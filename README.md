@@ -212,6 +212,21 @@ Create `apps/web/tsconfig.json`:
 }
 ```
 
+Create `tsconfig.node.json`:
+
+```json
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts"]
+}
+```
+
 Create `apps/web/vite.config.ts`:
 
 ```ts
