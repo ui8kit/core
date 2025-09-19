@@ -166,6 +166,7 @@ Create `apps/web/package.json` (aligned with the provided example):
   "devDependencies": {
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
+    "@types/node": "^24.5.2",
     "@vitejs/plugin-react-swc": "^3.11.0",
     "autoprefixer": "^10.4.18",
     "class-variance-authority": "^0.7.0",
