@@ -3,6 +3,10 @@ import {
   Image as BaseImage,
   spacingVariants,
   roundedVariants,
+<<<<<<< HEAD
+=======
+  roundedSideVariants,
+>>>>>>> 29c4955 (Add DashLayout component and update dependencies)
   shadowVariants,
   layoutVariants,
   imageFitVariants,
@@ -10,6 +14,10 @@ import {
   aspectRatioVariants,
   type VariantSpacingProps,
   type RoundedProps,
+<<<<<<< HEAD
+=======
+  type RoundedSideProps,
+>>>>>>> 29c4955 (Add DashLayout component and update dependencies)
   type ShadowProps,
   type VariantLayoutProps,
   type ImageFitProps,
@@ -22,6 +30,10 @@ export interface ImageProps
   extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'>,
     Pick<VariantSpacingProps, 'm' | 'mx' | 'my'>,
     RoundedProps,
+<<<<<<< HEAD
+=======
+    RoundedSideProps,
+>>>>>>> 29c4955 (Add DashLayout component and update dependencies)
     ShadowProps,
     Pick<VariantLayoutProps, 'w' | 'h'>,
     ImageFitProps,
@@ -44,6 +56,13 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
     position = 'center',
     aspect = 'auto',
     rounded,
+<<<<<<< HEAD
+=======
+    roundedTop,
+    roundedRight,
+    roundedBottom,
+    roundedLeft,
+>>>>>>> 29c4955 (Add DashLayout component and update dependencies)
     shadow,
     fallbackSrc,
     withPlaceholder = false,
@@ -83,6 +102,10 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
           spacingVariants({ m, mx, my }),
           layoutVariants({ w, h }),
           roundedVariants({ rounded }),
+<<<<<<< HEAD
+=======
+          roundedSideVariants({ roundedTop, roundedRight, roundedBottom, roundedLeft }),
+>>>>>>> 29c4955 (Add DashLayout component and update dependencies)
           shadowVariants({ shadow }),
           className
         )}
