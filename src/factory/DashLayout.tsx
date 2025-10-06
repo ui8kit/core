@@ -91,7 +91,7 @@ export function Dashboard({ page: Page, children, sidebar, navbarProps }: Dashbo
 }
 
 // Default export: factory alias
-export default function DashLayout(props: DashboardProps) {
+export function DashLayout(props: DashboardProps) {
   return <Dashboard {...props} />;
 }
 
