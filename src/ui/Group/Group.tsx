@@ -1,7 +1,7 @@
 import type { ReactNode, ElementType } from "react";
 import { forwardRef } from "react";
 import {
-  Flex,
+  Box as BaseBox,
   spacingVariants,
   colorVariants,
   layoutVariants,
@@ -11,7 +11,7 @@ import {
   type VariantLayoutProps,
   type VariantFlexProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface GroupProps 
   extends React.HTMLAttributes<HTMLElement>,
@@ -48,7 +48,7 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
     ...props 
   }, ref) => {
     return (
-      <Flex
+      <BaseBox
         ref={ref}
         component={component}
         data-class="group"
@@ -66,7 +66,7 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
         {...props}
       >
         {children}
-      </Flex>
+      </BaseBox>
     );
   }
 );

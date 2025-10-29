@@ -3,7 +3,7 @@
   "items": [
     {
       "name": "Title",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -11,14 +11,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Title/Title.tsx",
-          "target": "components"
+          "path": "src/ui/Title/Title.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Text",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -26,14 +26,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Text/Text.tsx",
-          "target": "components"
+          "path": "src/ui/Text/Text.tsx",
+          "target": "ui"
         }
       ]
     },
     {
-      "name": "Icon",
-      "type": "registry:component",
+      "name": "Stack",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -41,29 +41,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Icon/Icon.tsx",
-          "target": "components"
-        }
-      ]
-    },
-    {
-      "name": "Image",
-      "type": "registry:component",
-      "description": "",
-      "dependencies": [
-        "react"
-      ],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "src/components/Image/Image.tsx",
-          "target": "components"
+          "path": "src/ui/Stack/Stack.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Sheet",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react",
@@ -72,14 +57,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Sheet/Sheet.tsx",
-          "target": "components"
+          "path": "src/ui/Sheet/Sheet.tsx",
+          "target": "ui"
         }
       ]
     },
     {
-      "name": "Stack",
-      "type": "registry:component",
+      "name": "Image",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -87,14 +72,29 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Stack/Stack.tsx",
-          "target": "components"
+          "path": "src/ui/Image/Image.tsx",
+          "target": "ui"
+        }
+      ]
+    },
+    {
+      "name": "Icon",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Icon/Icon.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Group",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -102,14 +102,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Group/Group.tsx",
-          "target": "components"
+          "path": "src/ui/Group/Group.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Grid",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "Main Grid component interface",
       "dependencies": [
         "react"
@@ -117,14 +117,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Grid/Grid.tsx",
-          "target": "components"
+          "path": "src/ui/Grid/Grid.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Container",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -132,14 +132,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Container/Container.tsx",
-          "target": "components"
+          "path": "src/ui/Container/Container.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Card",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "Main Card component interface",
       "dependencies": [
         "react"
@@ -147,14 +147,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Card/Card.tsx",
-          "target": "components"
+          "path": "src/ui/Card/Card.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Button",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -162,14 +162,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Button/Button.tsx",
-          "target": "components"
+          "path": "src/ui/Button/Button.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Box",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -177,14 +177,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Box/Box.tsx",
-          "target": "components"
+          "path": "src/ui/Box/Box.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Block",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -192,14 +192,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Block/Block.tsx",
-          "target": "components"
+          "path": "src/ui/Block/Block.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Badge",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react"
@@ -207,14 +207,14 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Badge/Badge.tsx",
-          "target": "components"
+          "path": "src/ui/Badge/Badge.tsx",
+          "target": "ui"
         }
       ]
     },
     {
       "name": "Accordion",
-      "type": "registry:component",
+      "type": "registry:ui",
       "description": "",
       "dependencies": [
         "react",
@@ -223,8 +223,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Accordion/Accordion.tsx",
-          "target": "components"
+          "path": "src/ui/Accordion/Accordion.tsx",
+          "target": "ui"
         }
       ]
     },
@@ -276,6 +276,6 @@
     }
   ],
   "version": "1.0.0",
-  "lastUpdated": "2025-10-29T12:24:01.390Z",
+  "lastUpdated": "2025-10-29T15:04:10.872Z",
   "registry": "ui"
 }

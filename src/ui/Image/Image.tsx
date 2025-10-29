@@ -16,7 +16,7 @@ import {
   type ImagePositionProps,
   type AspectRatioProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface ImageProps 
   extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'>,

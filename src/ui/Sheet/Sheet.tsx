@@ -1,8 +1,8 @@
 import type { ReactNode, HTMLAttributes } from "react";
 import { forwardRef } from "react";
-import { cn, buttonSizeVariants, buttonStyleVariants } from "../../core";
-import type { ButtonProps } from "../Button";
-import { Icon } from "../Icon";
+import { cn, buttonSizeVariants, buttonStyleVariants } from "@ui8kit/core";
+import type { ButtonProps } from "@ui8kit/core";
+import { Icon } from "@ui8kit/core";
 import { Menu } from "lucide-react";
 
 export interface SheetProps extends HTMLAttributes<HTMLDivElement> {

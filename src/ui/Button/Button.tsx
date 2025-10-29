@@ -17,7 +17,7 @@ import {
   type ButtonStyleProps,
   type ButtonContentAlignProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface ButtonProps 
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

@@ -20,7 +20,7 @@ export {
 } from './core/ui';
 
 // Composite components with prop forwarding API (main exports)
-export * from './components';
+export * from './ui';
 
 // Factory components (layouts)
 export * from './layouts';

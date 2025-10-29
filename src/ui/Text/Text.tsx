@@ -1,7 +1,7 @@
 import type { ReactNode, ElementType } from "react";
 import { forwardRef } from "react";
 import {
-  Element,
+  Box as BaseBox,
   spacingVariants,
   colorVariants,
   layoutVariants,
@@ -21,10 +21,10 @@ import {
   type TypographyModifierProps,
   type TrackingProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
-export interface TitleProps 
-  extends React.HTMLAttributes<HTMLHeadingElement>,
+export interface TextProps 
+  extends React.HTMLAttributes<HTMLElement>,
     Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'>,
     Pick<ColorProps, 'c'>,
     Pick<VariantLayoutProps, 'w'>,
@@ -33,22 +33,24 @@ export interface TitleProps
     TextAlignProps,
     LeadingProps,
     TrackingProps,
-    Pick<TypographyModifierProps, 'truncate'> {
+    TypographyModifierProps {
   children: ReactNode;
-  order?: 1 | 2 | 3 | 4 | 5 | 6;
+  component?: ElementType;
 }
 
-export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
+export const Text = forwardRef<HTMLElement, TextProps>(
   ({ 
     children, 
     className,
-    order = 1,
-    size = 'lg',
-    fw = 'semibold',
+    component = 'p',
+    size = 'md',
+    fw = 'normal',
     ta = 'left',
     leading = 'normal',
     tracking,
     truncate = false,
+    italic = false,
+    underline = false,
     // Spacing props
     m, mx, my, mb, mt,
     // Color props
@@ -57,23 +59,19 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
     w,
     ...props 
   }, ref) => {
-    const headingTag = `h${order}` as ElementType;
-
     return (
-      <Element
+      <BaseBox
         ref={ref}
-        as={headingTag}
-        data-class="title"
+        as={component}
+        data-class="text"
         className={cn(
-          // Base title styles
-          'font-semibold tracking-tight',
           // Apply CVA variants
           textSizeVariants({ size }),
           fontWeightVariants({ fw }),
           textAlignVariants({ ta }),
           leadingVariants({ leading }),
           trackingVariants({ tracking }),
-          typographyModifierVariants({ truncate }),
+          typographyModifierVariants({ truncate, italic, underline }),
           spacingVariants({ m, mx, my, mb, mt }),
           colorVariants({ c }),
           layoutVariants({ w }),
@@ -82,9 +80,9 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
         {...props}
       >
         {children}
-      </Element>
+      </BaseBox>
     );
   }
 );
 
-Title.displayName = "Title"; 
+Text.displayName = "Text"; 

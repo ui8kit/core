@@ -1,7 +1,7 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
-import { cn } from "../../core/utils";
-import { Box as BaseBox } from "../../core/ui";
+import { cn } from "@ui8kit/core";
+import { Box as BaseBox } from "@ui8kit/core";
 import {
   spacingVariants,
   roundedVariants,
@@ -19,7 +19,7 @@ import {
   type BorderProps,
   type VariantFlexProps,
   type AspectRatioProps
-} from "../../core/variants";
+} from "@ui8kit/core";
 
 export interface BoxProps 
   extends VariantSpacingProps,

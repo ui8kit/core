@@ -15,7 +15,7 @@ import {
   type BadgeSizeProps,
   type BadgeStyleProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface BadgeProps 
   extends React.HTMLAttributes<HTMLDivElement>,

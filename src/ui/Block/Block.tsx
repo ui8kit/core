@@ -15,7 +15,7 @@ import {
   type ShadowProps,
   type BorderProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface BlockProps 
   extends React.HTMLAttributes<HTMLElement>,

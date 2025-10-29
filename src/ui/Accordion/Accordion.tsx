@@ -2,9 +2,9 @@
 
 import * as React from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
-import { cn, layoutVariants, flexVariants,type VariantLayoutProps, type VariantFlexProps } from "../../core";
-import { Button, ButtonProps } from "../Button";
-import { Icon } from "../Icon";
+import { cn, layoutVariants, flexVariants,type VariantLayoutProps, type VariantFlexProps } from "@ui8kit/core";
+import { Button, ButtonProps } from "@ui8kit/core";
+import { Icon } from "@ui8kit/core";
 
 type AccordionContextValue = {
   value: string | string[];

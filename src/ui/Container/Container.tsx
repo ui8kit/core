@@ -11,7 +11,7 @@ import {
   type ContainerSizingProps,
   type TextAlignProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface ContainerProps 
   extends React.HTMLAttributes<HTMLElement>,

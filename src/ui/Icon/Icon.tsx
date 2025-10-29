@@ -9,7 +9,7 @@ import {
   type ColorProps,
   type IconSizingProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface IconProps 
   extends React.HTMLAttributes<HTMLElement>,

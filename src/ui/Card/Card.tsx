@@ -18,7 +18,7 @@ import {
   type VariantLayoutProps,
   type TextSizeProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 // Main Card component interface
 interface CardProps 

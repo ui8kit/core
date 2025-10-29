@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { forwardRef } from "react";
 import {
   Grid as BaseGrid,
-  Element as BaseElement,
+  Box as BaseBox,
   gridVariants,
   spacingVariants,
   colorVariants,
@@ -11,7 +11,7 @@ import {
   type ColorProps,
   type VariantLayoutProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 // Main Grid component interface
 export interface GridProps 
@@ -88,7 +88,7 @@ export interface GridColProps {
 const GridCol = forwardRef<HTMLElement, GridColProps>(
   ({ children, className, span, start, end, order, ...props }, ref) => {
     return (
-      <BaseElement
+      <BaseBox
         component="div"
         ref={ref}
         className={cn(
@@ -163,7 +163,7 @@ const GridCol = forwardRef<HTMLElement, GridColProps>(
         {...props}
       >
         {children}
-      </BaseElement>
+      </BaseBox>
     );
   }
 );

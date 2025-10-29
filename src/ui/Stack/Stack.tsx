@@ -13,7 +13,7 @@ import {
   type VariantFlexProps,
   type TextAlignProps,
   cn
-} from "../../core";
+} from "@ui8kit/core";
 
 export interface StackProps 
   extends React.HTMLAttributes<HTMLElement>,
