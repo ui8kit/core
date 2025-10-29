@@ -22,8 +22,8 @@ export {
 // Composite components with prop forwarding API (main exports)
 export * from './components';
 
-// Factory components (blocks)
-export * from './factory';
+// Factory components (layouts)
+export * from './layouts';
 
 // Themes
 export * from './themes';

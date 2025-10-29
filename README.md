@@ -138,6 +138,9 @@ Place the UI kit as a Git submodule at `packages/@ui8kit/core`:
 ```bash
 git submodule add https://github.com/ui8kit/core.git packages/@ui8kit/core
 git submodule update --init --recursive
+
+
+git clone --recurse-submodules https://github.com/ui8kit/core.git packages/@ui8kit/core
 ```
 
 Notes:
