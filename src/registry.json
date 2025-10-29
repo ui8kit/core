@@ -32,7 +32,7 @@
       ]
     },
     {
-      "name": "Stack",
+      "name": "Icon",
       "type": "registry:component",
       "description": "",
       "dependencies": [
@@ -41,7 +41,22 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Stack/Stack.tsx",
+          "path": "src/components/Icon/Icon.tsx",
+          "target": "components"
+        }
+      ]
+    },
+    {
+      "name": "Image",
+      "type": "registry:component",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/components/Image/Image.tsx",
           "target": "components"
         }
       ]
@@ -63,7 +78,7 @@
       ]
     },
     {
-      "name": "Image",
+      "name": "Stack",
       "type": "registry:component",
       "description": "",
       "dependencies": [
@@ -72,22 +87,7 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/components/Image/Image.tsx",
-          "target": "components"
-        }
-      ]
-    },
-    {
-      "name": "Icon",
-      "type": "registry:component",
-      "description": "",
-      "dependencies": [
-        "react"
-      ],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "src/components/Icon/Icon.tsx",
+          "path": "src/components/Stack/Stack.tsx",
           "target": "components"
         }
       ]
@@ -153,21 +153,6 @@
       ]
     },
     {
-      "name": "Box",
-      "type": "registry:component",
-      "description": "",
-      "dependencies": [
-        "react"
-      ],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "src/components/Box/Box.tsx",
-          "target": "components"
-        }
-      ]
-    },
-    {
       "name": "Button",
       "type": "registry:component",
       "description": "",
@@ -178,6 +163,21 @@
       "files": [
         {
           "path": "src/components/Button/Button.tsx",
+          "target": "components"
+        }
+      ]
+    },
+    {
+      "name": "Box",
+      "type": "registry:component",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/components/Box/Box.tsx",
           "target": "components"
         }
       ]
@@ -227,9 +227,55 @@
           "target": "components"
         }
       ]
+    },
+    {
+      "name": "SplitBlock",
+      "type": "registry:layout",
+      "description": "Content hook system - allows replacing parts of the content",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/layouts/SplitBlock.tsx",
+          "target": "layouts"
+        }
+      ]
+    },
+    {
+      "name": "LayoutBlock",
+      "type": "registry:layout",
+      "description": "Layout types",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/layouts/LayoutBlock.tsx",
+          "target": "layouts"
+        }
+      ]
+    },
+    {
+      "name": "DashLayout",
+      "type": "registry:layout",
+      "description": "import React from \"react\";",
+      "dependencies": [
+        "lucide-react",
+        "react-resizable-panels"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/layouts/DashLayout.tsx",
+          "target": "layouts"
+        }
+      ]
     }
   ],
   "version": "1.0.0",
-  "lastUpdated": "2025-10-21T19:25:48.045Z",
-  "registry": "core"
+  "lastUpdated": "2025-10-29T12:24:01.390Z",
+  "registry": "ui"
 }

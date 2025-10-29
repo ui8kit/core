@@ -4,6 +4,7 @@
 .manual/
 .example/
 .vscode/
+packages/
 node_modules/
 dist/
 build/
