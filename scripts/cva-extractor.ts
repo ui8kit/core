@@ -298,8 +298,8 @@ async function main() {
       ...results
     };
 
-    // writeFileSync(outputPath, JSON.stringify(output, null, 2));
-    // console.log(`💾 Results saved to: ${outputPath}`);
+    writeFileSync(outputPath, JSON.stringify(output, null, 2));
+    console.log(`💾 Results saved to: ${outputPath}`);
     
     // Test filtering
     console.log('\n🧪 Testing simple filtering...');
@@ -313,7 +313,7 @@ async function main() {
     console.log(`Analysis: ${filterResult.analysis.inCVA}/${filterResult.analysis.total} classes found in CVA`);
     
     // Generate whitelist
-    const whitelist = extractor.generateWhitelist();
+    /*const whitelist = extractor.generateWhitelist();
     const whitelistPath = join(__dirname, '../src/lib/core-classes.json');
     writeFileSync(whitelistPath, JSON.stringify({ 
       classes: whitelist,
@@ -323,7 +323,7 @@ async function main() {
     console.log(`📝 Whitelist saved to: ${whitelistPath}`);
     
     console.log('\n✅ Simple extraction completed!');
-    console.log('💡 Use this whitelist with tw-merge or similar tools');
+    console.log('💡 Use this whitelist with tw-merge or similar tools');*/
     
   } catch (error) {
     console.error('❌ Extraction failed:', error);
