@@ -23,8 +23,9 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "scan": "bunx buildy-ui@latest scan && mv ui/registry.json src/registry.json && rm -rf ui",
-    "build:r": "bunx buildy-ui@latest build"
+    "scan": "bunx buildy-ui@latest scan",
+    "build:r": "bunx buildy-ui@latest build",
+    "publish": "cd packages/registry && npm version patch && npm publish"
   },
   "sideEffects": false,
   "main": "./dist/index.js",

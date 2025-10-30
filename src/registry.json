@@ -11,8 +11,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Title/Title.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Title/Title.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -26,8 +26,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Text/Text.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Text/Text.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -41,8 +41,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Stack/Stack.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Stack/Stack.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -57,8 +57,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Sheet/Sheet.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Sheet/Sheet.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -72,8 +72,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Image/Image.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Image/Image.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -87,8 +87,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Icon/Icon.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Icon/Icon.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -102,8 +102,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Group/Group.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Group/Group.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -117,8 +117,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Grid/Grid.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Grid/Grid.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -132,8 +132,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Container/Container.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Container/Container.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -147,8 +147,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Card/Card.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Card/Card.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -162,8 +162,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Button/Button.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Button/Button.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -177,8 +177,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Box/Box.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Box/Box.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -192,8 +192,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Block/Block.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Block/Block.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -207,8 +207,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Badge/Badge.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Badge/Badge.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -223,8 +223,8 @@
       "devDependencies": [],
       "files": [
         {
-          "path": "src/ui/Accordion/Accordion.tsx",
-          "target": "ui"
+          "path": "src/components/ui/Accordion/Accordion.tsx",
+          "target": "components/ui"
         }
       ]
     },
@@ -276,6 +276,6 @@
     }
   ],
   "version": "1.0.0",
-  "lastUpdated": "2025-10-29T15:04:10.872Z",
+  "lastUpdated": "2025-10-30T13:21:21.408Z",
   "registry": "ui"
 }
