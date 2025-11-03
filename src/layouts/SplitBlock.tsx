@@ -4,7 +4,7 @@ import {
   Block,
   Container,
   Grid
-} from "../components";
+} from "@ui8kit/core";
 import type { VariantSpacingProps, ContainerSizingProps, VariantGridProps } from "../core/variants";
 
 // Content hook system - allows replacing parts of the content

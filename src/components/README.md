@@ -1,4 +1,4 @@
-# @ui8kit/core Composite Components
+# @ui8kit/core Composite UI Components
 
 ## Overview
 
@@ -9,7 +9,7 @@ This directory contains the middle-tier composite components that provide the id
 ```
 USER LEVEL               COMPOSITE LEVEL           PRIMITIVE LEVEL
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│ <Card           │────▶│ components/Card │────▶│ core/ui/Card    │
+│ <Card           │────▶│ components/ui/Card │────▶│ core/ui/Card    │
 │   p="lg"        │     │ + spacingVariants│     │ (no styles)     │
 │   rounded="md"  │     │ + roundedVariants│     │                 │
 │   shadow="sm"   │     │ + shadowVariants │     │                 │
@@ -86,8 +86,8 @@ CSS Grid layout with responsive presets.
   gap="lg"
   p="md"
 >
-  <Grid.Col span={2}>Wide column</Grid.Col>
-  <Grid.Col>Regular column</Grid.Col>
+  <GridCol span={2}>Wide column</GridCol>
+  <GridCol>Regular column</GridCol>
 </Grid>
 ```
 
@@ -103,16 +103,16 @@ Card component with compound structure.
   shadow="md" 
   bg="card"
 >
-  <Card.Header>
-    <Card.Title>Title</Card.Title>
-    <Card.Description>Description</Card.Description>
-  </Card.Header>
-  <Card.Content>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+    <CardDescription>Description</CardDescription>
+  </CardHeader>
+  <CardContent>
     Content
-  </Card.Content>
-  <Card.Footer>
+  </CardContent>
+  <CardFooter>
     <Button>Action</Button>
-  </Card.Footer>
+  </CardFooter>
 </Card>
 ```
 
@@ -152,7 +152,7 @@ Semantic headings with typography control.
 
 ```tsx
 <Title 
-  order={1} 
+  order={1} // h1
   size="3xl" 
   fw="bold"
   c="primary"
@@ -222,22 +222,22 @@ All components support these universal props through CVA variants:
 
 ## Data Classes
 
-Every component includes semantic `data-class` attributes for easy targeting:
+Every component in the `components/ui` directory contains semantic `data-class` attributes for easy targeting:
 
 ```tsx
 <Card data-class="card">
-  <Card.Header data-class="card-header">
-    <Card.Title data-class="card-title">Title</Card.Title>
-  </Card.Header>
+  <CardHeader data-class="card-header">
+    <CardTitle data-class="card-title">Title</CardTitle>
+  </CardHeader>
 </Card>
 ```
 
-This enables easy CSS targeting and semantic understanding of the markup.
+`data-class` enables easy CSS targeting and semantic understanding of the markup.
 
 ## Best Practices
 
-1. **Use semantic components**: Choose `Block` with appropriate `component` prop for sections
-2. **Leverage compound components**: Use `Card.Header`, `Card.Content` structure
+1. **Use semantic tag components**: Choose `Block` with appropriate `component` prop for sections
+2. **Leverage compound components**: Use `CardHeader`, `CardContent` structure
 3. **Apply consistent spacing**: Use the spacing scale for predictable layouts
 4. **Follow the prop naming**: Use short, consistent prop names (`p`, `m`, `bg`, `c`)
 5. **Utilize data-class**: Use for custom styling and testing selectors

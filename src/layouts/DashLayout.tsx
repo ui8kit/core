@@ -1,5 +1,5 @@
 //import React from "react";
-import { Block, Box, Container, Button, Icon, Text, Group, Stack, Title } from "../index";
+import { Block, Box, Container, Button, Icon, Text, Group, Stack } from "@ui8kit/core";
 import { Atom, Moon, Sun } from "lucide-react";
 import { PanelGroup, Panel, PanelResizeHandle } from "react-resizable-panels";
 

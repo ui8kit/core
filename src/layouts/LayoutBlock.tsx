@@ -13,7 +13,7 @@ import {
   Card,
   Image,
   Group
-} from "../components";
+} from "@ui8kit/core";
 import type { VariantSpacingProps, ContainerSizingProps, VariantGridProps, VariantFlexProps } from "../core/variants";
 
 // Layout types
