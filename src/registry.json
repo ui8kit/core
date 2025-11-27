@@ -1,0 +1,431 @@
+{
+  "$schema": "https://buildy.tw/schema/registry.json",
+  "items": [
+    {
+      "name": "Title",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Title/Title.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Text/Text.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Stack",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Stack/Stack.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Sheet",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Sheet/Sheet.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Image",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Image/Image.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Icon",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Icon/Icon.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Group",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Group/Group.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Grid",
+      "type": "registry:ui",
+      "description": "Main Grid component interface",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Grid/Grid.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Container",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Container/Container.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Card",
+      "type": "registry:ui",
+      "description": "Main Card component interface",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Card/Card.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Button/Button.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Box",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Box/Box.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Block",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Block/Block.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Badge",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Badge/Badge.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/ui/Accordion/Accordion.tsx",
+          "target": "components/ui"
+        }
+      ]
+    },
+    {
+      "name": "typography",
+      "type": "registry:variants",
+      "description": "Text size variants",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/typography.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "spacing",
+      "type": "registry:variants",
+      "description": "Type for spacing props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/spacing.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "sizing",
+      "type": "registry:variants",
+      "description": "Specific size configurations for different component types",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/sizing.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "shadow",
+      "type": "registry:variants",
+      "description": "Type for shadow props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/shadow.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "rounded",
+      "type": "registry:variants",
+      "description": "Side-specific rounded",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/rounded.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "layout",
+      "type": "registry:variants",
+      "description": "Type for layout props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/layout.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "image",
+      "type": "registry:variants",
+      "description": "Image fit variants",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/image.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "flex",
+      "type": "registry:variants",
+      "description": "Types for flex props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/flex.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "colors",
+      "type": "registry:variants",
+      "description": "Types for color props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/colors.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:variants",
+      "description": "Button size variants",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/button.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "border",
+      "type": "registry:variants",
+      "description": "Type for border props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/border.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:variants",
+      "description": "Badge size variants",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/variants/badge.ts",
+          "target": "variants"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "description": "",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "target": "lib"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-27T14:24:55.968Z",
+  "registry": "ui"
+}
