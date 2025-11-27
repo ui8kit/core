@@ -1,8 +1,8 @@
 // Export variants
-export * from './components/variants';
+export * from './variants';
 
 // Export components
-export * from './components/ui';
+export * from './ui';
 
 // Export utilities
 export * from './lib/utils';
