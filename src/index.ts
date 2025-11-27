@@ -1,32 +1,8 @@
-// Export variants and utilities from core
-export * from './core/variants';
-export * from './core/utils';
+// Export variants
+export * from './components/variants';
 
-// Export core primitives with Base prefix to avoid conflicts
-export {
-  Block as BaseBlock,
-  Container as BaseContainer,
-  Grid as BaseGrid,
-  Flex as BaseFlex,
-  Box as BaseBox,
-  Stack as BaseStack,
-  Component as BaseComponent,
-  Element as BaseElement,
-  Card as BaseCard,
-  Button as BaseButton,
-  Badge as BaseBadge,
-  Image as BaseImage,
-  Icon as BaseIcon
-} from './core/ui';
+// Export components
+export * from './components/ui';
 
-// Composite components with prop forwarding API (main exports)
-export * from './ui';
-
-// Factory components (layouts)
-export * from './layouts';
-
-// Themes
-export * from './themes';
-
-// Hooks
-export * from './hooks';
+// Export utilities
+export * from './lib/utils';
