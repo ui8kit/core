@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
-import { cn } from "../../lib/utils";
-import { layoutVariants, flexVariants, type VariantLayoutProps, type VariantFlexProps } from "../../variants";
-import { Icon } from "../Icon";
-import { Button, ButtonProps } from "../Button";
+import { cn } from "../lib/utils";
+import { layoutVariants, flexVariants, type VariantLayoutProps, type VariantFlexProps } from "../variants";
+import { Icon } from "./ui/Icon";
+import { Button, type ButtonProps } from "./ui/Button";
 
 type AccordionContextValue = {
   value: string | string[];
@@ -136,7 +136,6 @@ const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerPro
       <Button
         ref={ref}
         variant="ghost"
-        size="sm"
         w={w || "full"}
         contentAlign="between"
         onClick={() => onItemClick(value)}
