@@ -1,94 +1,106 @@
 {
   "repo_notes": [
     {
-      "content": "ui8kit/core is a three-layered React UI component library built with utility-first classes and clean HTML5 semantic tag approach. The architecture consists of 3 levels: Core/UI (basic primitives), Components/UI (composite components), and Layouts (templates). This aligns with atomic design philosophy: atoms, molecules, and organisms. The library supports various integration formats: npm install, registry JSON, submodule to monorepo. Key features include: CVA-based (class-variance-authority) variant system and prop forwarding API for extended components. Important directories for documentation: src/core/ui/ (basic primitives), src/core/variants (CVA variants), src/components/ui/ (ready-made composite components), src/layouts/ (layout templates), src/components/GUIDE_CREATE_FORM.md (component development example where form components are absent and we use Block + Box instead), src/components/README.md (typical component usage examples). The library targets developers building React applications with Tailwind CSS. It supports modern patterns: compound components, render props, controlled/uncontrolled components. Documentation should cover all architecture levels: from basic primitives to complex layout components, explain the variant system, and demonstrate various integration and installation methods.",
+      "content": "UI8Kit/core is a modern React UI component library built with a utility-first approach and clean semantic HTML. The architecture follows a three-layer system: Core/UI (basic primitives), Components/UI (composite components), and Layouts (page templates). This implements atomic design principles: atoms → molecules → organisms. The library supports multiple integration methods: npm install, component-specific installation via npx buildy-ui add [component], JSON registry for programmatic access, git submodule for monorepos, and direct source integration. Key features include: CVA (class-variance-authority) based variant system, prop forwarding API, polymorphic components, and full TypeScript support. Critical directories: src/components/ui/ (base primitives like Block, Box, Button), src/variants/ (CVA variant definitions), src/components/ (extended components), src/layouts/ (layout templates), GUIDE_CREATE_FORM.md (form creation guide using Block+Box since no Form components exist). The library targets React developers using Tailwind CSS, supporting modern patterns like compound components, controlled/uncontrolled inputs, and semantic HTML5.",
       "author": "UI Systems Architect"
     },
     {
-      "content": "Minimalism is the key motivation: complex interfaces can be built using just 15 composite components, and Tailwind flexibility fits into 12 reusable variants. This provides minimal code footprint, eliminates redundant classes, and enables unlimited design-flexible layouts.",
+      "content": "Minimalism drives the design: complex UIs can be built with just 15 composite components and 12 reusable variants covering ~80% of design scenarios. This provides minimal bundle size, eliminates redundant CSS classes, and enables unlimited design flexibility without sacrificing performance or developer experience.",
       "author": "Design Philosophy"
     },
     {
-      "content": "The prop forwarding pattern allows extending base components with additional variant props from the core variant system. All components use consistent data-class attributes for identification and DOM targeting. Compound components pattern (Card.Header, Card.Content, Card.Footer) enables flexible composition while maintaining type safety.",
-      "author": "Component Patterns"
+      "content": "Prop forwarding enables extending base components with variant props from the core system. All components include consistent data-class attributes for DOM targeting and testing. The compound component pattern (Card.Header, Card.Content, Card.Footer) provides flexible composition while maintaining full type safety and IntelliSense support.",
+      "author": "Component Architecture"
     },
     {
-      "content": "Integration scenarios include: standalone npm installation, per-component npm installation via npx buildy-ui add [component], JSON registry for programmatic access, git submodule for monorepo architectures, and direct source integration for custom builds.",
-      "author": "Integration Formats"
+      "content": "Integration options include: standard npm installation (@ui8kit/core), per-component installation (npx buildy-ui add button), JSON registry for programmatic component discovery, git submodule for monorepo integration, and direct source imports for advanced customization. Each method supports tree shaking and optimal bundle sizes.",
+      "author": "Integration Methods"
     },
     {
-      "content": "The variant system (CVA-based) centralizes styling logic: spacing (margin/padding), colors (backgrounds/text), layout (width/height), shadows, borders, rounded corners, typography, flexbox, and grid properties. Each variant is composable and reusable across components, reducing style duplication.",
-      "author": "Variant System Architecture"
+      "content": "The CVA-based variant system centralizes styling logic across: spacing (p, m, gap), colors (bg, c, border), layout (w, h, display), visual effects (shadow, rounded, border), typography (size, weight, align), and component-specific variants (button styles, badge variants). Variants are composable, reusable, and automatically merged to prevent conflicts.",
+      "author": "Variant System"
+    },
+    {
+      "content": "UI8Kit uses zero-runtime styling: all variants compile to Tailwind classes at build time. The library achieves ~15KB gzipped bundle size through aggressive tree shaking. Components support full TypeScript with generated types, polymorphic rendering (any HTML element via component prop), and semantic data-class attributes for reliable testing and styling.",
+      "author": "Performance & DX"
+    },
+    {
+      "content": "Key components: Block (polymorphic container), Box (flexible primitive), Button (interactive with variants), Card (compound structure), Container (responsive wrapper), Stack/Group (flex layouts), Grid (CSS Grid), Title/Text (typography), Image/Icon (media). All support universal props: spacing, colors, layout, shadows, borders, and component-specific variants.",
+      "author": "Core Components"
+    },
+    {
+      "content": "No dedicated form components exist - use Block+Box composition for forms. Example: Block as form container, Box as input/textarea with proper ARIA labels. This approach provides maximum flexibility while maintaining consistent styling and behavior.",
+      "author": "Form Handling"
     }
   ],
   "pages": [
     {
       "title": "Overview",
-      "purpose": "Introduction to the library, architectural principles, design philosophy, and core features",
+      "purpose": "Library introduction, architectural principles, design philosophy, and key features",
       "page_notes": [
         {
-          "content": "Explain the motivation behind creating this library: minimalism as the core principle. Demonstrate how complex interfaces can be built using just 15 composite components with 12 reusable variants that cover ~80% of design scenarios. Highlight how this approach minimizes code, eliminates excessive classes, and enables unlimited design flexibility in layouts."
+          "content": "Explain UI8Kit's minimalist approach: build complex UIs with 15 composite components and 12 variants covering 80% of design needs. Demonstrate zero-runtime styling, tree shaking benefits, and how the utility-first approach with semantic classes eliminates redundant CSS while maintaining full design flexibility."
         }
       ],
       "parent": null
     },
     {
       "title": "Getting Started",
-      "purpose": "Installation and basic configuration of the library for various use cases",
+      "purpose": "Installation, configuration, and basic usage for different project setups",
       "page_notes": [
         {
-          "content": "Base this section on the project's README file. Cover installation via npm, basic component imports, simple examples, and setup for different project types (Next.js, Vite, Create React App)."
+          "content": "Cover npm installation, Tailwind setup, CSS variables configuration, theme provider setup, and basic component usage. Include examples for Vite, Next.js, and Create React App. Emphasize the importance of content paths in Tailwind config for proper styling."
         }
       ],
       "parent": null
     },
     {
       "title": "Architecture",
-      "purpose": "Detailed description of the three-layered architecture: Core → Components → Layouts",
+      "purpose": "Three-layer architecture explanation: Core primitives → Composite components → Layout templates",
       "page_notes": [
         {
-          "content": "Provide extensive examples and show component relationships and interactions. Explain architectural principles and implementation details. Note: API Reference has a dedicated section."
+          "content": "Detail the Core/UI layer (Block, Box, Button), Components/UI layer (extended components with variants), and Layouts layer (page templates). Explain CVA variant system, prop forwarding, polymorphic components, and how everything ties together for maximum composability."
         }
       ],
       "parent": null
     },
     {
       "title": "Core Components",
-      "purpose": "Documentation of basic primitives in src/core/ui/ and their composition",
+      "purpose": "Basic primitives documentation: Block, Box, Button, and their fundamental APIs",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "This section teaches fundamental React component principles: props, interfaces, imports/exports, element naming, and display configurations. Include beginner-friendly explanations of forwardRef, TypeScript types, and HTML attributes forwarding."
+          "content": "Cover the essential building blocks: Block (polymorphic container), Box (universal primitive), Button (interactive element). Explain prop forwarding, component prop for polymorphism, TypeScript interfaces, and how these primitives form the foundation for all other components."
         }
       ]
     },
     {
       "title": "Variant System",
-      "purpose": "Description of the CVA-based styling system (src/core/variants/): spacing, colors, layout, shadows, borders, etc.",
+      "purpose": "CVA-based styling system explanation: spacing, colors, layout, typography, and component variants",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "This is a critical section. Explain how Tailwind utility classes are grouped by design concerns and made reusable across components. Cover fundamental principles, composition patterns, and interactions between variants. Show how this eliminates style duplication."
+          "content": "Critical section explaining how variants work: spacing (p, m, gap), colors (bg, c), layout (w, h, display), visual (shadow, rounded), and component-specific variants. Show how variants compose, how Tailwind merging works, and how to create custom variants."
         }
       ]
     },
     {
       "title": "UI Components",
-      "purpose": "Documentation of extended components in src/components/ui/ with prop forwarding API",
+      "purpose": "Extended components with full variant support: Card, Badge, Title, Text, Image, etc.",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Explain core principles and how these components interact with variants. Cover the required data-class attribute usage and other prop configuration conventions. Show prop forwarding patterns and type safety."
+          "content": "Document composite components that extend primitives with specific functionality. Explain compound component patterns (Card.Header), data-class attributes for testing, and how these components provide high-level APIs while maintaining the flexibility of the variant system."
         }
       ]
     },
     {
-      "title": "Layouts",
-      "purpose": "Documentation of layout components: DashLayout, LayoutBlock, SplitBlock, Grid, Flex",
+      "title": "Layout Components",
+      "purpose": "Layout and structural components: Container, Stack, Group, Grid",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Explain core principles and interactions with composite components. Cover special considerations for building structural layouts and component composition patterns."
+          "content": "Cover layout primitives for building page structures. Explain Container (responsive wrapper), Stack/Group (flex layouts), Grid (CSS Grid with responsive presets). Show how these create consistent spacing and alignment across applications."
         }
       ]
     },
@@ -134,93 +146,98 @@
     },
     {
       "title": "API Reference",
-      "purpose": "Complete API documentation for component props, imported variants, consistent naming conventions, and export names",
+      "purpose": "Complete component API documentation: props, types, variants, and usage patterns",
       "parent": null
     },
     {
       "title": "Core Components",
-      "purpose": "Complete API documentation for basic primitives (core/ui): Button, Card, Box, Grid, Stack, etc.",
+      "purpose": "API documentation for basic primitives: Block, Box, Button with TypeScript interfaces and examples",
       "parent": "API Reference",
       "page_notes": [
         {
-          "content": "Document each primitive component: props interface, TypeScript types, usage examples, and special attributes. Include forwardRef implementation details and ref typing."
+          "content": "Detail Block (polymorphic container), Box (universal primitive), Button (interactive element). Include complete prop interfaces, TypeScript types, forwardRef patterns, component polymorphism, and practical usage examples with different HTML elements."
         }
       ]
     },
     {
       "title": "UI Components",
-      "purpose": "Complete API documentation for extended components (components/ui) with prop forwarding and variants",
+      "purpose": "API documentation for extended components: Card, Badge, Title, Text, Image with variant support",
       "parent": "API Reference",
       "page_notes": [
         {
-          "content": "Document each component: props interface, imported variants, TypeScript types, prop forwarding patterns, data-class attributes, usage examples, and extension capabilities."
+          "content": "Document composite components with full variant APIs. Cover compound patterns (Card.Header), data-class attributes, prop forwarding, and how components extend base primitives while maintaining type safety and flexibility."
         }
       ]
     },
     {
       "title": "Layout Components",
-      "purpose": "API documentation for layout components and layout systems",
+      "purpose": "API documentation for layout system: Container, Stack, Group, Grid with responsive patterns",
       "parent": "API Reference",
       "page_notes": [
         {
-          "content": "Explain component import scenarios, relationships, and structural layout construction patterns for different use cases: Landing Pages, Dashboards, Websites, Admin Panels. Show composition examples for each scenario."
+          "content": "Explain layout components for building page structures. Cover Container sizing, Stack/Group flex layouts, Grid responsive presets. Show how these components create consistent spacing, alignment, and responsive behavior across different screen sizes."
         }
       ]
     },
     {
       "title": "Development Guide",
-      "purpose": "Guide for contributors and developers working on the library",
+      "purpose": "Developer workflows, best practices, and advanced usage patterns",
       "parent": null,
       "page_notes": [
         {
-          "content": "This section describes different usage scenarios adapted for MCP server integration. LLM will query this to understand how to use the library effectively. Include practical workflows and examples."
+          "content": "Comprehensive guide for UI8Kit developers. Covers component composition, theme customization, performance optimization, and real-world usage patterns. Includes practical examples for common development scenarios."
         }
       ]
     },
     {
       "title": "Basic Workflow",
-      "purpose": "Common development patterns and usage examples for typical scenarios",
+      "purpose": "Step-by-step development workflow from project setup to deployment",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Base this on src/components/README.md. Show typical component usage examples for common development scenarios. Include step-by-step patterns developers follow."
+          "content": "Complete workflow guide: project creation, theme setup, component development, testing, and deployment. Includes Tailwind configuration, CSS variables setup, theme provider integration, and common development patterns."
         }
       ]
     },
     {
-      "title": "Advanced Workflow",
-      "purpose": "Handling edge cases where standard components are insufficient",
+      "title": "Component Development",
+      "purpose": "Creating custom components and extending UI8Kit with new functionality",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Cover non-standard scenarios where form components (Form, Label, Input) are absent. Show how to compose Block + Box for custom forms. Base this on src/components/GUIDE_CREATE_FORM.md."
+          "content": "Guide for building custom components that integrate with UI8Kit's variant system. Covers extending base components, creating new variants, prop forwarding patterns, and maintaining consistency with the design system."
         }
       ]
     },
     {
       "title": "Best Practices",
-      "purpose": "General guidelines and recommendations for using components and building layouts",
+      "purpose": "Guidelines for optimal component usage, performance, and maintainability",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Cover best practices, templates, and prototypes without relying on className or styles props (as variants and components cover ~80% of scenarios). Include recommendations for performance, accessibility, patterns, and semantic HTML usage."
+          "content": "Best practices for UI8Kit usage: semantic HTML, accessibility, performance optimization, TypeScript patterns, theming approaches. Emphasizes the utility-first philosophy and avoiding custom CSS when variants suffice."
         }
       ]
     },
     {
       "title": "Dark Mode",
-      "purpose": "Explain dark mode implementation, toggle functionality, and persistence",
+      "purpose": "Complete dark mode implementation with theme switching and persistence",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Instructions for configuring and applying dark mode. Base explanation on src/themes/providers/ThemeProvider.tsx. Cover the theme provider mechanism, hooks, preferences, and persistence."
+          "content": "Detailed guide for implementing dark mode: CSS variable setup, ThemeProvider configuration, toggle components, system preference detection, localStorage persistence, and theme switching animations."
         }
       ]
     },
     {
       "title": "Troubleshooting",
-      "purpose": "Solutions for common problems, FAQ, and debugging guides",
-      "parent": null
+      "purpose": "Common issues, debugging techniques, and problem-solving guides",
+      "parent": null,
+      "page_notes": [
+        {
+          "content": "Comprehensive troubleshooting guide covering: component styling issues, TypeScript errors, theme problems, form handling, responsive design, accessibility concerns, and performance optimization. Includes diagnostic steps and solutions."
+        }
+      ]
     }
   ]
 }
