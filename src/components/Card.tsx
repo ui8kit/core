@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { forwardRef } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import {
   spacingVariants,
   roundedVariants,
@@ -16,7 +16,7 @@ import {
   type BorderProps,
   type VariantLayoutProps,
   type TextSizeProps
-} from "../../variants";
+} from "../variants";
 
 // Main Card component interface
 interface CardProps 

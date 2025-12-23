@@ -19,6 +19,6 @@ export { Icon, type IconProps } from "./ui/Icon";
 
 // Composite Components
 export { Grid, type GridProps } from "./Grid";
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, type CardProps, type CardHeaderProps, type CardTitleProps, type CardDescriptionProps, type CardContentProps, type CardFooterProps } from "./ui/Card";
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, type CardProps, type CardHeaderProps, type CardTitleProps, type CardDescriptionProps, type CardContentProps, type CardFooterProps } from "./Card";
 export { Sheet, type SheetProps } from "./Sheet";
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent, type AccordionProps, type AccordionItemProps, type AccordionTriggerProps, type AccordionContentProps } from "./Accordion";

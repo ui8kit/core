@@ -16,7 +16,7 @@ export const badgeSizeVariants = cva("", {
 });
 
 // Badge style variants
-export const badgeStyleVariants = cva("", {
+export const badgeStyleVariants = cva("inline-flex items-center font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2", {
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground hover:bg-primary/80",
