@@ -1,20 +1,83 @@
 export const colorTokens = {
-  'none':' none',
-  'inherit':' inherit',
-  'current':' currentColor',
-  'transparent':' transparent',
-  'black' :'#000',
-  'white' :'#fff',
-  'gray-50' :'#f9fafb',
-  'gray-100' :'#f3f4f6',
-  'gray-200' :'#e5e7eb',
-  'gray-300' :'#d1d5db',
-  'gray-400' :'#9ca3af',
-  'gray-500' :'#6b7280',
-  'gray-600' :'#4b5563',
-  'gray-700' :'#374151',
-  'gray-800' :'#1f2937',
-  'gray-900' :'#111827',
+
+  /**
+   * 2026 Color Year
+   * Cloud Dancer
+   * 'cloud-dancer': '#f0eee9'
+   * 
+   * https://www.pantone.com/color-of-the-year/2026
+   */
+  'none': ' none',
+  'inherit': ' inherit',
+  'current': ' currentColor',
+  'transparent': ' transparent',
+  'black': '#000',
+  'white': '#fff',
+  'cloud-dancer': '#f0eee9',
+  'cloud-0': '#fdfdfd',
+  'cloud-1': '#f0efeb',
+  'cloud-2': '#f1f0ed',
+  'cloud-3': '#f3f2ef',
+  'cloud-4': '#f4f3f1',
+  'cloud-5': '#f6f5f3',
+  'cloud-6': '#f7f7f5',
+  'cloud-7': '#f9f8f7',
+  'cloud-8': '#faafa9',
+  'cloud-9': '#fcfbfb',
+  'gray-50': '#f0efeb',
+  'gray-100': '#d8d7d3',
+  'gray-200': '#c0bfbc',
+  'gray-300': '#a8a7a4',
+  'gray-400': '#908f8d',
+  'gray-500': '#787775',
+  'gray-600': '#605f5e',
+  'gray-700': '#484746',
+  'gray-800': '#302f2f',
+  'gray-900': '#181717',
+
+  /**
+   * Monochrome
+   * 'cloud-dancer': '#f0eee9'
+   */
+  'monochrome-1': '#f0efec',
+  'monochrome-2': '#f0efed',
+  'monochrome-3': '#f0f0ef',
+
+  /**
+   * Atmosphere
+   * 'cloud-dancer': '#f0eee9'
+   */
+  'regatta': '#497ab7',
+  'alaskan-blue': '#6da9d2',
+  'cosmic-sky': '#aaaac4',
+  'aqua-gray': '#a5b2aa',
+  'rinsing-rivulet': '#5cc6c3',
+  'dusky-citron': '#e3cc81',
+  'nantucket-breeze': '#b7d1ea',
+
+  /**
+   * Triad
+   * 'cloud-dancer': '#f0eee9'
+   * 'mint-green': '#07f0ad'
+   */
+  'violet-berry': '#ad07f0',
+
+  /**
+   * Tetrad
+   * 'cloud-dancer': '#f0eee9'
+   */
+  'mint-green': '#07f0ad',
+  'blue-berry': '#074af0',
+  'rose-pink': '#f0074a',
+
+  /**
+   * Pentad
+   * 'cloud-dancer': '#f0eee9'
+   */
+  'jade-green': '#a3d59e',
+  'ice-blue': '#9eced5',
+  'lavender-purple': '#af9ed5',
+  'dusky-rose': '#d59eb9',
 };
 
 export const coloredEntries = {
