@@ -66,6 +66,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         data-class="button"
+        data-loading={loading ? 'true' : undefined}
         disabled={disabled || loading}
         className={cn(
           // Base styles (static)

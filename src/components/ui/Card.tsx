@@ -219,6 +219,7 @@ const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
         data-class="card-content"
         className={cn(
           spacingVariants({ p, px, py }),
+          'pt-0',
           className
         )}
         {...props}
