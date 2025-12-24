@@ -20,14 +20,20 @@ export default defineConfig({
     exclude: ['node_modules', 'dist', '.git', '.cache'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      // Measure coverage only for real source files (no dist, no tests).
+      // We intentionally do NOT include unimported files yet (TDD-first workflow).
+      all: false,
+      include: ['src/**/*.{ts,tsx}'],
+      reporter: ['text', 'json-summary', 'html'],
       exclude: [
         'node_modules/',
-        'tests/setup/',
-        'tests/config/',
+        'tests/',
         '**/*.d.ts',
         '**/*.config.*',
-        '**/index.ts',
+        // Barrel files are not a meaningful coverage target.
+        'src/**/index.ts',
+        // Variants will be covered later (CDL mapping phase).
+        'src/variants/**',
       ],
       thresholds: {
         global: {

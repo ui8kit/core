@@ -11,8 +11,6 @@
   "compilerOptions": {
     "composite": false,
     "declaration": false,
-    "declarationDir": null,
-    "outDir": null,
     "rootDir": ".",
     "types": ["vitest/globals", "@testing-library/jest-dom"],
     "baseUrl": "../",

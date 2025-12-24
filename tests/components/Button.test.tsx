@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@tests/utils/test-utils';
-import { Button } from '@ui8kit/core';
+import { Button } from '@/components/ui/Button';
 
 describe('Button', () => {
   it('renders a native <button> with children', () => {

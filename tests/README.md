@@ -62,10 +62,20 @@ Use the shared render helper:
 
 ```tsx
 import { render, screen } from '@tests/utils/test-utils';
-import { Button } from '@ui8kit/core';
+import { Button } from '@/components/ui/Button';
 
 it('renders a button', () => {
   render(<Button>Click</Button>);
   expect(screen.getByRole('button', { name: 'Click' })).toBeInTheDocument();
 });
 ```
+
+### Why tests import from `src` (and not from `@ui8kit/core`)
+
+For TDD we prefer importing the **exact module under test** from `src` (via `@/` aliases).
+If you import from `@ui8kit/core`, the barrel exports can load many unrelated modules, which:
+- makes coverage noisy,
+- makes tests slower,
+- and can hide what you're actually testing.
+
+Use `@ui8kit/core` only for higher-level "consumer-like" integration tests.

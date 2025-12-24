@@ -1,5 +1,5 @@
 import { render, screen } from '@tests/utils/test-utils';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@ui8kit/core';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/Card';
 
 describe('Card', () => {
   it('renders a basic card', () => {
@@ -71,6 +71,29 @@ describe('CardTitle', () => {
     const title = screen.getByText('Title text');
     expect(title).toHaveAttribute('data-class', 'card-title');
     expect(title).toHaveClass('font-semibold', 'tracking-tight');
+  });
+
+  it('renders the correct heading tag for order={1..6}', () => {
+    const cases = [
+      { order: 1, tag: 'H1' },
+      { order: 2, tag: 'H2' },
+      { order: 3, tag: 'H3' },
+      { order: 4, tag: 'H4' },
+      { order: 5, tag: 'H5' },
+      { order: 6, tag: 'H6' },
+    ] as const;
+
+    for (const c of cases) {
+      const text = `Title order ${c.order}`;
+      const { unmount } = render(<CardTitle order={c.order}>{text}</CardTitle>);
+      expect(screen.getByText(text).tagName).toBe(c.tag);
+      unmount();
+    }
+  });
+
+  it('falls back to h3 for unknown order values', () => {
+    render(<CardTitle order={999 as any}>Unknown</CardTitle>);
+    expect(screen.getByText('Unknown').tagName).toBe('H3');
   });
 });
 
