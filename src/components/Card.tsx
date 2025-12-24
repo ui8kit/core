@@ -9,13 +9,20 @@ import {
   borderVariants,
   layoutVariants,
   textSizeVariants,
+  cardRootVariants,
+  cardHeaderVariants,
+  cardTitleBaseVariants,
+  cardDescriptionVariants,
+  cardContentBaseVariants,
+  cardFooterBaseVariants,
   type VariantSpacingProps,
   type RoundedProps,
   type ShadowProps,
   type ColorProps,
   type BorderProps,
   type VariantLayoutProps,
-  type TextSizeProps
+  type TextSizeProps,
+  type CardRootVariantProps
 } from "../variants";
 
 // Main Card component interface
@@ -28,7 +35,7 @@ interface CardProps
     BorderProps,
     Pick<VariantLayoutProps, 'w' | 'h'> {
   children: ReactNode;
-  variant?: 'default' | 'outlined' | 'filled';
+  variant?: CardRootVariantProps['variant'];
 }
 
 // Enhanced Card component with prop forwarding
@@ -69,11 +76,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
           borderVariants({ border, borderTop, borderBottom, borderLeft, borderRight }),
           colorVariants({ borderColor }),
           layoutVariants({ w, h }),
-          {
-            'border-border': variant === 'default',
-            'border-border shadow-none': variant === 'outlined',
-            'border-transparent bg-muted/50': variant === 'filled',
-          },
+          cardRootVariants({ variant }),
           className
         )}
         {...props}
@@ -107,7 +110,7 @@ const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
         ref={ref}
         data-class="card-header"
         className={cn(
-          'flex flex-col space-y-1.5',
+          cardHeaderVariants(),
           spacingVariants({ p, px, py }),
           className
         )}
@@ -142,7 +145,7 @@ const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
       ref,
       'data-class': 'card-title',
       className: cn(
-        'font-semibold leading-none tracking-tight',
+        cardTitleBaseVariants(),
         // Apply CVA variants
         textSizeVariants({ size }),
         className
@@ -184,7 +187,7 @@ const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionProps>(
       ref={ref}
       data-class="card-description"
       className={cn(
-        'text-sm text-muted-foreground',
+        cardDescriptionVariants(),
         className
       )}
       {...props}
@@ -218,7 +221,7 @@ const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
         data-class="card-content"
         className={cn(
           spacingVariants({ p, px, py }),
-          'pt-0',
+          cardContentBaseVariants(),
           className
         )}
         {...props}
@@ -252,7 +255,7 @@ const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
         ref={ref}
         data-class="card-footer"
         className={cn(
-          'flex items-center pt-0',
+          cardFooterBaseVariants(),
           spacingVariants({ p, px, py }),
           className
         )}

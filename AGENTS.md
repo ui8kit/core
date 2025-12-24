@@ -22,6 +22,16 @@ For any change in `src/components/**` (including `src/components/ui/**`):
 - Then change the component implementation under `src/`
 - Keep tests green at all times
 
+### Styling rule (variants-only in components)
+
+In `src/components/**`:
+- Do not hardcode Tailwind utility class groups in component bodies (e.g. `'flex flex-col ...'`).
+- Move those class strings into `src/variants/**` and compose them in the component via variant functions.
+
+This rule is enforced by:
+- `scripts/coverage-guard.mjs` (checks changed files)
+- policy tests in `tests/components/` (checks key components)
+
 ### Coverage rule (strict for changed components)
 
 Changes to `src/components/**` are allowed only if:

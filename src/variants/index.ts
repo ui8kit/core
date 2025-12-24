@@ -15,6 +15,7 @@ export * from './button';
 export * from './badge';
 export * from './typography';
 export * from './image';
+export * from './card';
 
 // Additional typography helpers (transforms, whitespace, breaking, hyphens)
 export { 
