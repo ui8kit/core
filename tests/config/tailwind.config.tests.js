@@ -77,11 +77,5 @@ export default {
         mono: ["var(--font-mono)"],
       },
     },
-  },
-  plugins: [],
-  corePlugins: {
-    // Enable preflight to match real app rendering.
-    // Without preflight, browser user-agent styles leak into <button>/<input> and can cause black borders/outlines.
-    preflight: true,
-  },
+  }
 };

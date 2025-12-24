@@ -34,8 +34,7 @@ function TestApp() {
       >
         <span
           aria-hidden="true"
-          className="inline-block h-2.5 w-2.5 rounded-full"
-          style={{ backgroundColor: theme === 'dark' ? 'var(--ring)' : 'var(--primary)' }}
+          className={`inline-block h-2.5 w-2.5 rounded-full ${theme === 'dark' ? 'bg-chart-2' : 'bg-chart-5'}`}
         />
         {theme === 'dark' ? 'Dark' : 'Light'}
       </button>
@@ -81,7 +80,7 @@ function TestApp() {
             <CardDescription>Default composition with subcomponents</CardDescription>
           </CardHeader>
           <CardContent>
-            <Card variant="outlined">
+            <Card variant="filled">
               <CardHeader>
                 <CardTitle order={4}>Nested card</CardTitle>
                 <CardDescription>Header / content / footer structure</CardDescription>
