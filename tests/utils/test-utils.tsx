@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
-// Кастомный рендерер без провайдеров (библиотека не имеет тем)
+// Custom render wrapper (currently no providers; keep as a single extension point)
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
@@ -11,13 +11,13 @@ const customRender = (
   options?: Omit<RenderOptions, 'wrapper'>
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
-// Переэкспортируем все из @testing-library/react
+// Re-export everything from Testing Library
 export * from '@testing-library/react';
 
-// Переопределяем render методом с провайдерами
+// Override render with our wrapper
 export { customRender as render };
 
-// Утилиты для тестирования компонентов
+// Test helpers
 export const createTestProps = <T extends Record<string, any>>(
   overrides: Partial<T> = {}
 ): T => {
@@ -31,19 +31,19 @@ export const mockProps = <T extends Record<string, any>>(
   return { ...template, ...overrides };
 };
 
-// Утилиты для тестирования событий
+// Event helpers
 export const createMockEvent = (overrides = {}) => ({
   preventDefault: vi.fn(),
   stopPropagation: vi.fn(),
   ...overrides,
 });
 
-// Утилиты для тестирования форм
+// Form helpers
 export const createMockChangeEvent = (value: string, name?: string) => ({
   target: { value, name: name || 'test' },
 });
 
-// Типы для тестов
+// Types
 export type TestComponentProps<T> = T & {
   'data-testid'?: string;
 };

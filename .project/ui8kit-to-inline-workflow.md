@@ -1,146 +1,114 @@
-# UI8Kit to Universal Inline Styles Workflow
+# UI8Kit → CDL → Styles Adapters (Tailwind / head CSS / inline)
 
-## Overview
+## What we build
 
-This roadmap outlines a systematic approach to create a language-agnostic design system that enables UI8Kit components to generate styles in multiple formats: inline CSS, Tailwind classes, or any custom styling system through universal adapters. The core is a declarative Component Definition Language (CDL) that can be compiled to any target platform or framework.
+We turn UI8Kit into a **declarative, scriptable design system** where:
+- **Source of truth lives in React** (variants + CDL maps).
+- We can output styles as:
+  - **Pure Tailwind classes** (normal UI8Kit usage)
+  - **Inline styles** (Tailwind-free rendering)
+  - **`<style>`/head CSS** (Tailwind-free rendering with shared CSS)
+  - Any other target via adapters (Go, Python, Rust, etc.)
 
-## Core System Architecture
+## What to consider (constraints)
 
-### 1. Refactor UI8Kit Library Architecture
-- **Goal**: Restructure UI8Kit so that all styling definitions are declarative and separated from component logic
-- **Implementation**:
-  - Move all utility classes from component implementations to variant definitions
-  - Ensure components receive only variant props and semantic class names
-  - Create clean separation between component logic and styling definitions
-  - Support multiple output formats (Tailwind classes, inline styles, CSS modules)
+- **Minimal UI/UX baseline**: UI8Kit core is a clean prototype layer (no brand decorations).
+  - No gradients, complex shadows, animations, fancy effects by default.
+  - Brand styling happens in the next layer (theme/adapters).
+- **Tailwind classes never inside component bodies**: only in **variants**.
+- **Tokens via shadcn**: colors/radius/fonts/etc should be driven by token variables, not Tailwind’s default palette.
+- **Scoped support**: start with the exact set of classes actually used by variants (whitelist), not “all Tailwind”.
 
-### 2. Create Component Definition Language (CDL)
-- **Goal**: Develop a universal declarative language for defining component variants and styles
-- **Implementation**:
-  - Create CDL schema supporting multiple syntax formats (JSON, YAML, TypeScript)
-  - Define component variants with semantic class combinations
-  - Enable automatic generation of all variant combinations
-  - Support composition, inheritance, and conditional styling
-  - Allow mapping to different output formats (Tailwind, inline CSS, CSS-in-JS)
+## Artifacts (deliverables)
 
-### 3. Create Universal Style Mapping System
-- **Goal**: Build comprehensive mapping system for converting between different styling formats
-- **Implementation**:
-  - Create atomic CSS property mappings (1 class = 1 CSS property)
-  - Develop combinatorial generators for spacing, colors, and other utilities
-  - Build bidirectional converters (Tailwind ↔ CSS properties ↔ inline styles)
-  - Generate master whitelist of supported classes and properties
-  - Create validation system for style compatibility across formats
+- **A. UI8Kit variants**: the only place where utility classes are written.
+- **B. CDL maps**: declarative component/variant definitions for code generation.
+- **C. Tailwind class inventory**: exact whitelist extracted from variants.
+- **D. `class → CSS` map**: mapping for the whitelist (atomic when possible).
+- **E. Semantic map**: `semanticName → [tailwindLikeClasses...]`.
+- **F. Prototype exports**:
+  - HTML with **semantic classes**
+  - HTML with **utility classes**
+  - (optionally) HTML with **inline styles**
 
-### 4. Build Universal Design System Foundation
-- **Goal**: Establish semantic naming conventions and cross-platform design tokens
-- **Implementation**:
-  - Create semantic class maps with meaningful names mapping to utility combinations
-  - Support multiple output targets (web, mobile, desktop, print)
-  - Enable theme switching and design token customization
-  - Build responsive and conditional styling systems
+## Plan (tasks)
 
-### 5. Implement Multi-Format Style Resolution
-- **Goal**: Enable automatic conversion between semantic names and various output formats
-- **Implementation**:
-  - Components accept semantic class names as input
-  - Automatic resolution to target format (Tailwind, inline CSS, CSS modules, etc.)
-  - Support for composition, inheritance, and conditional overrides
-  - Validation against design system rules and constraints
+## React (source of truth)
 
-### 6. Create Universal Component Adapters
-- **Goal**: Generate component implementations for any target platform or framework
-- **Implementation**:
-  - Build adapter system for multiple languages and frameworks
-  - Support semantic-to-utility class resolution for each target
-  - Enable both static generation and runtime style compilation
-  - Create reusable component templates and patterns
+### 1) Refactor UI8Kit: “variants only”
+- Move all Tailwind utility strings out of JSX and into variant files.
+- Enforce rule: components consume variant props; no ad-hoc class strings in bodies.
+- Result: components = logic/structure, variants = styling.
 
-## Universal Platform Adapters
+### 2) Create CDL maps (declarative component definitions)
+- Define a CDL schema (YAML/JSON/TS) that describes:
+  - component name
+  - variant axes + options
+  - default variants
+  - compound variants (if needed)
+- Add scripts to generate/validate CDL output.
+- Result: a stable machine-readable description for generation.
 
-### 1. Create Core Mapping Engine
-- **Goal**: Build language-agnostic mapping system for style conversion
-- **Implementation**:
-  - Develop universal parser for CDL definitions
-  - Create bidirectional style converters (semantic ↔ utility ↔ inline)
-  - Implement validation and optimization engines
-  - Build caching and performance optimization layers
+### 3) Audit real Tailwind usage (whitelist)
+- Scan all variant definitions → extract unique class tokens.
+- Save to a single whitelist (e.g. `.project/core-classes.json`).
+- Result: exact class surface area that UI8Kit core supports.
 
-### 2. Develop Platform-Specific Adapters
-- **Goal**: Create adapters for different languages and frameworks
-- **Implementation**:
-  - **Web Adapters**: React, Vue, Svelte, Angular (inline styles, CSS-in-JS)
-  - **Backend Adapters**: Go, Python, Rust, Java (HTML generation, styling)
-  - **Mobile Adapters**: React Native, Flutter (platform-specific styling)
-  - **Desktop Adapters**: Electron, Tauri (CSS and native styling)
+### 4) Build `class → CSS3 properties` map for the whitelist
+- Create/maintain a map where:
+  - key = class name
+  - value = CSS declarations (prefer **1 class = 1 property**; allow small composites like `truncate`)
+- Include generators for tokenized classes (spacing, etc.) where it’s safe.
+- Result: deterministic conversion to inline CSS or head CSS.
 
-### 3. Implement Style Compilation Systems
-- **Goal**: Enable runtime and build-time style generation for each platform
-- **Implementation**:
-  - Build-time: Generate optimized style bundles and component code
-  - Runtime: Dynamic style compilation with caching
-  - Hybrid: Mix of pre-generated and dynamic styles
-  - Optimization: Tree-shaking, dead code elimination, minification
+### 5) Build semantic design system map
+- Define semantic keys that represent UI intent:
+  - `button.primary`, `card.surface`, `text.muted`, etc.
+- Values are **coordinated sets** of tailwind-like utilities (from the whitelist).
+- Add validation scripts that ensure:
+  - only whitelisted utilities are used
+  - no forbidden “decorative” classes slip into the core layer
+- Result: semantic-first UI building blocks.
 
-### 4. Create Component Generation Pipeline
-- **Goal**: Automate component creation for any target platform
-- **Implementation**:
-  - Parse CDL definitions into platform-specific code
-  - Generate component structures and styling logic
-  - Maintain semantic relationships across platforms
-  - Support both static and dynamic component generation
+### 6) Export static HTML5 prototypes (render static markup)
+- Render components to static HTML in 2 modes:
+  - **semantic mode**: semantic classes only (portable prototypes)
+  - **utility mode**: expanded utility classes (Tailwind-compatible)
+- Optional third mode:
+  - **inline mode**: compile utility classes → inline styles (Tailwind-free)
+- Result: reusable prototypes that can be displayed with Tailwind or without Tailwind.
 
-### 5. Integrate AI-Assisted Development
-- **Goal**: Leverage AI for rapid component and adapter generation
-- **Implementation**:
-  - Use CDL as input for LLM-driven code generation
-  - Generate platform-specific adapters and components
-  - Validate generated code against design system rules
-  - Create feedback loops for continuous improvement
+## Adapters (Go + any other language)
 
-### 6. Build Cross-Platform Tooling
-- **Goal**: Create unified CLI and development tools
-- **Implementation**:
-  - Universal CLI for component generation and style conversion
-  - Development server with hot-reload across platforms
-  - Testing and validation tools for cross-platform consistency
-  - Documentation and example generation
+### 7) Define adapter contract (language-agnostic)
+Inputs:
+- semantic classes OR utility classes
+- semantic map + class whitelist + class→CSS map
 
-## Benefits
+Outputs (choose per target):
+- utility classes (Tailwind mode)
+- inline style string/object
+- head CSS (deduplicated) + class names
 
-### Universal Consistency
-- Pixel-perfect alignment across all platforms and frameworks
-- Single source of truth for design decisions through CDL
-- Automated synchronization prevents platform drift
+### 8) Implement adapters per language/framework
+- Go adapter is just one implementation:
+  - semantic → utilities → inline/head CSS
+- Repeat for any language:
+  - Python/Rust/Java/… (HTML generation + styles)
+- Result: same CDL/maps, multiple runtimes.
 
-### Maximum Efficiency
-- Minimal manual coding through universal code generation
-- Rapid prototyping with semantic class system
-- Reusable components across web, mobile, desktop, and backend platforms
+## LLM workflow (optional accelerator)
 
-### Enhanced Maintainability
-- Centralized design system management through CDL
-- Automated validation and testing across all platforms
-- Easy updates through script-based generation and adapters
+### 9) Use prototypes as prompt input
+- Take exported HTML prototypes as input to LLM requests:
+  - generate templates/layout in target language
+  - keep class/semantic naming stable
+- Validate output against the whitelist/maps.
 
-### Ultimate Flexibility
-- Support for multiple output formats (Tailwind, inline CSS, CSS-in-JS, native styles)
-- Theme switching and customization capabilities
-- Platform-agnostic design tokens with universal adapters
-
-## Implementation Priority
-
-1. **Phase 1**: UI8Kit refactoring and CDL specification (Foundation)
-2. **Phase 2**: Universal style mapping system and atomic CSS generation (Core System)
-3. **Phase 3**: Multi-format style resolution and semantic mapping (Design System)
-4. **Phase 4**: Platform adapter development and component generation (Universal Adapters)
-5. **Phase 5**: AI-assisted development and cross-platform tooling (Automation & Scale)
-
-## Success Metrics
-
-- 100% class coverage in universal design system maps
-- Zero manual style definitions in component logic
-- Automated generation of 90%+ component code across platforms
-- Consistent rendering across web, mobile, desktop, and backend platforms
-- Reduced development time by 70%+ for new components
-- Support for 5+ major platforms/frameworks with single CDL definition
+## Success criteria (simple)
+- 0 Tailwind classes inside component bodies (variants-only rule).
+- 100% of variant classes present in whitelist.
+- 100% of whitelist classes mapped in `class → CSS`.
+- Prototypes render correctly in:
+  - Tailwind mode (utility classes)
+  - Tailwind-free mode (inline or head CSS)

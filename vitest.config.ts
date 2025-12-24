@@ -10,7 +10,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
       '@ui8kit/core': path.resolve(__dirname, './src/index'),
       '@tests': path.resolve(__dirname, './tests'),
-      '@tests/*': path.resolve(__dirname, './tests/*'),
     },
   },
   test: {

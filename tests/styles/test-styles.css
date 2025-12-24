@@ -29,13 +29,3 @@ body {
   @apply text-lg font-semibold mb-4;
 }
 
-/* Animation utilities for testing */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin {
-  animation: spin 1s linear infinite;
-}

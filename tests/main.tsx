@@ -2,85 +2,77 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/test-styles.css';
 
-// Импортируем компоненты
-import {
-  Button,
-  Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter,
-  Badge,
-  Text, Title,
-  Box,
-  Stack,
-  Group,
-  Container
-} from '@ui8kit/core';
+import { Button } from '@ui8kit/core';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@ui8kit/core';
 
 function TestApp() {
   return (
-    <Container size="lg" py="xl">
-      <Stack gap="lg">
-        <Title order={1}>@ui8kit/core Test Environment</Title>
+    <div className="test-container">
+      <h1 className="text-2xl font-semibold mb-6">@ui8kit/core — Dev Playground</h1>
+
+      <div className="grid gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Button</CardTitle>
+            <CardDescription>Variants and sizes (smoke test)</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-wrap gap-3 items-center">
+              <Button>Default</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="outline">Outline</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="link">Link</Button>
+              <Button variant="destructive">Destructive</Button>
+            </div>
+            <div className="flex flex-wrap gap-3 items-center mt-4">
+              <Button size="xs">XS</Button>
+              <Button size="sm">SM</Button>
+              <Button size="default">Default</Button>
+              <Button size="lg">LG</Button>
+              <Button size="xl">XL</Button>
+              <Button size="icon" aria-label="Icon button">
+                ⌁
+              </Button>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <span className="text-sm text-muted-foreground">
+              Tip: keep UI8Kit core minimal; brand styling lives in theme/tokens.
+            </span>
+          </CardFooter>
+        </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Component Showcase</CardTitle>
-            <CardDescription>
-              Testing environment for @ui8kit/core components
-            </CardDescription>
+            <CardTitle>Card</CardTitle>
+            <CardDescription>Default composition with subcomponents</CardDescription>
           </CardHeader>
           <CardContent>
-            <Stack gap="md">
-              <div>
-                <Title order={3} style={{ marginBottom: '12px' }}>Buttons</Title>
-                <Group>
-                  <Button variant="default">Default</Button>
-                  <Button variant="secondary">Secondary</Button>
-                  <Button variant="outline">Outline</Button>
-                  <Button variant="ghost">Ghost</Button>
-                  <Button variant="link">Link</Button>
-                </Group>
-              </div>
-
-              <div>
-                <Title order={3} style={{ marginBottom: '12px' }}>Badges</Title>
-                <Group>
-                  <Badge variant="default">Default</Badge>
-                  <Badge variant="secondary">Secondary</Badge>
-                  <Badge variant="destructive">Destructive</Badge>
-                  <Badge variant="outline">Outline</Badge>
-                </Group>
-              </div>
-
-              <div>
-                <Title order={3} style={{ marginBottom: '12px' }}>Typography</Title>
-                <Text>
-                  This is a text component demonstrating the typography system.
-                </Text>
-              </div>
-
-              <Box p="md" bg="muted">
-                <Text size="sm" c="muted">
-                  This box demonstrates background colors and spacing utilities.
-                </Text>
-              </Box>
-            </Stack>
+            <Card variant="outlined">
+              <CardHeader>
+                <CardTitle order={4}>Nested card</CardTitle>
+                <CardDescription>Header / content / footer structure</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  This is the content area. Use semantic structure first, decoration later.
+                </p>
+              </CardContent>
+              <CardFooter className="justify-end">
+                <Button size="sm">Action</Button>
+              </CardFooter>
+            </Card>
           </CardContent>
-          <CardFooter>
-            <Text size="sm" c="muted">
-              Test environment ready for development and testing.
-            </Text>
-          </CardFooter>
         </Card>
-      </Stack>
-    </Container>
+      </div>
+    </div>
   );
 }
 
-// Рендерим приложение
+// Render
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <TestApp />
   </React.StrictMode>,
 );
-
-// Логируем успешные импорты
-console.log('✅ @ui8kit/core components loaded successfully');

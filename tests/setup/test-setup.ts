@@ -1,13 +1,12 @@
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 
-// Очищаем после каждого теста
-// Используем глобальный afterEach из vitest globals
+// Cleanup after each test (using Vitest globals)
 global.afterEach(() => {
   cleanup();
 });
 
-// Глобальные настройки для тестов
+// Global test environment shims
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: (query: string) => ({
@@ -22,14 +21,14 @@ Object.defineProperty(window, 'matchMedia', {
   }),
 });
 
-// Mock для ResizeObserver
+// ResizeObserver mock
 global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
   disconnect() {}
 };
 
-// Mock для IntersectionObserver
+// IntersectionObserver mock
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}
