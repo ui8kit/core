@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/test-styles.css';
 
@@ -6,8 +6,40 @@ import { Button } from '@ui8kit/core';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@ui8kit/core';
 
 function TestApp() {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    try {
+      const saved = localStorage.getItem('ui8kit-tests-theme');
+      return saved === 'dark' ? 'dark' : 'light';
+    } catch {
+      return 'light';
+    }
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    try {
+      localStorage.setItem('ui8kit-tests-theme', theme);
+    } catch {
+      // Ignore storage errors (private mode, disabled storage, etc.)
+    }
+  }, [theme]);
+
   return (
     <div className="test-container">
+      <button
+        type="button"
+        className="fixed left-4 bottom-4 z-50 inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm text-card-foreground shadow-sm"
+        onClick={() => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))}
+        aria-label="Toggle theme"
+      >
+        <span
+          aria-hidden="true"
+          className="inline-block h-2.5 w-2.5 rounded-full"
+          style={{ backgroundColor: theme === 'dark' ? 'var(--ring)' : 'var(--primary)' }}
+        />
+        {theme === 'dark' ? 'Dark' : 'Light'}
+      </button>
+
       <h1 className="text-2xl font-semibold mb-6">@ui8kit/core — Dev Playground</h1>
 
       <div className="grid gap-6">
