@@ -439,6 +439,43 @@ npm run lint:fix
 npm run scan
 ```
 
+## Roadmap CDL mapping
+
+### 1) Refactor UI8Kit: “variants only”
+- Move all Tailwind utility strings out of JSX and into variant files.
+- Enforce rule: components consume variant props; no ad-hoc class strings in bodies.
+- Result: components = logic/structure, variants = styling.
+
+### 2) Create CDL maps (declarative component definitions)
+- Define a CDL schema (YAML/JSON/TS) that describes:
+  - component name
+  - variant axes + options
+  - default variants
+  - compound variants (if needed)
+- Add scripts to generate/validate CDL output.
+- Result: a stable machine-readable description for generation.
+
+### 3) Audit real Tailwind usage (whitelist)
+- Scan all variant definitions → extract unique class tokens.
+- Save to a single whitelist (e.g. `.project/core-classes.json`).
+- Result: exact class surface area that UI8Kit core supports.
+
+### 4) Build `class → CSS3 properties` map for the whitelist
+- Create/maintain a map where:
+  - key = class name
+  - value = CSS declarations (prefer **1 class = 1 property**; allow small composites like `truncate`)
+- Include generators for tokenized classes (spacing, etc.) where it’s safe.
+- Result: deterministic conversion to inline CSS or head CSS.
+
+### 5) Build semantic design system map
+- Define semantic keys that represent UI intent:
+  - `button.primary`, `card.surface`, `text.muted`, etc.
+- Values are **coordinated sets** of tailwind-like utilities (from the whitelist).
+- Add validation scripts that ensure:
+  - only whitelisted utilities are used
+  - no forbidden “decorative” classes slip into the core layer
+- Result: semantic-first UI building blocks.
+
 ## 📄 License
 
 MIT - see [LICENSE](./LICENSE) file for details
