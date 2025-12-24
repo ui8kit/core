@@ -3,14 +3,10 @@ export const colorTokens = {
   /**
    * 2026 Color Year
    * Cloud Dancer
-   * 'cloud-dancer': '#f0eee9'
+   * Base: cloud-dancer (#f0eee9) converted to HSL for shadcn-like usage.
    * 
    * https://www.pantone.com/color-of-the-year/2026
-   */
-  'none': ' none',
-  'inherit': ' inherit',
-  'current': ' currentColor',
-  'transparent': ' transparent',
+   * 
   'black': '#000',
   'white': '#fff',
   'cloud-dancer': '#f0eee9',
@@ -34,50 +30,37 @@ export const colorTokens = {
   'gray-700': '#484746',
   'gray-800': '#302f2f',
   'gray-900': '#181717',
+   */
+  'none': ' none',
+  'inherit': ' inherit',
+  'current': ' currentColor',
+  'transparent': ' transparent',
+
+  // Neutrals (HSL)
+  'black': 'hsl(0 0% 0%)',
+  'white': 'hsl(0 0% 100%)',
+  'cloud-dancer': 'hsl(43 18.9% 92.7%)',
+  'cloud-0': 'hsl(0 0% 99.2%)',
+  'cloud-1': 'hsl(48 14.3% 93.1%)',
+  'cloud-2': 'hsl(45 12.5% 93.7%)',
+  'cloud-3': 'hsl(45 14.3% 94.5%)',
+  'cloud-4': 'hsl(40 12% 95.1%)',
+  'cloud-5': 'hsl(40 14.3% 95.9%)',
+  'cloud-6': 'hsl(60 11.1% 96.5%)',
+  'cloud-7': 'hsl(30 14.3% 97.3%)',
+  'cloud-9': 'hsl(0 14.3% 98.6%)',
 
   /**
-   * Monochrome
-   * 'cloud-dancer': '#f0eee9'
+   * Atmosphere (HSL)
+   * Picked for "cloud systems" UI: calm blues + teal + warm highlight.
    */
-  'monochrome-1': '#f0efec',
-  'monochrome-2': '#f0efed',
-  'monochrome-3': '#f0f0ef',
-
-  /**
-   * Atmosphere
-   * 'cloud-dancer': '#f0eee9'
-   */
-  'regatta': '#497ab7',
-  'alaskan-blue': '#6da9d2',
-  'cosmic-sky': '#aaaac4',
-  'aqua-gray': '#a5b2aa',
-  'rinsing-rivulet': '#5cc6c3',
-  'dusky-citron': '#e3cc81',
-  'nantucket-breeze': '#b7d1ea',
-
-  /**
-   * Triad
-   * 'cloud-dancer': '#f0eee9'
-   * 'mint-green': '#07f0ad'
-   */
-  'violet-berry': '#ad07f0',
-
-  /**
-   * Tetrad
-   * 'cloud-dancer': '#f0eee9'
-   */
-  'mint-green': '#07f0ad',
-  'blue-berry': '#074af0',
-  'rose-pink': '#f0074a',
-
-  /**
-   * Pentad
-   * 'cloud-dancer': '#f0eee9'
-   */
-  'jade-green': '#a3d59e',
-  'ice-blue': '#9eced5',
-  'lavender-purple': '#af9ed5',
-  'dusky-rose': '#d59eb9',
+  'regatta': 'hsl(213 43.3% 50.2%)',
+  'alaskan-blue': 'hsl(204 52.9% 62.5%)',
+  'cosmic-sky': 'hsl(240 18.1% 71.8%)',
+  'aqua-gray': 'hsl(143 7.8% 67.3%)',
+  'rinsing-rivulet': 'hsl(178 48.2% 56.9%)',
+  'dusky-citron': 'hsl(46 63.6% 69.8%)',
+  'nantucket-breeze': 'hsl(209 54.8% 81.8%)',
 };
 
 export const coloredEntries = {

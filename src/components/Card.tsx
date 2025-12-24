@@ -62,7 +62,6 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         ref={ref}
         data-class="card"
         className={cn(
-          'text-card-foreground transition-colors',
           spacingVariants({ p: p || 'md', px, py, pt, pb, pl, pr, m, mx, my, mt, mb, ml, mr }),
           roundedVariants({ rounded }),
           shadowVariants({ shadow }),

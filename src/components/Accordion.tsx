@@ -137,7 +137,6 @@ const AccordionTrigger = React.forwardRef<HTMLButtonElement, AccordionTriggerPro
         ref={ref}
         variant="ghost"
         w={w || "full"}
-        contentAlign="between"
         onClick={() => onItemClick(value)}
         data-class="accordion-trigger"
         rounded={rounded}
