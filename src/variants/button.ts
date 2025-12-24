@@ -19,7 +19,7 @@ export const buttonSizeVariants = cva("", {
 });
 
 // Button style variants
-export const buttonStyleVariants = cva("", {
+export const buttonStyleVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2", {
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground hover:bg-primary/90",

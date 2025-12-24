@@ -43,7 +43,7 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
     className,
     order = 1,
     size = 'lg',
-    fw = 'semibold',
+    fw = 'bold',
     ta,
     leading = 'normal',
     tracking,
@@ -51,7 +51,7 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
     // Spacing props
     m, mx, my, mb, mt,
     // Color props
-    c = 'foreground',
+    c,
     // Layout props
     w,
     ...props 
@@ -65,7 +65,6 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
         ref={ref}
         data-class="title"
         className={cn(
-          'font-semibold tracking-tight',
           textSizeVariants({ size }),
           fontWeightVariants({ fw }),
           textAlignVariants({ ta }),
