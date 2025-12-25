@@ -6,6 +6,7 @@ import {
   colorVariants,
   layoutVariants,
   flexVariants,
+  groupLayoutVariants,
   type VariantSpacingProps,
   type ColorProps,
   type VariantLayoutProps,
@@ -57,8 +58,7 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
           spacingVariants({ p, px, py, m, mx, my }),
           colorVariants({ bg, c }),
           layoutVariants({ w, h }),
-          grow && 'flex-1',
-          preventGrowOverflow && 'min-w-0',
+          groupLayoutVariants({ grow, preventGrowOverflow }),
           className
         )}
         {...props}

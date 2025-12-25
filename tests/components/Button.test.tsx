@@ -1,18 +1,7 @@
 import { render, screen, fireEvent } from '@tests/utils/test-utils';
 import { Button } from '@/components/ui/Button';
-import fs from 'node:fs';
-import path from 'node:path';
 
 describe('Button', () => {
-  it('does not hardcode Tailwind class groups inside the component file (variants-only policy)', () => {
-    const filePath = path.resolve(process.cwd(), 'src/components/ui/Button.tsx');
-    const source = fs.readFileSync(filePath, 'utf8');
-
-    // Heuristic: inline Tailwind groups usually appear as string literals containing spaces.
-    // We forbid those in src/components/**. Variant tokens like 'md' are allowed.
-    expect(source).not.toMatch(/['"`][^'"`]*\s+[^'"`]*['"`]/);
-  });
-
   it('renders a native <button> with children', () => {
     render(<Button>Click me</Button>);
     expect(screen.getByRole('button', { name: 'Click me' })).toBeInTheDocument();

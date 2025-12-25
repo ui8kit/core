@@ -1,7 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
-// Card root variants (visual-only utility classes belong here, not in components)
-export const cardRootVariants = cva("", {
+export const cardVariantVariants = cva("", {
   variants: {
     variant: {
       default: "border-border",
@@ -14,16 +13,16 @@ export const cardRootVariants = cva("", {
   },
 });
 
-export interface CardRootVariantProps extends VariantProps<typeof cardRootVariants> {}
-
 export const cardHeaderVariants = cva("flex flex-col space-y-1.5");
 
-export const cardTitleBaseVariants = cva("font-semibold leading-none tracking-tight");
+export const cardTitleVariants = cva("font-semibold leading-none tracking-tight");
 
 export const cardDescriptionVariants = cva("text-sm text-muted-foreground");
 
-export const cardContentBaseVariants = cva("pt-0");
+export const cardContentVariants = cva("pt-0");
 
-export const cardFooterBaseVariants = cva("flex items-center pt-0");
+export const cardFooterVariants = cva("flex items-center pt-0");
+
+export interface CardVariantProps extends VariantProps<typeof cardVariantVariants> {}
 
 

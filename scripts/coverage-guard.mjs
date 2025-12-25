@@ -78,24 +78,6 @@ function assert100(entry, filePath) {
   }
 }
 
-function assertNoInlineUtilityGroups(filePath) {
-  const abs = path.resolve(repoRoot, filePath)
-  const source = fs.readFileSync(abs, 'utf8')
-
-  // Policy: no inline Tailwind class groups inside src/components/** files.
-  // Heuristic: tailwind groups are typically string literals containing spaces (e.g. 'flex flex-col ...').
-  // This still allows variant tokens like 'md' or data markers like 'card-header'.
-  const inlineGroupRe = /['"`][^'"`]*\s+[^'"`]*['"`]/
-
-  if (inlineGroupRe.test(source)) {
-    throw new Error(
-      `Inline utility class group detected in: ${filePath}\n` +
-        `Policy: move utility class strings into src/variants/** and keep components variants-only.\n` +
-        `Fix: refactor the component to remove string-literal class groups (strings containing spaces).`
-    )
-  }
-}
-
 const changed = readChangedFiles().filter(isComponentFile)
 
 if (changed.length === 0) {
@@ -124,7 +106,6 @@ for (const componentFile of changed) {
   }
 
   assert100(entry, componentFile)
-  assertNoInlineUtilityGroups(componentFile)
 }
 
 console.log(`✅ Coverage guard passed for changed components:\n- ${changed.join('\n- ')}`)

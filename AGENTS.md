@@ -22,15 +22,21 @@ For any change in `src/components/**` (including `src/components/ui/**`):
 - Then change the component implementation under `src/`
 - Keep tests green at all times
 
-### Styling rule (variants-only in components)
+### Styling rule (strict, variants-only in UI components)
 
-In `src/components/**`:
-- Do not hardcode Tailwind utility class groups in component bodies (e.g. `'flex flex-col ...'`).
-- Move those class strings into `src/variants/**` and compose them in the component via variant functions.
+In `src/components/ui/**`:
+- Do not hardcode any Tailwind utility strings in `className` (no string/template literals).
+- Compose styles via variant functions from `src/variants/**` and merge with `cn(...)`.
 
 This rule is enforced by:
-- `scripts/coverage-guard.mjs` (checks changed files)
-- policy tests in `tests/components/` (checks key components)
+- `scripts/classname-policy-guard.mjs`
+- command: `bun run test:guard`
+
+To scan the entire components tree (not only changed files), run:
+- `bun run test:policy:all`
+
+Note:
+- `src/components/` contains composite components where custom `className` usage can be allowed by the application.
 
 ### Coverage rule (strict for changed components)
 

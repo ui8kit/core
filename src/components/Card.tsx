@@ -9,20 +9,19 @@ import {
   borderVariants,
   layoutVariants,
   textSizeVariants,
-  cardRootVariants,
+  cardVariantVariants,
   cardHeaderVariants,
-  cardTitleBaseVariants,
+  cardTitleVariants,
   cardDescriptionVariants,
-  cardContentBaseVariants,
-  cardFooterBaseVariants,
+  cardContentVariants,
+  cardFooterVariants,
   type VariantSpacingProps,
   type RoundedProps,
   type ShadowProps,
   type ColorProps,
   type BorderProps,
   type VariantLayoutProps,
-  type TextSizeProps,
-  type CardRootVariantProps
+  type TextSizeProps
 } from "../variants";
 
 // Main Card component interface
@@ -35,7 +34,7 @@ interface CardProps
     BorderProps,
     Pick<VariantLayoutProps, 'w' | 'h'> {
   children: ReactNode;
-  variant?: CardRootVariantProps['variant'];
+  variant?: 'default' | 'outlined' | 'filled';
 }
 
 // Enhanced Card component with prop forwarding
@@ -76,7 +75,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
           borderVariants({ border, borderTop, borderBottom, borderLeft, borderRight }),
           colorVariants({ borderColor }),
           layoutVariants({ w, h }),
-          cardRootVariants({ variant }),
+          cardVariantVariants({ variant }),
           className
         )}
         {...props}
@@ -145,8 +144,7 @@ const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
       ref,
       'data-class': 'card-title',
       className: cn(
-        cardTitleBaseVariants(),
-        // Apply CVA variants
+        cardTitleVariants(),
         textSizeVariants({ size }),
         className
       ),
@@ -221,7 +219,7 @@ const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
         data-class="card-content"
         className={cn(
           spacingVariants({ p, px, py }),
-          cardContentBaseVariants(),
+          cardContentVariants(),
           className
         )}
         {...props}
@@ -255,7 +253,7 @@ const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
         ref={ref}
         data-class="card-footer"
         className={cn(
-          cardFooterBaseVariants(),
+          cardFooterVariants(),
           spacingVariants({ p, px, py }),
           className
         )}

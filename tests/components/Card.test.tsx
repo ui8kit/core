@@ -1,18 +1,7 @@
 import { render, screen } from '@tests/utils/test-utils';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/Card';
-import fs from 'node:fs';
-import path from 'node:path';
 
 describe('Card', () => {
-  it('does not hardcode Tailwind class groups inside the component file (variants-only policy)', () => {
-    const filePath = path.resolve(process.cwd(), 'src/components/Card.tsx');
-    const source = fs.readFileSync(filePath, 'utf8');
-
-    // Heuristic: inline Tailwind groups usually appear as string literals containing spaces.
-    // We forbid those in src/components/**. Variant tokens like 'md' are allowed.
-    expect(source).not.toMatch(/['"`][^'"`]*\s+[^'"`]*['"`]/);
-  });
-
   it('renders a basic card', () => {
     render(<Card>Card content</Card>);
     const card = screen.getByText('Card content');
