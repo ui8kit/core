@@ -1,5 +1,15 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
+// Image base variants
+export const imageBaseVariants = cva("block", {
+  variants: {
+    withPlaceholder: {
+      true: "bg-muted",
+      false: "",
+    },
+  },
+});
+
 // Image fit variants
 export const imageFitVariants = cva("", {
   variants: {
@@ -57,3 +67,4 @@ export const aspectRatioVariants = cva("", {
 export interface ImageFitProps extends VariantProps<typeof imageFitVariants> {}
 export interface ImagePositionProps extends VariantProps<typeof imagePositionVariants> {}
 export interface AspectRatioProps extends VariantProps<typeof aspectRatioVariants> {} 
+export interface ImageBaseProps extends VariantProps<typeof imageBaseVariants> {}

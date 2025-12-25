@@ -5,6 +5,7 @@ import {
   spacingVariants,
   colorVariants,
   containerSizeVariants,
+  containerLayoutVariants,
   textAlignVariants,
   type VariantSpacingProps,
   type ColorProps,
@@ -51,8 +52,7 @@ export const Container = forwardRef<HTMLElement, ContainerProps>(
         data-class="container"
         className={cn(
           containerSizeVariants({ size }),
-          centered && 'mx-auto',
-          fluid && 'max-w-none',
+          containerLayoutVariants({ centered, fluid }),
           textAlignVariants({ ta }),
           spacingVariants({ p, px, py, pt, pb, pl, pr, m, mx, my, mt, mb, ml, mr }),
           colorVariants({ bg, c, borderColor }),

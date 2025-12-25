@@ -5,6 +5,7 @@ import {
   roundedVariants,
   shadowVariants,
   layoutVariants,
+  imageBaseVariants,
   imageFitVariants,
   imagePositionVariants,
   aspectRatioVariants,
@@ -71,8 +72,7 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
         height={height}
         onError={handleError}
         className={cn(
-          'block',
-          withPlaceholder && 'bg-muted',
+          imageBaseVariants({ withPlaceholder }),
           imageFitVariants({ fit }),
           imagePositionVariants({ position }),
           aspectRatioVariants({ aspect }),

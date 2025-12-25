@@ -9,6 +9,12 @@ import {
   borderVariants,
   layoutVariants,
   textSizeVariants,
+  cardVariantVariants,
+  cardHeaderVariants,
+  cardTitleVariants,
+  cardDescriptionVariants,
+  cardContentVariants,
+  cardFooterVariants,
   type VariantSpacingProps,
   type RoundedProps,
   type ShadowProps,
@@ -69,11 +75,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
           borderVariants({ border, borderTop, borderBottom, borderLeft, borderRight }),
           colorVariants({ borderColor }),
           layoutVariants({ w, h }),
-          {
-            'border-border': variant === 'default',
-            'border-border shadow-none': variant === 'outlined',
-            'border-transparent bg-muted/50': variant === 'filled',
-          },
+          cardVariantVariants({ variant }),
           className
         )}
         {...props}
@@ -107,7 +109,7 @@ const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
         ref={ref}
         data-class="card-header"
         className={cn(
-          'flex flex-col space-y-1.5',
+          cardHeaderVariants(),
           spacingVariants({ p, px, py }),
           className
         )}
@@ -142,8 +144,7 @@ const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
       ref,
       'data-class': 'card-title',
       className: cn(
-        'font-semibold leading-none tracking-tight',
-        // Apply CVA variants
+        cardTitleVariants(),
         textSizeVariants({ size }),
         className
       ),
@@ -184,7 +185,7 @@ const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionProps>(
       ref={ref}
       data-class="card-description"
       className={cn(
-        'text-sm text-muted-foreground',
+        cardDescriptionVariants(),
         className
       )}
       {...props}
@@ -218,7 +219,7 @@ const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
         data-class="card-content"
         className={cn(
           spacingVariants({ p, px, py }),
-          'pt-0',
+          cardContentVariants(),
           className
         )}
         {...props}
@@ -252,7 +253,7 @@ const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
         ref={ref}
         data-class="card-footer"
         className={cn(
-          'flex items-center pt-0',
+          cardFooterVariants(),
           spacingVariants({ p, px, py }),
           className
         )}
