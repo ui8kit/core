@@ -71,13 +71,13 @@ export const colorVariants = cva("", {
     },
     // Selection color (requires global selection styles support)
     selectionBg: {
-      primary: "selection:bg-primary",
-      secondary: "selection:bg-secondary",
-      accent: "selection:bg-accent"
+      primary: "bg-primary",
+      secondary: "bg-secondary",
+      accent: "bg-accent"
     },
     selectionText: {
-      foreground: "selection:text-foreground",
-      primary: "selection:text-primary"
+      foreground: "text-foreground",
+      primary: "text-primary"
     }
   }
 });

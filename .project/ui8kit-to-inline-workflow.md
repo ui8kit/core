@@ -21,15 +21,18 @@ We turn UI8Kit into a **declarative, scriptable design system** where:
 
 ## Artifacts (deliverables)
 
-- **A. UI8Kit variants**: the only place where utility classes are written.
-- **B. CDL maps**: declarative component/variant definitions for code generation.
-- **C. Tailwind class inventory**: exact whitelist extracted from variants.
-- **D. `class → CSS` map**: mapping for the whitelist (atomic when possible).
-- **E. Semantic map**: `semanticName → [tailwindLikeClasses...]`.
-- **F. Prototype exports**:
-  - HTML with **semantic classes**
-  - HTML with **utility classes**
-  - (optionally) HTML with **inline styles**
+These five artifacts are the core of the system:
+
+- **1) Whitelist (single source of truth)**: allowed utility class tokens (+ allowed patterns, if any).
+- **2) `class → CSS` map**: direct mapping from whitelisted classes to CSS declarations.
+- **3) CDL variants map**: structured component variant definitions (no modifiers, no arbitrary values).
+- **4) Semantic map (app-specific)**: `semanticKey → [utility classes...]` (must be whitelisted).
+- **5) Validator**: verifies that all classes used by CDL/semantic maps are whitelisted and mappable.
+
+Optional exports (for prototyping):
+- HTML with **semantic classes**
+- HTML with **utility classes**
+- HTML with **inline styles** (Tailwind-free)
 
 ## Plan (tasks)
 
@@ -40,37 +43,44 @@ We turn UI8Kit into a **declarative, scriptable design system** where:
 - Enforce rule: components consume variant props; no ad-hoc class strings in bodies.
 - Result: components = logic/structure, variants = styling.
 
-### 2) Create CDL maps (declarative component definitions)
-- Define a CDL schema (YAML/JSON/TS) that describes:
+### 2) Create CDL variants map (structured, modifiers-free)
+- Define a minimal CDL schema that describes:
   - component name
-  - variant axes + options
+  - variant axes + options (each option value must be a single utility token)
   - default variants
-  - compound variants (if needed)
-- Add scripts to generate/validate CDL output.
-- Result: a stable machine-readable description for generation.
+  - optional compound rules (still one token per field)
+- Add a separate structured form for **responsive rules** (no `md:` in strings):
+  - Example: `cols: [{ bp: "base", value: 1 }, { bp: "lg", value: 4 }]`
+- Result: a stable machine-readable style contract for generation and validation.
 
-### 3) Audit real Tailwind usage (whitelist)
-- Scan all variant definitions → extract unique class tokens.
-- Save to a single whitelist (e.g. `.project/core-classes.json`).
-- Result: exact class surface area that UI8Kit core supports.
+### 3) Build the whitelist (single source of truth)
+- Scan current variants → extract all class tokens used in core.
+- Normalize tokens:
+  - keep `/` tokens (e.g. `bg-muted/50`)
+  - remove modifiers (`md:`, `hover:`, etc.) from CDL/core maps
+  - remove arbitrary values (`*-\\[...\\]`) and replace with clean tokens
+- Save as a whitelist file (e.g. `.project/core-classes.json`).
+- Result: the only allowed class surface area for maps and compilers.
 
-### 4) Build `class → CSS3 properties` map for the whitelist
-- Create/maintain a map where:
-  - key = class name
-  - value = CSS declarations (prefer **1 class = 1 property**; allow small composites like `truncate`)
-- Include generators for tokenized classes (spacing, etc.) where it’s safe.
-- Result: deterministic conversion to inline CSS or head CSS.
+### 4) Build the `class → CSS` map for the whitelist
+- Ensure every whitelisted token has a deterministic CSS mapping.
+- Prefer **1 token → 1 CSS property**. Allow small composites only when unavoidable (e.g. `truncate`).
+- Result: deterministic conversion for inline/head CSS modes.
 
-### 5) Build semantic design system map
+### 5) Build semantic map (app-specific)
 - Define semantic keys that represent UI intent:
   - `button.primary`, `card.surface`, `text.muted`, etc.
-- Values are **coordinated sets** of tailwind-like utilities (from the whitelist).
-- Add validation scripts that ensure:
-  - only whitelisted utilities are used
-  - no forbidden “decorative” classes slip into the core layer
-- Result: semantic-first UI building blocks.
+- Values are coordinated sets of **whitelisted** utility tokens.
+- Result: semantic-first UI composition without losing the whitelist guarantees.
 
-### 6) Export static HTML5 prototypes (render static markup)
+### 6) Add validator (maps vs whitelist)
+- Validate:
+  - every class used in CDL variants map is in the whitelist
+  - every class used in semantic map is in the whitelist
+  - every whitelisted class has a `class → CSS` mapping
+- Result: guaranteed consistency across the system.
+
+### 7) Export static HTML5 prototypes (optional)
 - Render components to static HTML in 2 modes:
   - **semantic mode**: semantic classes only (portable prototypes)
   - **utility mode**: expanded utility classes (Tailwind-compatible)

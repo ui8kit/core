@@ -22,6 +22,38 @@ For any change in `src/components/**` (including `src/components/ui/**`):
 - Then change the component implementation under `src/`
 - Keep tests green at all times
 
+## CDL (Component Definition Language) workflow
+
+### Goal
+
+We are moving UI8Kit styling to a declarative system driven by a whitelist:
+- **Whitelist**: the single source of truth for allowed utility classes
+- **class → CSS map**: converts whitelisted classes to CSS declarations
+- **CDL variants map**: structured variant definitions (no class modifiers)
+- **Semantic map**: app-specific semantic names mapped to whitelisted utilities
+
+### Rules
+
+- **Whitelist-first**: any new class must be added to the whitelist and mapped in `class → CSS`.
+- **No modifiers in CDL**: CDL and core variant maps must not contain `md:`, `hover:`, `focus:`, `dark:`, etc.
+- **No arbitrary values**: forbid bracket syntax like `w-[...]`, `min-h-[...]`, `aspect-[...]` in CDL/core variants.
+- **Responsive is structural**: represent responsive behavior as a rule list, not via `md:` strings.
+
+Example (Grid columns responsive rules):
+
+```ts
+cols: [
+  { bp: "base", value: 1 },
+  { bp: "md", value: 2 },
+  { bp: "lg", value: 3 },
+  { bp: "xl", value: 4 }
+]
+```
+
+Compilers can turn this into:
+- Tailwind classes (`grid-cols-1 md:grid-cols-2 ...`) for web
+- `@media` CSS rules (`grid-template-columns: repeat(...)`) for head CSS output
+
 ### Styling rule (strict, variants-only in UI components)
 
 In `src/components/ui/**`:

@@ -64,10 +64,6 @@ export const layoutVariants = cva("", {
     },
     // Min height
     minH: {
-      "200px": "min-h-[200px]",
-      "300px": "min-h-[300px]",
-      "400px": "min-h-[400px]",
-      "500px": "min-h-[500px]",
       screen: "min-h-screen",
       full: "min-h-full"
     },
