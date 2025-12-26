@@ -6,7 +6,7 @@
  */
 import React, { forwardRef } from "react";
 import { cn } from "@/lib/utils";
-import { gridVariants } from "@/variants/flex";
+import { gridVariants } from "@/variants/grid";
 
 // =============================================================================
 // USING EXISTING VARIANTS - No duplication of Tailwind classes
@@ -88,7 +88,7 @@ const ORDER_CLASSES = {
 // TYPES - Using VariantGridProps from existing variants
 // =============================================================================
 
-import type { VariantGridProps } from "@/variants/flex";
+import type { VariantGridProps } from "@/variants/grid";
 
 type GridCols = NonNullable<VariantGridProps["cols"]>;
 type GridGap = NonNullable<VariantGridProps["gap"]>;
