@@ -33,10 +33,11 @@
     "test:policy:all": "node scripts/classname-policy-guard.mjs --all",
     "scan:variants:classes": "node scripts/scan-variant-classes.mjs --dir src/variants",
     "cdl:extract": "node scripts/extract-cdl-from-variants.mjs",
+    "cdl:trace": "bun scripts/trace-cdl.ts",
     "cdl:whitelist": "node scripts/build-whitelist-from-cdl.mjs",
     "cdl:classmap:missing": "node scripts/report-classmap-missing.mjs",
     "cdl:emit:ts": "node scripts/emit-cdl-ts.mjs",
-    "cdl:sync": "bun run cdl:extract && bun run cdl:whitelist && bun run cdl:emit:ts",
+    "cdl:sync": "bun run cdl:trace && bun run cdl:whitelist && bun run cdl:classmap:missing",
     "test:ui": "vitest --ui",
     "test:dev": "vite --config vite.test-dev.config.ts --host",
     "test:watch": "vitest --watch"
