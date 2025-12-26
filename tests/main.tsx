@@ -4,6 +4,8 @@ import './styles/test-styles.css';
 
 import { Button } from '@ui8kit/core';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@ui8kit/core';
+import { Grid } from '@ui8kit/core';
+import { Block } from '@ui8kit/core';
 
 function TestApp() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -42,6 +44,35 @@ function TestApp() {
       <h1 className="text-2xl font-semibold mb-6">@ui8kit/core — Dev Playground</h1>
 
       <div className="grid gap-6">
+        <Block
+          variant="section"
+          className="bg-primary text-primary-foreground rounded-lg p-4"
+        >
+          <Card variant="filled">
+            <CardHeader>
+              <CardTitle order={4}>Grid</CardTitle>
+              <CardDescription>Responsive cols rule list</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Grid
+                cols={[
+                  { bp: "base", value: 1 },
+                  { bp: "md", value: 2 },
+                  { bp: "lg", value: 3 }
+                ]}
+                gap="md"
+              >
+                <div className="h-10 rounded-md bg-primary-foreground/10" />
+                <div className="h-10 rounded-md bg-primary-foreground/10" />
+                <div className="h-10 rounded-md bg-primary-foreground/10" />
+                <div className="h-10 rounded-md bg-primary-foreground/10" />
+                <div className="h-10 rounded-md bg-primary-foreground/10" />
+                <div className="h-10 rounded-md bg-primary-foreground/10" />
+              </Grid>
+            </CardContent>
+          </Card>
+        </Block>
+
         <Card>
           <CardHeader>
             <CardTitle>Button</CardTitle>

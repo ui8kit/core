@@ -16,18 +16,18 @@ import {
   type BorderProps
 } from "../../variants";
 
-export interface BlockProps 
-  extends React.HTMLAttributes<HTMLElement>,
-    VariantSpacingProps,
-    ColorProps,
-    Pick<VariantLayoutProps, 'w' | 'h' | 'minH' | 'position'>,
-    RoundedProps,
-    ShadowProps,
-    BorderProps {
+export type BlockProps 
+  = React.HTMLAttributes<HTMLElement> &
+    VariantSpacingProps &
+    ColorProps &
+    Pick<VariantLayoutProps, 'w' | 'h' | 'minH' | 'position'> &
+    RoundedProps &
+    ShadowProps &
+    BorderProps & {
   children: ReactNode;
   component?: ElementType;
   variant?: 'section' | 'main' | 'nav' | 'article' | 'header' | 'footer' | 'aside' | 'div';
-}
+};
 
 export const Block = forwardRef<HTMLElement, BlockProps>(
   ({ 

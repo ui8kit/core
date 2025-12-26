@@ -31,7 +31,7 @@
     "test:coverage": "vitest run --coverage",
     "test:guard": "bun run test:coverage && node scripts/coverage-guard.mjs && node scripts/classname-policy-guard.mjs",
     "test:policy:all": "node scripts/classname-policy-guard.mjs --all",
-    "scan:variants:classes": "node scripts/scan-variant-classes.mjs --dir src/variants",
+    "scan:variants:classes": "node scripts/scan-variant-classes.mjs --dir src/cdl",
     "cdl:extract": "node scripts/extract-cdl-from-variants.mjs",
     "cdl:trace": "bun scripts/trace-cdl.ts",
     "cdl:whitelist": "node scripts/build-whitelist-from-cdl.mjs",

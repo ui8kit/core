@@ -1,7 +1,7 @@
 /**
  * Grid component using Tailwind CSS classes (JIT-compatible)
  *
- * Uses existing gridVariants from @src/variants/grid.ts to avoid duplication
+ * Uses gridVariants from @/variants (CDL-backed) for base grid variants
  * All class strings are static for proper Tailwind JIT compilation
  */
 import React, { forwardRef } from "react";
@@ -12,8 +12,8 @@ import { gridVariants } from "@/variants";
 // USING EXISTING VARIANTS - No duplication of Tailwind classes
 // =============================================================================
 
-// All grid-related classes come from gridVariants in @src/variants/grid.ts
-// This ensures single source of truth and avoids duplication
+// All grid-related base classes come from gridVariants (CDL-backed).
+// Responsive behavior is represented structurally and compiled here (no "md:" strings in CDL).
 
 const COL_SPAN_CLASSES = {
   1: "col-span-1",
@@ -90,7 +90,7 @@ const ORDER_CLASSES = {
 
 import type { VariantGridProps } from "@/variants";
 
-type GridCols = NonNullable<VariantGridProps["cols"]>;
+type GridColsValue = number | NonNullable<VariantGridProps["cols"]>;
 type GridGap = NonNullable<VariantGridProps["gap"]>;
 type GridAlign = NonNullable<VariantGridProps["align"]>;
 type GridJustify = NonNullable<VariantGridProps["justify"]>;
@@ -101,6 +101,55 @@ type GridFlow = NonNullable<VariantGridProps["flow"]>;
 type GridAutoRows = NonNullable<VariantGridProps["autoRows"]>;
 type GridAutoCols = NonNullable<VariantGridProps["autoCols"]>;
 
+type GridBreakpoint = "base" | "sm" | "md" | "lg" | "xl" | "2xl";
+
+export type GridColsRule = {
+  bp: GridBreakpoint;
+  value: number;
+};
+
+function bpPrefix(bp: GridBreakpoint): "" | "sm:" | "md:" | "lg:" | "xl:" | "2xl:" {
+  switch (bp) {
+    case "base":
+      return "";
+    case "sm":
+      return "sm:";
+    case "md":
+      return "md:";
+    case "lg":
+      return "lg:";
+    case "xl":
+      return "xl:";
+    case "2xl":
+      return "2xl:";
+  }
+}
+
+function compileCols(cols?: GridColsValue | GridColsRule[]): string {
+  if (!cols) return "";
+
+  // Simple: cols={3}
+  if (!Array.isArray(cols)) {
+    const key = String(cols) as unknown as NonNullable<VariantGridProps["cols"]>;
+    return gridVariants({ cols: key });
+  }
+
+  // Responsive rule list: cols={[{bp:"base",value:1},{bp:"md",value:2}]}
+  const out: string[] = [];
+  for (const rule of cols) {
+    if (!rule) continue;
+    const prefix = bpPrefix(rule.bp);
+    const value = rule.value;
+    if (prefix === "") {
+      const key = String(value) as unknown as NonNullable<VariantGridProps["cols"]>;
+      out.push(gridVariants({ cols: key }));
+      continue;
+    }
+    out.push(`${prefix}grid-cols-${value}`);
+  }
+  return out.join(" ").trim();
+}
+
 // Grid item specific types (not in gridVariants)
 type GridColSpan = keyof typeof COL_SPAN_CLASSES;
 type GridColStart = keyof typeof COL_START_CLASSES;
@@ -108,8 +157,8 @@ type GridColEnd = keyof typeof COL_END_CLASSES;
 type GridOrder = keyof typeof ORDER_CLASSES;
 
 export interface GridProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Number of columns or responsive pattern like "1-2-3" */
-  cols?: GridCols;
+  /** Number of columns or responsive rules list */
+  cols?: GridColsValue | GridColsRule[];
   /** Gap between items */
   gap?: GridGap;
   /** Vertical alignment of items */
@@ -163,18 +212,20 @@ const Grid = forwardRef<HTMLDivElement, GridProps>((props, ref) => {
   } = props;
 
   // Use gridVariants for all grid-related classes
-  const gridClasses = gridVariants({
-    cols,
-    gap,
-    align,
-    justify,
-    justifyItems,
-    rows,
-    content,
-    flow,
-    autoRows,
-    autoCols
-  });
+  const gridClasses = cn(
+    compileCols(cols),
+    gridVariants({
+      gap,
+      align,
+      justify,
+      justifyItems,
+      rows,
+      content,
+      flow,
+      autoRows,
+      autoCols,
+    } as any)
+  );
 
   const gridClassName = cn(gridClasses, className);
 

@@ -13,17 +13,17 @@ import {
   type TextAlignProps
 } from "../../variants";
 
-export interface ContainerProps 
-  extends React.HTMLAttributes<HTMLElement>,
-    VariantSpacingProps,
-    ColorProps,
-    ContainerSizingProps,
-    TextAlignProps {
+export type ContainerProps 
+  = React.HTMLAttributes<HTMLElement> &
+    VariantSpacingProps &
+    ColorProps &
+    ContainerSizingProps &
+    TextAlignProps & {
   children: ReactNode;
   component?: ElementType;
   centered?: boolean;
   fluid?: boolean;
-}
+};
 
 export const Container = forwardRef<HTMLElement, ContainerProps>(
   ({ 

@@ -14,16 +14,16 @@ import {
   type TextAlignProps
 } from "../../variants";
 
-export interface StackProps 
-  extends React.HTMLAttributes<HTMLElement>,
-    Pick<VariantSpacingProps, 'p' | 'px' | 'py' | 'm' | 'mx' | 'my'>,
-    Pick<ColorProps, 'bg' | 'c'>,
-    Pick<VariantLayoutProps, 'w' | 'h'>,
-    Pick<VariantFlexProps, 'gap' | 'align' | 'justify' | 'direction'>,
-    TextAlignProps {
+export type StackProps 
+  = React.HTMLAttributes<HTMLElement> &
+    Pick<VariantSpacingProps, 'p' | 'px' | 'py' | 'm' | 'mx' | 'my'> &
+    Pick<ColorProps, 'bg' | 'c'> &
+    Pick<VariantLayoutProps, 'w' | 'h'> &
+    Pick<VariantFlexProps, 'gap' | 'align' | 'justify' | 'direction'> &
+    TextAlignProps & {
   children: ReactNode;
   component?: ElementType;
-}
+};
 
 export const Stack = forwardRef<HTMLElement, StackProps>(
   ({ 

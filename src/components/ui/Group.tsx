@@ -13,17 +13,17 @@ import {
   type VariantFlexProps
 } from "../../variants";
 
-export interface GroupProps 
-  extends React.HTMLAttributes<HTMLElement>,
-    Pick<VariantSpacingProps, 'p' | 'px' | 'py' | 'm' | 'mx' | 'my'>,
-    Pick<ColorProps, 'bg' | 'c'>,
-    Pick<VariantLayoutProps, 'w' | 'h'>,
-    Pick<VariantFlexProps, 'gap' | 'align' | 'justify' | 'wrap'> {
+export type GroupProps 
+  = React.HTMLAttributes<HTMLElement> &
+    Pick<VariantSpacingProps, 'p' | 'px' | 'py' | 'm' | 'mx' | 'my'> &
+    Pick<ColorProps, 'bg' | 'c'> &
+    Pick<VariantLayoutProps, 'w' | 'h'> &
+    Pick<VariantFlexProps, 'gap' | 'align' | 'justify' | 'wrap'> & {
   children: ReactNode;
   component?: ElementType;
   grow?: boolean;
   preventGrowOverflow?: boolean;
-}
+};
 
 export const Group = forwardRef<HTMLElement, GroupProps>(
   ({ 

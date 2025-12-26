@@ -16,17 +16,17 @@ import {
   type ButtonStyleProps,
 } from "../../variants";
 
-export interface ButtonProps 
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mr'>,
-    RoundedProps,
-    ShadowProps,
-    Pick<VariantLayoutProps, 'w'>,
-    ButtonSizeProps,
-    ButtonStyleProps {
+export type ButtonProps 
+  = React.ButtonHTMLAttributes<HTMLButtonElement> &
+    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mr'> &
+    RoundedProps &
+    ShadowProps &
+    Pick<VariantLayoutProps, 'w'> &
+    ButtonSizeProps &
+    ButtonStyleProps & {
   children: ReactNode;
   disabled?: boolean;
-}
+};
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ 

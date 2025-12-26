@@ -22,20 +22,20 @@ import {
   type TrackingProps
 } from "../../variants";
 
-export interface TitleProps 
-  extends React.HTMLAttributes<HTMLHeadingElement>,
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'>,
-    Pick<ColorProps, 'c'>,
-    Pick<VariantLayoutProps, 'w'>,
-    TextSizeProps,
-    FontWeightProps,
-    TextAlignProps,
-    LeadingProps,
-    TrackingProps,
-    Pick<TypographyModifierProps, 'truncate'> {
+export type TitleProps 
+  = React.HTMLAttributes<HTMLHeadingElement> &
+    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'> &
+    Pick<ColorProps, 'c'> &
+    Pick<VariantLayoutProps, 'w'> &
+    TextSizeProps &
+    FontWeightProps &
+    TextAlignProps &
+    LeadingProps &
+    TrackingProps &
+    Pick<TypographyModifierProps, 'truncate'> & {
   children: ReactNode;
   order?: 1 | 2 | 3 | 4 | 5 | 6;
-}
+};
 
 export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
   ({ 

@@ -22,36 +22,101 @@ function getDef(namespace: string, exportName: string) {
 // -----------------------------------------------------------------------------
 
 export const spacingVariants = cdlToCva(getDef("spacing", "spacingVariants"));
-export type VariantSpacingProps = VariantProps<typeof spacingVariants>;
+export type VariantSpacingProps = {
+  m?: VariantProps<typeof spacingVariants>["m"];
+  mx?: VariantProps<typeof spacingVariants>["mx"];
+  my?: VariantProps<typeof spacingVariants>["my"];
+  mt?: VariantProps<typeof spacingVariants>["mt"];
+  mb?: VariantProps<typeof spacingVariants>["mb"];
+  ml?: VariantProps<typeof spacingVariants>["ml"];
+  mr?: VariantProps<typeof spacingVariants>["mr"];
+  p?: VariantProps<typeof spacingVariants>["p"];
+  px?: VariantProps<typeof spacingVariants>["px"];
+  py?: VariantProps<typeof spacingVariants>["py"];
+  pt?: VariantProps<typeof spacingVariants>["pt"];
+  pb?: VariantProps<typeof spacingVariants>["pb"];
+  pl?: VariantProps<typeof spacingVariants>["pl"];
+  pr?: VariantProps<typeof spacingVariants>["pr"];
+  gap?: VariantProps<typeof spacingVariants>["gap"];
+  gapX?: VariantProps<typeof spacingVariants>["gapX"];
+  gapY?: VariantProps<typeof spacingVariants>["gapY"];
+};
 
 export const roundedVariants = cdlToCva(getDef("rounded", "roundedVariants"));
 export const roundedSideVariants = cdlToCva(getDef("rounded", "roundedSideVariants"));
-export interface RoundedProps extends VariantProps<typeof roundedVariants> {}
+export type RoundedProps = { rounded?: VariantProps<typeof roundedVariants>["rounded"] };
 
 export const shadowVariants = cdlToCva(getDef("shadow", "shadowVariants"));
-export interface ShadowProps extends VariantProps<typeof shadowVariants> {}
+export type ShadowProps = { shadow?: VariantProps<typeof shadowVariants>["shadow"] };
 
 export const colorVariants = cdlToCva(getDef("colors", "colorVariants"));
-export interface ColorProps extends VariantProps<typeof colorVariants> {}
+export type ColorProps = {
+  bg?: VariantProps<typeof colorVariants>["bg"];
+  c?: VariantProps<typeof colorVariants>["c"];
+  borderColor?: VariantProps<typeof colorVariants>["borderColor"];
+};
 
 export const layoutVariants = cdlToCva(getDef("layout", "layoutVariants"));
-export type VariantLayoutProps = VariantProps<typeof layoutVariants>;
+export type VariantLayoutProps = {
+  display?: VariantProps<typeof layoutVariants>["display"];
+  w?: VariantProps<typeof layoutVariants>["w"];
+  h?: VariantProps<typeof layoutVariants>["h"];
+  minW?: VariantProps<typeof layoutVariants>["minW"];
+  minH?: VariantProps<typeof layoutVariants>["minH"];
+  maxW?: VariantProps<typeof layoutVariants>["maxW"];
+  maxH?: VariantProps<typeof layoutVariants>["maxH"];
+  position?: VariantProps<typeof layoutVariants>["position"];
+  z?: VariantProps<typeof layoutVariants>["z"];
+  overflow?: VariantProps<typeof layoutVariants>["overflow"];
+};
 
 export const borderVariants = cdlToCva(getDef("border", "borderVariants"));
-export interface BorderProps extends VariantProps<typeof borderVariants> {}
+export type BorderProps = {
+  border?: VariantProps<typeof borderVariants>["border"];
+  borderTop?: VariantProps<typeof borderVariants>["borderTop"];
+  borderRight?: VariantProps<typeof borderVariants>["borderRight"];
+  borderBottom?: VariantProps<typeof borderVariants>["borderBottom"];
+  borderLeft?: VariantProps<typeof borderVariants>["borderLeft"];
+};
 
 export const sizingVariants = cdlToCva(getDef("sizing", "sizingVariants"));
 export const iconSizeVariants = cdlToCva(getDef("sizing", "iconSizeVariants"));
 export const containerSizeVariants = cdlToCva(getDef("sizing", "containerSizeVariants"));
-export interface SizingProps extends VariantProps<typeof sizingVariants> {}
-export interface IconSizingProps extends VariantProps<typeof iconSizeVariants> {}
-export interface ContainerSizingProps extends VariantProps<typeof containerSizeVariants> {}
+export type SizingProps = { size?: VariantProps<typeof sizingVariants>["size"] };
+export type IconSizingProps = { size?: VariantProps<typeof iconSizeVariants>["size"] };
+export type ContainerSizingProps = { size?: VariantProps<typeof containerSizeVariants>["size"] };
 
 export const flexVariants = cdlToCva(getDef("flex", "flexVariants"));
-export type VariantFlexProps = VariantProps<typeof flexVariants>;
+export type VariantFlexProps = {
+  direction?: VariantProps<typeof flexVariants>["direction"];
+  align?: VariantProps<typeof flexVariants>["align"];
+  justify?: VariantProps<typeof flexVariants>["justify"];
+  wrap?: VariantProps<typeof flexVariants>["wrap"];
+  gap?: VariantProps<typeof flexVariants>["gap"];
+  grow?: VariantProps<typeof flexVariants>["grow"];
+  shrink?: VariantProps<typeof flexVariants>["shrink"];
+  basis?: VariantProps<typeof flexVariants>["basis"];
+};
 
 export const gridVariants = cdlToCva(getDef("grid", "gridVariants"));
-export interface VariantGridProps extends VariantProps<typeof gridVariants> {}
+export type VariantGridProps = {
+  cols?: VariantProps<typeof gridVariants>["cols"];
+  gap?: VariantProps<typeof gridVariants>["gap"];
+  align?: VariantProps<typeof gridVariants>["align"];
+  justify?: VariantProps<typeof gridVariants>["justify"];
+  justifyItems?: VariantProps<typeof gridVariants>["justifyItems"];
+  rows?: VariantProps<typeof gridVariants>["rows"];
+  content?: VariantProps<typeof gridVariants>["content"];
+  flow?: VariantProps<typeof gridVariants>["flow"];
+  autoRows?: VariantProps<typeof gridVariants>["autoRows"];
+  autoCols?: VariantProps<typeof gridVariants>["autoCols"];
+  rowStart?: VariantProps<typeof gridVariants>["rowStart"];
+  rowEnd?: VariantProps<typeof gridVariants>["rowEnd"];
+  colStart?: VariantProps<typeof gridVariants>["colStart"];
+  colEnd?: VariantProps<typeof gridVariants>["colEnd"];
+  gapX?: VariantProps<typeof gridVariants>["gapX"];
+  gapY?: VariantProps<typeof gridVariants>["gapY"];
+};
 
 // -----------------------------------------------------------------------------
 // Component-specific variants
@@ -59,13 +124,13 @@ export interface VariantGridProps extends VariantProps<typeof gridVariants> {}
 
 export const buttonSizeVariants = cdlToCva(getDef("button", "buttonSizeVariants"));
 export const buttonStyleVariants = cdlToCva(getDef("button", "buttonStyleVariants"));
-export interface ButtonSizeProps extends VariantProps<typeof buttonSizeVariants> {}
-export interface ButtonStyleProps extends VariantProps<typeof buttonStyleVariants> {}
+export type ButtonSizeProps = { size?: VariantProps<typeof buttonSizeVariants>["size"] };
+export type ButtonStyleProps = { variant?: VariantProps<typeof buttonStyleVariants>["variant"] };
 
 export const badgeSizeVariants = cdlToCva(getDef("badge", "badgeSizeVariants"));
 export const badgeStyleVariants = cdlToCva(getDef("badge", "badgeStyleVariants"));
-export interface BadgeSizeProps extends VariantProps<typeof badgeSizeVariants> {}
-export interface BadgeStyleProps extends VariantProps<typeof badgeStyleVariants> {}
+export type BadgeSizeProps = { size?: VariantProps<typeof badgeSizeVariants>["size"] };
+export type BadgeStyleProps = { variant?: VariantProps<typeof badgeStyleVariants>["variant"] };
 
 export const cardVariantVariants = cdlToCva(getDef("card", "cardVariantVariants"));
 export const cardHeaderVariants = cdlToCva(getDef("card", "cardHeaderVariants"));
@@ -82,9 +147,9 @@ export const imageBaseVariants = cdlToCva(getDef("image", "imageBaseVariants"));
 export const imageFitVariants = cdlToCva(getDef("image", "imageFitVariants"));
 export const imagePositionVariants = cdlToCva(getDef("image", "imagePositionVariants"));
 export const aspectRatioVariants = cdlToCva(getDef("image", "aspectRatioVariants"));
-export interface ImageFitProps extends VariantProps<typeof imageFitVariants> {}
-export interface ImagePositionProps extends VariantProps<typeof imagePositionVariants> {}
-export interface AspectRatioProps extends VariantProps<typeof aspectRatioVariants> {}
+export type ImageFitProps = { fit?: VariantProps<typeof imageFitVariants>["fit"] };
+export type ImagePositionProps = { position?: VariantProps<typeof imagePositionVariants>["position"] };
+export type AspectRatioProps = { ratio?: VariantProps<typeof aspectRatioVariants>["ratio"] };
 
 // -----------------------------------------------------------------------------
 // Typography
@@ -102,13 +167,16 @@ export const whitespaceVariants = cdlToCva(getDef("typography", "whitespaceVaria
 export const breakVariants = cdlToCva(getDef("typography", "breakVariants"));
 export const hyphenVariants = cdlToCva(getDef("typography", "hyphenVariants"));
 
-export interface TextSizeProps extends VariantProps<typeof textSizeVariants> {}
-export interface FontWeightProps extends VariantProps<typeof fontWeightVariants> {}
-export interface TextAlignProps extends VariantProps<typeof textAlignVariants> {}
-export interface LeadingProps extends VariantProps<typeof leadingVariants> {}
-export interface TypographyModifierProps
-  extends VariantProps<typeof typographyModifierVariants> {}
-export interface TrackingProps extends VariantProps<typeof trackingVariants> {}
+export type TextSizeProps = { size?: VariantProps<typeof textSizeVariants>["size"] };
+export type FontWeightProps = { fw?: VariantProps<typeof fontWeightVariants>["fw"] };
+export type TextAlignProps = { ta?: VariantProps<typeof textAlignVariants>["ta"] };
+export type LeadingProps = { leading?: VariantProps<typeof leadingVariants>["leading"] };
+export type TypographyModifierProps = {
+  truncate?: VariantProps<typeof typographyModifierVariants>["truncate"];
+  italic?: VariantProps<typeof typographyModifierVariants>["italic"];
+  underline?: VariantProps<typeof typographyModifierVariants>["underline"];
+};
+export type TrackingProps = { tracking?: VariantProps<typeof trackingVariants>["tracking"] };
 
 // Combined interfaces (kept for compatibility with previous variants barrel)
 export interface UniversalProps extends VariantSpacingProps, RoundedProps, ShadowProps, ColorProps, BorderProps {}

@@ -16,16 +16,16 @@ import {
   type BadgeStyleProps,
 } from "../../variants";
 
-export interface BadgeProps 
-  extends React.HTMLAttributes<HTMLDivElement>,
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'>,
-    RoundedProps,
-    ShadowProps,
-    BorderProps,
-    BadgeSizeProps,
-    BadgeStyleProps {
+export type BadgeProps 
+  = React.HTMLAttributes<HTMLDivElement> &
+    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'> &
+    RoundedProps &
+    ShadowProps &
+    BorderProps &
+    BadgeSizeProps &
+    BadgeStyleProps & {
   children: ReactNode;
-}
+};
 
 export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
   ({ 

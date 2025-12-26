@@ -10,15 +10,15 @@ import {
   type IconSizingProps
 } from "../../variants";
 
-export interface IconProps 
-  extends React.HTMLAttributes<HTMLElement>,
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'>,
-    Pick<ColorProps, 'c'>,
-    IconSizingProps {
+export type IconProps 
+  = React.HTMLAttributes<HTMLElement> &
+    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'> &
+    Pick<ColorProps, 'c'> &
+    IconSizingProps & {
   children?: ReactNode;
   component?: ElementType;
   lucideIcon?: any; // For Lucide React icons
-}
+};
 
 export const Icon = forwardRef<HTMLElement, IconProps>(
   ({

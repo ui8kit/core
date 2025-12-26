@@ -18,20 +18,20 @@ import {
   type AspectRatioProps
 } from "../../variants";
 
-export interface ImageProps 
-  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'>,
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'>,
-    RoundedProps,
-    ShadowProps,
-    Pick<VariantLayoutProps, 'w' | 'h'>,
-    ImageFitProps,
-    ImagePositionProps,
-    AspectRatioProps {
+export type ImageProps 
+  = Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'> &
+    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'> &
+    RoundedProps &
+    ShadowProps &
+    Pick<VariantLayoutProps, 'w' | 'h'> &
+    ImageFitProps &
+    ImagePositionProps &
+    AspectRatioProps & {
   width?: string | number;
   height?: string | number;
   fallbackSrc?: string;
   withPlaceholder?: boolean;
-}
+};
 
 export const Image = forwardRef<HTMLImageElement, ImageProps>(
   ({ 

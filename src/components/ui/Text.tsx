@@ -22,20 +22,20 @@ import {
   type TrackingProps
 } from "../../variants";
 
-export interface TextProps 
-  extends React.HTMLAttributes<HTMLElement>,
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'>,
-    Pick<ColorProps, 'c'>,
-    Pick<VariantLayoutProps, 'w'>,
-    TextSizeProps,
-    FontWeightProps,
-    TextAlignProps,
-    LeadingProps,
-    TrackingProps,
-    TypographyModifierProps {
+export type TextProps 
+  = React.HTMLAttributes<HTMLElement> &
+    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'> &
+    Pick<ColorProps, 'c'> &
+    Pick<VariantLayoutProps, 'w'> &
+    TextSizeProps &
+    FontWeightProps &
+    TextAlignProps &
+    LeadingProps &
+    TrackingProps &
+    TypographyModifierProps & {
   children: ReactNode;
   component?: ElementType;
-}
+};
 
 export const Text = forwardRef<HTMLElement, TextProps>(
   ({ 
