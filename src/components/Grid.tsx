@@ -1,7 +1,7 @@
 /**
  * Grid component using Tailwind CSS classes (JIT-compatible)
  *
- * Uses existing gridVariants from @src/variants/flex.ts to avoid duplication
+ * Uses existing gridVariants from @src/variants/grid.ts to avoid duplication
  * All class strings are static for proper Tailwind JIT compilation
  */
 import React, { forwardRef } from "react";
@@ -12,7 +12,7 @@ import { gridVariants } from "@/variants/grid";
 // USING EXISTING VARIANTS - No duplication of Tailwind classes
 // =============================================================================
 
-// All grid-related classes come from gridVariants in @src/variants/flex.ts
+// All grid-related classes come from gridVariants in @src/variants/grid.ts
 // This ensures single source of truth and avoids duplication
 
 const COL_SPAN_CLASSES = {

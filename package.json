@@ -32,6 +32,9 @@
     "test:guard": "bun run test:coverage && node scripts/coverage-guard.mjs && node scripts/classname-policy-guard.mjs",
     "test:policy:all": "node scripts/classname-policy-guard.mjs --all",
     "scan:variants:classes": "node scripts/scan-variant-classes.mjs --dir src/variants",
+    "cdl:extract": "node scripts/extract-cdl-from-variants.mjs",
+    "cdl:whitelist": "node scripts/build-whitelist-from-cdl.mjs",
+    "cdl:classmap:missing": "node scripts/report-classmap-missing.mjs",
     "test:ui": "vitest --ui",
     "test:dev": "vite --config vite.test-dev.config.ts --host",
     "test:watch": "vitest --watch"

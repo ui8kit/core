@@ -9,6 +9,7 @@ export * from './layout';
 export * from './border';
 export * from './sizing';
 export * from './flex';
+export * from './grid';
 
 // Component-specific variants
 export * from './button';
