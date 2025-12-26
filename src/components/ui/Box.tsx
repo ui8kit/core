@@ -20,20 +20,21 @@ import {
   type AspectRatioProps
 } from "../../variants";
 
-export interface BoxProps 
-  extends VariantSpacingProps,
-    RoundedProps,
-    ShadowProps,
-    ColorProps,
-    VariantLayoutProps,
-    BorderProps,
-    VariantFlexProps,
-    AspectRatioProps {
-  component?: ElementType;
-  className?: string;
-  children?: ReactNode;
-  [key: string]: any;
-}
+export type BoxProps 
+  = React.HTMLAttributes<HTMLElement> &
+  VariantSpacingProps &
+    RoundedProps &
+    ShadowProps &
+    ColorProps &
+    VariantLayoutProps &
+    BorderProps &
+    VariantFlexProps &
+    AspectRatioProps & {
+      component?: ElementType;
+      className?: string;
+      children?: ReactNode;
+      [key: string]: any;
+    };
 
 export const Box = forwardRef<HTMLElement, BoxProps>(
   ({ 

@@ -139,17 +139,61 @@ export const cardDescriptionVariants = cdlToCva(getDef("card", "cardDescriptionV
 export const cardContentVariants = cdlToCva(getDef("card", "cardContentVariants"));
 export const cardFooterVariants = cdlToCva(getDef("card", "cardFooterVariants"));
 
-export const containerLayoutVariants = cdlToCva(getDef("container", "containerLayoutVariants"));
+// Boolean variant keys are not reliably preserved in the generated CDL trace yet,
+// so we define these small boolean-based variants explicitly for correctness.
+export const containerLayoutVariants = cva("", {
+  variants: {
+    centered: {
+      center: "mx-auto",
+      left: "",
+    },
+    fluid: {
+      fluid: "max-w-none",
+      fixed: "",
+    },
+  },
+  defaultVariants: {
+    centered: "center",
+    fluid: "fixed",
+  },
+});
 
-export const groupLayoutVariants = cdlToCva(getDef("group", "groupLayoutVariants"));
+export const groupLayoutVariants = cva("", {
+  variants: {
+    grow: {
+      grow: "flex-1",
+      "no-grow": "",
+    },
+    preventGrowOverflow: {
+      "prevent-grow-overflow": "min-w-0",
+      "allow-grow-overflow": "",
+    },
+  },
+  defaultVariants: {
+    grow: "no-grow",
+    preventGrowOverflow: "prevent-grow-overflow",
+  },
+});
 
-export const imageBaseVariants = cdlToCva(getDef("image", "imageBaseVariants"));
+export const imageBaseVariants = cva("block", {
+  variants: {
+    withPlaceholder: {
+      "with-placeholder": "bg-muted",
+      "no-placeholder": "",
+    },
+  },
+  defaultVariants: {
+    withPlaceholder: "no-placeholder",
+  },
+});
 export const imageFitVariants = cdlToCva(getDef("image", "imageFitVariants"));
 export const imagePositionVariants = cdlToCva(getDef("image", "imagePositionVariants"));
 export const aspectRatioVariants = cdlToCva(getDef("image", "aspectRatioVariants"));
 export type ImageFitProps = { fit?: VariantProps<typeof imageFitVariants>["fit"] };
 export type ImagePositionProps = { position?: VariantProps<typeof imagePositionVariants>["position"] };
 export type AspectRatioProps = { ratio?: VariantProps<typeof aspectRatioVariants>["ratio"] };
+
+export const iconBaseVariants = cva("inline-block flex items-center justify-center");
 
 // -----------------------------------------------------------------------------
 // Typography
@@ -159,7 +203,27 @@ export const textSizeVariants = cdlToCva(getDef("typography", "textSizeVariants"
 export const fontWeightVariants = cdlToCva(getDef("typography", "fontWeightVariants"));
 export const textAlignVariants = cdlToCva(getDef("typography", "textAlignVariants"));
 export const leadingVariants = cdlToCva(getDef("typography", "leadingVariants"));
-export const typographyModifierVariants = cdlToCva(getDef("typography", "typographyModifierVariants"));
+export const typographyModifierVariants = cva("", {
+  variants: {
+    truncate: {
+      truncate: "truncate",
+      "no-truncate": "",
+    },
+    italic: {
+      italic: "italic",
+      "no-italic": "",
+    },
+    underline: {
+      underline: "underline",
+      "no-underline": "",
+    },
+  },
+  defaultVariants: {
+    truncate: "no-truncate",
+    italic: "no-italic",
+    underline: "no-underline",
+  },
+});
 export const trackingVariants = cdlToCva(getDef("typography", "trackingVariants"));
 
 export const textTransformVariants = cdlToCva(getDef("typography", "textTransformVariants"));

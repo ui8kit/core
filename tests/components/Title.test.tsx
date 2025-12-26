@@ -15,7 +15,7 @@ describe("Title", () => {
 
   it("applies truncate modifier", () => {
     render(
-      <Title truncate data-testid="t">
+      <Title truncate="truncate" data-testid="t">
         X
       </Title>
     );

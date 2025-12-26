@@ -4,6 +4,7 @@ import { cn } from "../../lib/utils";
 import {
   spacingVariants,
   colorVariants,
+  iconBaseVariants,
   iconSizeVariants,
   type VariantSpacingProps,
   type ColorProps,
@@ -34,7 +35,7 @@ export const Icon = forwardRef<HTMLElement, IconProps>(
     const { 'aria-hidden': ariaHidden, role, ...rest } = props;
 
     const baseClasses = cn(
-      'inline-block flex items-center justify-center',
+      iconBaseVariants(),
       iconSizeVariants({ size }),
       spacingVariants({ m, mx, my }),
       colorVariants({ c }),

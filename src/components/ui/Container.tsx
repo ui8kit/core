@@ -52,7 +52,7 @@ export const Container = forwardRef<HTMLElement, ContainerProps>(
         data-class="container"
         className={cn(
           containerSizeVariants({ size }),
-          containerLayoutVariants({ centered, fluid }),
+          containerLayoutVariants({ centered: centered ? 'center' : 'left', fluid: fluid ? 'fluid' : 'fixed' }),
           textAlignVariants({ ta }),
           spacingVariants({ p, px, py, pt, pb, pl, pr, m, mx, my, mt, mb, ml, mr }),
           colorVariants({ bg, c, borderColor }),

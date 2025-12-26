@@ -38,6 +38,16 @@ describe('Container', () => {
     expect(el).not.toHaveClass('max-w-screen-md');
   });
 
+  it('does not apply mx-auto when centered is false', () => {
+    render(
+      <Container centered={false} data-testid="c">
+        X
+      </Container>
+    );
+    const el = screen.getByTestId('c');
+    expect(el).not.toHaveClass('mx-auto');
+  });
+
   it('merges custom className', () => {
     render(
       <Container className="custom" data-testid="c">

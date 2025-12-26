@@ -42,7 +42,7 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
     height,
     fit = 'cover',
     position = 'center',
-    aspect = 'auto',
+    ratio = 'auto',
     rounded,
     shadow,
     fallbackSrc,
@@ -72,10 +72,10 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
         height={height}
         onError={handleError}
         className={cn(
-          imageBaseVariants({ withPlaceholder }),
+          imageBaseVariants({ withPlaceholder: withPlaceholder ? 'with-placeholder' : 'no-placeholder' }),
           imageFitVariants({ fit }),
           imagePositionVariants({ position }),
-          aspectRatioVariants({ aspect }),
+          aspectRatioVariants({ ratio }),
           spacingVariants({ m, mx, my }),
           layoutVariants({ w, h }),
           roundedVariants({ rounded }),

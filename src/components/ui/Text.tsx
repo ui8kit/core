@@ -47,9 +47,9 @@ export const Text = forwardRef<HTMLElement, TextProps>(
     ta,
     leading = 'normal',
     tracking,
-    truncate = false,
-    italic = false,
-    underline = false,
+    truncate = 'no-truncate',
+    italic = 'no-italic',
+    underline = 'no-underline',
     // Spacing props
     m, mx, my, mb, mt,
     // Color props

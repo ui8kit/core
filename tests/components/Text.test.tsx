@@ -21,6 +21,18 @@ describe("Text", () => {
     );
     expect(screen.getByTestId("t").tagName.toLowerCase()).toBe("span");
   });
+
+  it("applies typography modifiers", () => {
+    render(
+      <Text italic="italic" underline="underline" truncate="truncate" data-testid="t">
+        X
+      </Text>
+    );
+    const el = screen.getByTestId("t");
+    expect(el.className).toContain("italic");
+    expect(el.className).toContain("underline");
+    expect(el.className).toContain("truncate");
+  });
 });
 
 

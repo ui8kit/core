@@ -34,6 +34,7 @@ export type TitleProps
     TrackingProps &
     Pick<TypographyModifierProps, 'truncate'> & {
   children: ReactNode;
+  component?: ElementType;
   order?: 1 | 2 | 3 | 4 | 5 | 6;
 };
 
@@ -47,7 +48,7 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
     ta,
     leading = 'normal',
     tracking,
-    truncate = false,
+    truncate = 'no-truncate',
     // Spacing props
     m, mx, my, mb, mt,
     // Color props

@@ -58,7 +58,7 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
           spacingVariants({ p, px, py, m, mx, my }),
           colorVariants({ bg, c }),
           layoutVariants({ w, h }),
-          groupLayoutVariants({ grow, preventGrowOverflow }),
+          groupLayoutVariants({ grow: grow ? 'grow' : 'no-grow', preventGrowOverflow: preventGrowOverflow ? 'prevent-grow-overflow' : 'allow-grow-overflow' }),
           className
         )}
         {...props}
