@@ -1,23 +1,14 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import {
-  spacingVariants,
-  colorVariants,
-  layoutVariants,
-  flexVariants,
-  groupLayoutVariants,
-  type VariantSpacingProps,
-  type ColorProps,
-  type VariantLayoutProps,
-  type VariantFlexProps
-} from "../../variants";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
+import { flexVariants, groupLayoutVariants, type VariantFlexProps } from "../../variants";
 
-export type GroupProps 
-  = React.HTMLAttributes<HTMLElement> &
-    Pick<VariantSpacingProps, 'p' | 'px' | 'py' | 'm' | 'mx' | 'my'> &
-    Pick<ColorProps, 'bg' | 'c'> &
-    Pick<VariantLayoutProps, 'w' | 'h'> &
+type GroupDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
+
+export type GroupProps
+  = GroupDomProps &
+    UtilityPropBag &
     Pick<VariantFlexProps, 'gap' | 'align' | 'justify' | 'wrap'> & {
   children: ReactNode;
   component?: ElementType;
@@ -26,8 +17,8 @@ export type GroupProps
 };
 
 export const Group = forwardRef<HTMLElement, GroupProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     component = 'div',
     gap = 'md',
@@ -36,17 +27,9 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
     wrap = 'nowrap',
     grow = false,
     preventGrowOverflow = true,
-    // Spacing props
-    p, px, py,
-    m, mx, my,
-    // Color props
-    bg,
-    c,
-    // Layout props
-    w,
-    h,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
     const Element = component as ElementType;
 
     return (
@@ -55,13 +38,11 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
         data-class="group"
         className={cn(
           flexVariants({ gap, align, justify, wrap }),
-          spacingVariants({ p, px, py, m, mx, my }),
-          colorVariants({ bg, c }),
-          layoutVariants({ w, h }),
           groupLayoutVariants({ grow: grow ? 'grow' : 'no-grow', preventGrowOverflow: preventGrowOverflow ? 'prevent-grow-overflow' : 'allow-grow-overflow' }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </Element>

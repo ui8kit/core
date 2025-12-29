@@ -1,19 +1,14 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 import {
-  spacingVariants,
-  colorVariants,
-  layoutVariants,
   textSizeVariants,
   fontWeightVariants,
   textAlignVariants,
   leadingVariants,
   typographyModifierVariants,
   trackingVariants,
-  type VariantSpacingProps,
-  type ColorProps,
-  type VariantLayoutProps,
   type TextSizeProps,
   type FontWeightProps,
   type TextAlignProps,
@@ -22,11 +17,11 @@ import {
   type TrackingProps
 } from "../../variants";
 
-export type TextProps 
-  = React.HTMLAttributes<HTMLElement> &
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'> &
-    Pick<ColorProps, 'c'> &
-    Pick<VariantLayoutProps, 'w'> &
+type TextDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
+
+export type TextProps
+  = TextDomProps &
+    UtilityPropBag &
     TextSizeProps &
     FontWeightProps &
     TextAlignProps &
@@ -38,8 +33,8 @@ export type TextProps
 };
 
 export const Text = forwardRef<HTMLElement, TextProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     component = 'p',
     size = 'md',
@@ -50,14 +45,9 @@ export const Text = forwardRef<HTMLElement, TextProps>(
     truncate = 'no-truncate',
     italic = 'no-italic',
     underline = 'no-underline',
-    // Spacing props
-    m, mx, my, mb, mt,
-    // Color props
-    c = 'foreground',
-    // Layout props
-    w,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
     const Element = component as ElementType;
 
     return (
@@ -71,12 +61,10 @@ export const Text = forwardRef<HTMLElement, TextProps>(
           leadingVariants({ leading }),
           trackingVariants({ tracking }),
           typographyModifierVariants({ truncate, italic, underline }),
-          spacingVariants({ m, mx, my, mb, mt }),
-          colorVariants({ c }),
-          layoutVariants({ w }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </Element>

@@ -1,40 +1,31 @@
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 import {
-  spacingVariants,
-  roundedVariants,
-  shadowVariants,
-  layoutVariants,
   imageBaseVariants,
   imageFitVariants,
   imagePositionVariants,
   aspectRatioVariants,
-  type VariantSpacingProps,
-  type RoundedProps,
-  type ShadowProps,
-  type VariantLayoutProps,
   type ImageFitProps,
   type ImagePositionProps,
   type AspectRatioProps
 } from "../../variants";
 
-export type ImageProps 
-  = Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'> &
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'> &
-    RoundedProps &
-    ShadowProps &
-    Pick<VariantLayoutProps, 'w' | 'h'> &
-    ImageFitProps &
-    ImagePositionProps &
-    AspectRatioProps & {
+type ImageDomProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, UtilityPropPrefix | 'width' | 'height'>;
+
+export type ImageProps
+  = ImageDomProps &
+    UtilityPropBag & {
   width?: string | number;
   height?: string | number;
   fallbackSrc?: string;
   withPlaceholder?: boolean;
-};
+} & ImageFitProps &
+    ImagePositionProps &
+    AspectRatioProps;
 
 export const Image = forwardRef<HTMLImageElement, ImageProps>(
-  ({ 
+  ({
     className,
     src,
     alt,
@@ -43,18 +34,13 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
     fit = 'cover',
     position = 'center',
     aspect = 'auto',
-    rounded,
-    shadow,
     fallbackSrc,
     withPlaceholder = false,
     onError,
-    // Spacing props  
-    m, mx, my,
-    // Layout props
-    w,
-    h,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
+
     const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
       if (fallbackSrc) {
         e.currentTarget.src = fallbackSrc;
@@ -76,13 +62,10 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
           imageFitVariants({ fit }),
           imagePositionVariants({ position }),
           aspectRatioVariants({ aspect }),
-          spacingVariants({ m, mx, my }),
-          layoutVariants({ w, h }),
-          roundedVariants({ rounded }),
-          shadowVariants({ shadow }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       />
     );
   }

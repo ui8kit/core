@@ -56,6 +56,19 @@ describe('Container', () => {
     );
     expect(screen.getByTestId('c')).toHaveClass('custom');
   });
+
+  it('supports fast utility props without leaking them to DOM attributes', () => {
+    render(
+      <Container p="4" bg="primary" data-testid="c">
+        U
+      </Container>,
+    );
+    const el = screen.getByTestId('c');
+    expect(el).toHaveClass('p-4');
+    expect(el).toHaveClass('bg-primary');
+    expect(el.getAttribute('p')).toBeNull();
+    expect(el.getAttribute('bg')).toBeNull();
+  });
 });
 
 

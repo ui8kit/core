@@ -1,19 +1,14 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 import {
-  spacingVariants,
-  colorVariants,
-  layoutVariants,
   textSizeVariants,
   fontWeightVariants,
   textAlignVariants,
   leadingVariants,
   typographyModifierVariants,
   trackingVariants,
-  type VariantSpacingProps,
-  type ColorProps,
-  type VariantLayoutProps,
   type TextSizeProps,
   type FontWeightProps,
   type TextAlignProps,
@@ -22,11 +17,11 @@ import {
   type TrackingProps
 } from "../../variants";
 
-export type TitleProps 
-  = React.HTMLAttributes<HTMLHeadingElement> &
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mb' | 'mt'> &
-    Pick<ColorProps, 'c'> &
-    Pick<VariantLayoutProps, 'w'> &
+type TitleDomProps = Omit<React.HTMLAttributes<HTMLHeadingElement>, UtilityPropPrefix>;
+
+export type TitleProps
+  = TitleDomProps &
+    UtilityPropBag &
     TextSizeProps &
     FontWeightProps &
     TextAlignProps &
@@ -39,8 +34,8 @@ export type TitleProps
 };
 
 export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     order = 1,
     size = 'lg',
@@ -49,14 +44,9 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
     leading = 'normal',
     tracking,
     truncate = 'no-truncate',
-    // Spacing props
-    m, mx, my, mb, mt,
-    // Color props
-    c,
-    // Layout props
-    w,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
     const headingTag = `h${order}` as ElementType;
 
     const Heading = headingTag as ElementType;
@@ -72,12 +62,10 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
           leadingVariants({ leading }),
           trackingVariants({ tracking }),
           typographyModifierVariants({ truncate }),
-          spacingVariants({ m, mx, my, mb, mt }),
-          colorVariants({ c }),
-          layoutVariants({ w }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </Heading>

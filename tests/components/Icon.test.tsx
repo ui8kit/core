@@ -20,6 +20,19 @@ describe("Icon", () => {
     expect(screen.getByTestId("i")).toBeInTheDocument();
     expect(screen.getByTestId("svg")).toBeInTheDocument();
   });
+
+  it("supports fast utility props without leaking them to DOM attributes", () => {
+    render(
+      <Icon p="2" text="primary" data-testid="i">
+        X
+      </Icon>,
+    );
+    const el = screen.getByTestId("i");
+    expect(el).toHaveClass("p-2");
+    expect(el).toHaveClass("text-primary");
+    expect(el.getAttribute("p")).toBeNull();
+    expect(el.getAttribute("text")).toBeNull();
+  });
 });
 
 

@@ -21,6 +21,19 @@ describe("Title", () => {
     );
     expect(screen.getByTestId("t").className).toContain("truncate");
   });
+
+  it("supports fast utility props without leaking them to DOM attributes", () => {
+    render(
+      <Title p="2" text="primary" data-testid="t">
+        Hello
+      </Title>,
+    );
+    const el = screen.getByTestId("t");
+    expect(el).toHaveClass("p-2");
+    expect(el).toHaveClass("text-primary");
+    expect(el.getAttribute("p")).toBeNull();
+    expect(el.getAttribute("text")).toBeNull();
+  });
 });
 
 

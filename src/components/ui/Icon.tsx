@@ -1,20 +1,14 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import {
-  spacingVariants,
-  colorVariants,
-  iconBaseVariants,
-  iconSizeVariants,
-  type VariantSpacingProps,
-  type ColorProps,
-  type IconSizingProps
-} from "../../variants";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
+import { iconBaseVariants, iconSizeVariants, type IconSizingProps } from "../../variants";
 
-export type IconProps 
-  = React.HTMLAttributes<HTMLElement> &
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'> &
-    Pick<ColorProps, 'c'> &
+type IconDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
+
+export type IconProps
+  = IconDomProps &
+    UtilityPropBag &
     IconSizingProps & {
   children?: ReactNode;
   component?: ElementType;
@@ -28,17 +22,15 @@ export const Icon = forwardRef<HTMLElement, IconProps>(
     component: Component = 'span',
     size = 'sm',
     lucideIcon: LucideIcon,
-    m, mx, my,
-    c = 'foreground',
     ...props
   }, ref) => {
-    const { 'aria-hidden': ariaHidden, role, ...rest } = props;
+    const { 'aria-hidden': ariaHidden, role, ...restProps } = props;
+    const { utilityClassName, rest } = resolveUtilityClassName(restProps);
 
     const baseClasses = cn(
       iconBaseVariants(),
       iconSizeVariants({ size }),
-      spacingVariants({ m, mx, my }),
-      colorVariants({ c }),
+      utilityClassName,
       className
     );
 
@@ -57,8 +49,7 @@ export const Icon = forwardRef<HTMLElement, IconProps>(
           <LucideIcon
             className={cn(
               iconSizeVariants({ size }),
-              spacingVariants({ m, mx, my }),
-              colorVariants({ c })
+              utilityClassName
             )}
           />
         ) : (

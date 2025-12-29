@@ -41,6 +41,17 @@ describe('Image', () => {
 
     expect(img.src).toBe(before);
   });
+
+  it('supports fast utility props without leaking them to DOM attributes', () => {
+    render(
+      <Image src="a.png" alt="A" p="2" rounded="lg" data-testid="img" />,
+    );
+    const el = screen.getByTestId('img');
+    expect(el).toHaveClass('p-2');
+    expect(el).toHaveClass('rounded-lg');
+    expect(el.getAttribute('p')).toBeNull();
+    expect(el.getAttribute('rounded')).toBeNull();
+  });
 });
 
 

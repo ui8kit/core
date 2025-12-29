@@ -1,22 +1,14 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import {
-  spacingVariants,
-  colorVariants,
-  containerSizeVariants,
-  containerLayoutVariants,
-  textAlignVariants,
-  type VariantSpacingProps,
-  type ColorProps,
-  type ContainerSizingProps,
-  type TextAlignProps
-} from "../../variants";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
+import { containerSizeVariants, containerLayoutVariants, textAlignVariants, type ContainerSizingProps, type TextAlignProps } from "../../variants";
 
-export type ContainerProps 
-  = React.HTMLAttributes<HTMLElement> &
-    VariantSpacingProps &
-    ColorProps &
+type ContainerDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
+
+export type ContainerProps
+  = ContainerDomProps &
+    UtilityPropBag &
     ContainerSizingProps &
     TextAlignProps & {
   children: ReactNode;
@@ -26,24 +18,17 @@ export type ContainerProps
 };
 
 export const Container = forwardRef<HTMLElement, ContainerProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     component = 'div',
     size = 'lg',
     centered = true,
     fluid = false,
     ta,
-    // Spacing props
-    p, px = 'md', py,
-    m, mx, my, mt, mb, ml, mr,
-    pt, pb, pl, pr,
-    // Color props
-    bg,
-    c,
-    borderColor,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
     const Element = component as ElementType;
 
     return (
@@ -54,11 +39,10 @@ export const Container = forwardRef<HTMLElement, ContainerProps>(
           containerSizeVariants({ size }),
           containerLayoutVariants({ centered: centered ? 'center' : 'left', fluid: fluid ? 'fluid' : 'fixed' }),
           textAlignVariants({ ta }),
-          spacingVariants({ p, px, py, pt, pb, pl, pr, m, mx, my, mt, mb, ml, mr }),
-          colorVariants({ bg, c, borderColor }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </Element>

@@ -1,63 +1,27 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import {
-  spacingVariants,
-  colorVariants,
-  layoutVariants,
-  roundedVariants,
-  shadowVariants,
-  borderVariants,
-  type VariantSpacingProps,
-  type ColorProps,
-  type VariantLayoutProps,
-  type RoundedProps,
-  type ShadowProps,
-  type BorderProps
-} from "../../variants";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 
-export type BlockProps 
-  = React.HTMLAttributes<HTMLElement> &
-    VariantSpacingProps &
-    ColorProps &
-    Pick<VariantLayoutProps, 'w' | 'h' | 'minH' | 'position'> &
-    RoundedProps &
-    ShadowProps &
-    BorderProps & {
+type BlockDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
+
+export type BlockProps
+  = BlockDomProps &
+    UtilityPropBag & {
   children: ReactNode;
   component?: ElementType;
   variant?: 'section' | 'main' | 'nav' | 'article' | 'header' | 'footer' | 'aside' | 'div';
 };
 
 export const Block = forwardRef<HTMLElement, BlockProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     component,
     variant = 'div',
-    // Spacing props
-    p, px, py, pt, pb, pl, pr,
-    m, mx, my, mt, mb, ml, mr,
-    // Color props
-    bg,
-    c,
-    borderColor,
-    // Layout props
-    w = 'full',
-    h,
-    minH,
-    position,
-    // Visual props
-    rounded,
-    shadow,
-    // Border props
-    border,
-    borderTop,
-    borderBottom,
-    borderLeft,
-    borderRight,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
     const elementType = component || variant;
     const Element = elementType as ElementType;
 
@@ -66,15 +30,10 @@ export const Block = forwardRef<HTMLElement, BlockProps>(
         ref={ref}
         data-class="block"
         className={cn(
-          spacingVariants({ p, px, py, pt, pb, pl, pr, m, mx, my, mt, mb, ml, mr }),
-          colorVariants({ bg, c, borderColor }),
-          layoutVariants({ w, h, minH, position }),
-          roundedVariants({ rounded }),
-          shadowVariants({ shadow }),
-          borderVariants({ border, borderTop, borderBottom, borderLeft, borderRight }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </Element>

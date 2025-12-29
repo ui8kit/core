@@ -43,6 +43,19 @@ describe('Group', () => {
     const el = screen.getByTestId('g');
     expect(el).not.toHaveClass('min-w-0');
   });
+
+  it('supports fast utility props without leaking them to DOM attributes', () => {
+    render(
+      <Group p="4" bg="primary" data-testid="g">
+        U
+      </Group>,
+    );
+    const el = screen.getByTestId('g');
+    expect(el).toHaveClass('p-4');
+    expect(el).toHaveClass('bg-primary');
+    expect(el.getAttribute('p')).toBeNull();
+    expect(el.getAttribute('bg')).toBeNull();
+  });
 });
 
 

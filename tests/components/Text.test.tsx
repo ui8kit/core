@@ -33,6 +33,19 @@ describe("Text", () => {
     expect(el.className).toContain("underline");
     expect(el.className).toContain("truncate");
   });
+
+  it("supports fast utility props without leaking them to DOM attributes", () => {
+    render(
+      <Text p="2" text="primary" data-testid="t">
+        Hello
+      </Text>,
+    );
+    const el = screen.getByTestId("t");
+    expect(el).toHaveClass("p-2");
+    expect(el).toHaveClass("text-primary");
+    expect(el.getAttribute("p")).toBeNull();
+    expect(el.getAttribute("text")).toBeNull();
+  });
 });
 
 
