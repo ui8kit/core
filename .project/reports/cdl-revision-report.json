@@ -1,0 +1,1599 @@
+{
+  "generatedAt": "2025-12-28T09:22:08.047Z",
+  "source": ".project/cdl/variants.generated.json",
+  "namespaces": {
+    "badge": {
+      "badgeSizeVariants": {
+        "source": "src/variants/badge.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "size": {
+            "kind": "variant",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "xs": 3,
+              "sm": 3,
+              "default": 3,
+              "lg": 3
+            }
+          }
+        }
+      },
+      "badgeStyleVariants": {
+        "source": "src/variants/badge.ts",
+        "baseTokenCount": 4,
+        "axes": {
+          "variant": {
+            "kind": "variant",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "default": 2,
+              "secondary": 2,
+              "destructive": 2,
+              "outline": 2,
+              "success": 2,
+              "warning": 2,
+              "info": 2
+            }
+          }
+        }
+      }
+    },
+    "border": {
+      "borderVariants": {
+        "source": "src/variants/border.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "border": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "none": 1,
+              "1px": 1,
+              "2px": 1,
+              "4px": 1
+            }
+          },
+          "ring": {
+            "kind": "utility",
+            "optionCount": 5,
+            "optionTokenCounts": {
+              "0": 1,
+              "1": 1,
+              "2": 1,
+              "4": 1,
+              "8": 1
+            }
+          },
+          "ringOffset": {
+            "kind": "utility",
+            "optionCount": 5,
+            "optionTokenCounts": {
+              "0": 1,
+              "1": 1,
+              "2": 1,
+              "4": 1,
+              "8": 1
+            }
+          },
+          "borderStyle": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "solid": 1,
+              "dashed": 1,
+              "dotted": 1
+            }
+          },
+          "borderTop": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "none": 1,
+              "1px": 1,
+              "2px": 1,
+              "4px": 1
+            }
+          },
+          "borderBottom": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "none": 1,
+              "1px": 1,
+              "2px": 1,
+              "4px": 1
+            }
+          },
+          "borderLeft": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "none": 1,
+              "1px": 1,
+              "2px": 1,
+              "4px": 1
+            }
+          },
+          "borderRight": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "none": 1,
+              "1px": 1,
+              "2px": 1,
+              "4px": 1
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "buttonSizeVariants": {
+        "source": "src/variants/button.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "size": {
+            "kind": "variant",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "xs": 3,
+              "sm": 3,
+              "default": 3,
+              "md": 3,
+              "lg": 2,
+              "xl": 3,
+              "icon": 2
+            }
+          }
+        }
+      },
+      "buttonStyleVariants": {
+        "source": "src/variants/button.ts",
+        "baseTokenCount": 10,
+        "axes": {
+          "variant": {
+            "kind": "variant",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "default": 2,
+              "primary": 2,
+              "destructive": 2,
+              "outline": 3,
+              "secondary": 2,
+              "ghost": 2,
+              "link": 2
+            }
+          }
+        }
+      },
+      "buttonContentAlignVariants": {
+        "source": "src/variants/button.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "contentAlign": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "between": 1
+            }
+          }
+        }
+      }
+    },
+    "card": {
+      "cardVariantVariants": {
+        "source": "src/variants/card.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "variant": {
+            "kind": "variant",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "default": 1,
+              "outlined": 2,
+              "filled": 2
+            }
+          }
+        }
+      },
+      "cardHeaderVariants": {
+        "source": "src/variants/card.ts",
+        "baseTokenCount": 3,
+        "axes": {}
+      },
+      "cardTitleVariants": {
+        "source": "src/variants/card.ts",
+        "baseTokenCount": 3,
+        "axes": {}
+      },
+      "cardDescriptionVariants": {
+        "source": "src/variants/card.ts",
+        "baseTokenCount": 2,
+        "axes": {}
+      },
+      "cardContentVariants": {
+        "source": "src/variants/card.ts",
+        "baseTokenCount": 1,
+        "axes": {}
+      },
+      "cardFooterVariants": {
+        "source": "src/variants/card.ts",
+        "baseTokenCount": 3,
+        "axes": {}
+      }
+    },
+    "colors": {
+      "colorVariants": {
+        "source": "src/variants/colors.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "bg": {
+            "kind": "utility",
+            "optionCount": 18,
+            "optionTokenCounts": {
+              "transparent": 1,
+              "background": 1,
+              "foreground": 1,
+              "primary": 1,
+              "primary-foreground": 1,
+              "secondary": 1,
+              "secondary-foreground": 1,
+              "muted": 1,
+              "muted-foreground": 1,
+              "accent": 1,
+              "accent-foreground": 1,
+              "destructive": 1,
+              "destructive-foreground": 1,
+              "border": 1,
+              "input": 1,
+              "ring": 1,
+              "card": 1,
+              "popover": 1
+            }
+          },
+          "c": {
+            "kind": "utility",
+            "optionCount": 9,
+            "optionTokenCounts": {
+              "foreground": 1,
+              "primary": 1,
+              "primary-foreground": 1,
+              "secondary": 1,
+              "secondary-foreground": 1,
+              "muted": 1,
+              "accent": 1,
+              "destructive": 1,
+              "destructive-foreground": 1
+            }
+          },
+          "accentColor": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "auto": 1,
+              "inherit": 1,
+              "current": 1
+            }
+          },
+          "placeholder": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "foreground": 1,
+              "muted": 1
+            }
+          },
+          "caret": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "primary": 1,
+              "secondary": 1,
+              "accent": 1,
+              "foreground": 1,
+              "current": 1,
+              "transparent": 1
+            }
+          },
+          "borderColor": {
+            "kind": "utility",
+            "optionCount": 11,
+            "optionTokenCounts": {
+              "transparent": 1,
+              "current": 1,
+              "border": 1,
+              "input": 1,
+              "ring": 1,
+              "foreground": 1,
+              "primary": 1,
+              "secondary": 1,
+              "destructive": 1,
+              "muted": 1,
+              "accent": 1
+            }
+          },
+          "selectionBg": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "primary": 1,
+              "secondary": 1,
+              "accent": 1
+            }
+          },
+          "selectionText": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "foreground": 1,
+              "primary": 1
+            }
+          }
+        }
+      }
+    },
+    "container": {
+      "containerLayoutVariants": {
+        "source": "src/variants/container.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "centered": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          },
+          "fluid": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          }
+        }
+      }
+    },
+    "flex": {
+      "flexVariants": {
+        "source": "src/variants/flex.ts",
+        "baseTokenCount": 1,
+        "axes": {
+          "direction": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "row": 1,
+              "col": 1,
+              "row-reverse": 1,
+              "col-reverse": 1
+            }
+          },
+          "align": {
+            "kind": "utility",
+            "optionCount": 5,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "baseline": 1,
+              "stretch": 1
+            }
+          },
+          "justify": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "between": 1,
+              "around": 1,
+              "evenly": 1
+            }
+          },
+          "wrap": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "wrap": 1,
+              "nowrap": 1,
+              "wrap-reverse": 1
+            }
+          },
+          "grow": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "shrink": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "1": 1
+            }
+          },
+          "basis": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "0": 1,
+              "auto": 1,
+              "full": 1,
+              "px": 1
+            }
+          },
+          "order": {
+            "kind": "utility",
+            "optionCount": 15,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 1,
+              "9": 1,
+              "10": 1,
+              "11": 1,
+              "12": 1,
+              "first": 1,
+              "last": 1,
+              "none": 1
+            }
+          },
+          "gap": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "3xl": 1
+            }
+          },
+          "gapX": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          },
+          "gapY": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          }
+        }
+      }
+    },
+    "grid": {
+      "gridVariants": {
+        "source": "src/variants/grid.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "cols": {
+            "kind": "variant",
+            "optionCount": 29,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "12": 1,
+              "1-2": 2,
+              "1-3": 2,
+              "1-4": 2,
+              "1-5": 2,
+              "1-6": 2,
+              "2-3": 2,
+              "2-4": 2,
+              "2-5": 2,
+              "2-6": 2,
+              "3-4": 2,
+              "3-5": 2,
+              "3-6": 2,
+              "4-5": 2,
+              "4-6": 2,
+              "5-6": 2,
+              "1-2-3": 3,
+              "1-2-4": 3,
+              "1-2-6": 3,
+              "1-3-4": 3,
+              "1-3-6": 3,
+              "2-3-4": 3,
+              "1-2-3-4": 4
+            }
+          },
+          "gap": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          },
+          "align": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "stretch": 1
+            }
+          },
+          "justify": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "between": 1,
+              "around": 1,
+              "evenly": 1
+            }
+          },
+          "justifyItems": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "stretch": 1
+            }
+          },
+          "rows": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "12": 1
+            }
+          },
+          "content": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "start": 1,
+              "center": 1,
+              "end": 1,
+              "between": 1,
+              "around": 1,
+              "evenly": 1
+            }
+          },
+          "flow": {
+            "kind": "utility",
+            "optionCount": 5,
+            "optionTokenCounts": {
+              "row": 1,
+              "col": 1,
+              "dense": 1,
+              "rowDense": 1,
+              "colDense": 1
+            }
+          },
+          "autoRows": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "auto": 1,
+              "min": 1,
+              "max": 1,
+              "fr": 1
+            }
+          },
+          "autoCols": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "auto": 1,
+              "min": 1,
+              "max": 1,
+              "fr": 1
+            }
+          },
+          "rowStart": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "auto": 1
+            }
+          },
+          "rowEnd": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "auto": 1
+            }
+          },
+          "colStart": {
+            "kind": "utility",
+            "optionCount": 14,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 1,
+              "9": 1,
+              "10": 1,
+              "11": 1,
+              "12": 1,
+              "13": 1,
+              "auto": 1
+            }
+          },
+          "colEnd": {
+            "kind": "utility",
+            "optionCount": 14,
+            "optionTokenCounts": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 1,
+              "9": 1,
+              "10": 1,
+              "11": 1,
+              "12": 1,
+              "13": 1,
+              "auto": 1
+            }
+          },
+          "gapX": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          },
+          "gapY": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          }
+        }
+      }
+    },
+    "group": {
+      "groupLayoutVariants": {
+        "source": "src/variants/group.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "grow": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          },
+          "preventGrowOverflow": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "imageBaseVariants": {
+        "source": "src/variants/image.ts",
+        "baseTokenCount": 1,
+        "axes": {
+          "withPlaceholder": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          }
+        }
+      },
+      "imageFitVariants": {
+        "source": "src/variants/image.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "fit": {
+            "kind": "utility",
+            "optionCount": 5,
+            "optionTokenCounts": {
+              "contain": 1,
+              "cover": 1,
+              "fill": 1,
+              "scale-down": 1,
+              "none": 1
+            }
+          }
+        }
+      },
+      "imagePositionVariants": {
+        "source": "src/variants/image.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "position": {
+            "kind": "variant",
+            "optionCount": 9,
+            "optionTokenCounts": {
+              "center": 1,
+              "top": 1,
+              "top-right": 2,
+              "right": 1,
+              "bottom-right": 2,
+              "bottom": 1,
+              "bottom-left": 2,
+              "left": 1,
+              "top-left": 2
+            }
+          }
+        }
+      },
+      "aspectRatioVariants": {
+        "source": "src/variants/image.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "aspect": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "auto": 0,
+              "square": 1,
+              "video": 1
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "layoutVariants": {
+        "source": "src/variants/layout.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "display": {
+            "kind": "utility",
+            "optionCount": 9,
+            "optionTokenCounts": {
+              "block": 1,
+              "inline-block": 1,
+              "inline": 1,
+              "flex": 1,
+              "inline-flex": 1,
+              "grid": 1,
+              "inline-grid": 1,
+              "contents": 1,
+              "hidden": 1
+            }
+          },
+          "w": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "auto": 1,
+              "full": 1,
+              "screen": 1,
+              "fit": 1,
+              "min": 1,
+              "max": 1,
+              "1px": 1
+            }
+          },
+          "minW": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "0": 1,
+              "full": 1,
+              "min": 1,
+              "max": 1
+            }
+          },
+          "maxW": {
+            "kind": "utility",
+            "optionCount": 12,
+            "optionTokenCounts": {
+              "none": 1,
+              "full": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "screenSm": 1,
+              "screenMd": 1,
+              "screenLg": 1,
+              "screenXl": 1,
+              "screen2xl": 1
+            }
+          },
+          "h": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "auto": 1,
+              "full": 1,
+              "screen": 1,
+              "fit": 1,
+              "min": 1,
+              "max": 1,
+              "1px": 1
+            }
+          },
+          "maxH": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "none": 1,
+              "full": 1,
+              "screen": 1
+            }
+          },
+          "minH": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "screen": 1,
+              "full": 1
+            }
+          },
+          "position": {
+            "kind": "utility",
+            "optionCount": 5,
+            "optionTokenCounts": {
+              "static": 1,
+              "relative": 1,
+              "absolute": 1,
+              "fixed": 1,
+              "sticky": 1
+            }
+          },
+          "inset": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "auto": 1
+            }
+          },
+          "top": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "auto": 1
+            }
+          },
+          "right": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "auto": 1
+            }
+          },
+          "bottom": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "auto": 1
+            }
+          },
+          "left": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "0": 1,
+              "auto": 1
+            }
+          },
+          "z": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "0": 1,
+              "10": 1,
+              "20": 1,
+              "30": 1,
+              "40": 1,
+              "50": 1,
+              "auto": 1
+            }
+          },
+          "overflow": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "auto": 1,
+              "hidden": 1,
+              "visible": 1,
+              "scroll": 1
+            }
+          },
+          "overflowX": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "auto": 1,
+              "hidden": 1,
+              "visible": 1,
+              "scroll": 1
+            }
+          },
+          "overflowY": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "auto": 1,
+              "hidden": 1,
+              "visible": 1,
+              "scroll": 1
+            }
+          },
+          "visibility": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "visible": 1,
+              "invisible": 1,
+              "collapse": 1
+            }
+          },
+          "pointerEvents": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "auto": 1,
+              "none": 1
+            }
+          }
+        }
+      }
+    },
+    "rounded": {
+      "roundedVariants": {
+        "source": "src/variants/rounded.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "rounded": {
+            "kind": "utility",
+            "optionCount": 9,
+            "optionTokenCounts": {
+              "none": 1,
+              "default": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "3xl": 1,
+              "full": 1
+            }
+          }
+        }
+      },
+      "roundedSideVariants": {
+        "source": "src/variants/rounded.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "roundedTop": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "full": 1
+            }
+          },
+          "roundedRight": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "full": 1
+            }
+          },
+          "roundedBottom": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "full": 1
+            }
+          },
+          "roundedLeft": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "full": 1
+            }
+          }
+        }
+      }
+    },
+    "shadow": {
+      "shadowVariants": {
+        "source": "src/variants/shadow.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "shadow": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "inner": 1
+            }
+          }
+        }
+      }
+    },
+    "sizing": {
+      "sizingVariants": {
+        "source": "src/variants/sizing.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "size": {
+            "kind": "variant",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "xs": 0,
+              "sm": 0,
+              "md": 0,
+              "lg": 0,
+              "xl": 0,
+              "2xl": 0
+            }
+          }
+        }
+      },
+      "iconSizeVariants": {
+        "source": "src/variants/sizing.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "size": {
+            "kind": "variant",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "xs": 2,
+              "sm": 2,
+              "md": 2,
+              "lg": 2,
+              "xl": 2,
+              "2xl": 2
+            }
+          }
+        }
+      },
+      "containerSizeVariants": {
+        "source": "src/variants/sizing.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "size": {
+            "kind": "utility",
+            "optionCount": 9,
+            "optionTokenCounts": {
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "4xl": 1,
+              "6xl": 1,
+              "full": 1
+            }
+          }
+        }
+      }
+    },
+    "spacing": {
+      "spacingVariants": {
+        "source": "src/variants/spacing.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "m": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "mx": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "my": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "mt": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "mb": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "ml": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "mr": {
+            "kind": "utility",
+            "optionCount": 8,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "auto": 1
+            }
+          },
+          "p": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "px": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "py": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "pt": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "pb": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "pl": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "pr": {
+            "kind": "utility",
+            "optionCount": 7,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1
+            }
+          },
+          "spaceX": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          },
+          "spaceY": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "none": 1,
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "textSizeVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "size": {
+            "kind": "utility",
+            "optionCount": 9,
+            "optionTokenCounts": {
+              "xs": 1,
+              "sm": 1,
+              "md": 1,
+              "lg": 1,
+              "xl": 1,
+              "2xl": 1,
+              "3xl": 1,
+              "4xl": 1,
+              "5xl": 1
+            }
+          }
+        }
+      },
+      "fontWeightVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "fw": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "normal": 1,
+              "medium": 1,
+              "semibold": 1,
+              "bold": 1
+            }
+          }
+        }
+      },
+      "textAlignVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "ta": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "left": 1,
+              "center": 1,
+              "right": 1,
+              "justify": 1
+            }
+          }
+        }
+      },
+      "leadingVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "leading": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "tight": 1,
+              "normal": 1,
+              "relaxed": 1
+            }
+          }
+        }
+      },
+      "typographyModifierVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "truncate": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          },
+          "italic": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          },
+          "underline": {
+            "kind": "utility",
+            "optionCount": 2,
+            "optionTokenCounts": {
+              "true": 1,
+              "false": 0
+            }
+          }
+        }
+      },
+      "trackingVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "tracking": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "tighter": 1,
+              "tight": 1,
+              "normal": 1,
+              "wide": 1,
+              "wider": 1,
+              "widest": 1
+            }
+          }
+        }
+      },
+      "textTransformVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "transform": {
+            "kind": "utility",
+            "optionCount": 4,
+            "optionTokenCounts": {
+              "uppercase": 1,
+              "lowercase": 1,
+              "capitalize": 1,
+              "normal": 1
+            }
+          }
+        }
+      },
+      "whitespaceVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "whitespace": {
+            "kind": "utility",
+            "optionCount": 6,
+            "optionTokenCounts": {
+              "normal": 1,
+              "nowrap": 1,
+              "pre": 1,
+              "preLine": 1,
+              "preWrap": 1,
+              "breakSpaces": 1
+            }
+          }
+        }
+      },
+      "breakVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "break": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "normal": 1,
+              "words": 1,
+              "all": 1
+            }
+          }
+        }
+      },
+      "hyphenVariants": {
+        "source": "src/variants/typography.ts",
+        "baseTokenCount": 0,
+        "axes": {
+          "hyphens": {
+            "kind": "utility",
+            "optionCount": 3,
+            "optionTokenCounts": {
+              "none": 1,
+              "manual": 1,
+              "auto": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "totalVariantDefs": 39,
+    "totalAxes": 113,
+    "axesUtility": 104,
+    "axesVariant": 9,
+    "uniqueTokens": 564
+  }
+}

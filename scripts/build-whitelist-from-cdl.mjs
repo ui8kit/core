@@ -23,11 +23,11 @@ function isToken(x) {
 }
 
 function main() {
-  const inputRel = '.project/cdl/variants.trace.json'
+  const inputRel = '.project/cdl/variants.generated.json'
   const inputPath = path.join(repoRoot, inputRel)
 
   if (!fs.existsSync(inputPath)) {
-    throw new Error(`Missing: ${inputRel}\nRun: bun run cdl:trace`)
+    throw new Error(`Missing: ${inputRel}\nRun: bun run cdl:extract`)
   }
 
   const json = JSON.parse(fs.readFileSync(inputPath, 'utf8'))

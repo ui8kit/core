@@ -146,7 +146,7 @@ function scanFile(relPath) {
 function main() {
   const targetDir = process.argv.includes('--dir')
     ? process.argv[process.argv.indexOf('--dir') + 1]
-    : 'src/cdl'
+    : 'src/variants'
 
   const absTarget = path.resolve(repoRoot, targetDir)
   const absFiles = []
@@ -159,7 +159,6 @@ function main() {
   const all = []
   for (const f of tsFiles) {
     if (f.endsWith('/index.ts')) continue
-    if (f.endsWith('/variants.generated.ts')) continue
     all.push(...scanFile(f))
   }
 
