@@ -105,6 +105,35 @@ function TestApp() {
           </CardFooter>
         </Card>
 
+        <Card grid gap="6">
+          <CardHeader>
+            <CardTitle>Utility props (CDL single-token)</CardTitle>
+            <CardDescription>
+              Use a few whitelisted utility props for small adjustments; 3+ props is a signal to add a variant.
+            </CardDescription>
+          </CardHeader> 
+          <CardContent>
+            <div className="grid gap-4">
+              <Card bg="muted" p="4" rounded="md">
+                p=&quot;4&quot; bg=&quot;muted&quot; rounded=&quot;md&quot;
+              </Card>
+
+              <Card bg="card" p="4" border rounded="md">
+                border=&quot;&quot; p=&quot;4&quot; bg=&quot;card&quot;
+              </Card>
+
+              <Card grid="cols-12" gap="2">
+                <Card bg="muted" rounded="md" p="2" col="start-1" row="start-1" auto="rows-auto">
+                  grid helpers: col=&quot;start-1&quot; row=&quot;start-1&quot; auto=&quot;rows-auto&quot;
+                </Card>
+              </Card>
+            </div>
+          </CardContent>
+          <CardFooter className="justify-end">
+            <Button size="sm">OK</Button>
+          </CardFooter>
+        </Card>
+
         <Card>
           <CardHeader>
             <CardTitle>Card</CardTitle>

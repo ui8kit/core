@@ -51,8 +51,22 @@ describe('Card', () => {
   it('applies expected default styling tokens', () => {
     render(<Card>Defaults</Card>);
     const card = screen.getByText('Defaults');
-    // Default props in the component: p defaults to md (p-4), rounded lg, shadow sm, bg card, border 1px.
+    // CDL utility-props defaults in Card:
+    // p-4, rounded-lg, shadow-sm, bg-card, border (bare token).
     expect(card).toHaveClass('p-4', 'rounded-lg', 'shadow-sm', 'bg-card', 'border');
+  });
+
+  it('supports fast utility props without leaking them to DOM attributes', () => {
+    render(
+      <Card grid="cols-12" gap="2" data-testid="c">
+        U
+      </Card>,
+    );
+    const el = screen.getByTestId('c');
+    expect(el).toHaveClass('grid-cols-12');
+    expect(el).toHaveClass('gap-2');
+    expect(el.getAttribute('grid')).toBeNull();
+    expect(el.getAttribute('gap')).toBeNull();
   });
 });
 
@@ -111,7 +125,8 @@ describe('CardContent', () => {
     render(<CardContent>Content text</CardContent>);
     const content = screen.getByText('Content text');
     expect(content).toHaveAttribute('data-class', 'card-content');
-    expect(content).toHaveClass('pt-0', 'p-4');
+    // Note: CardContent base has pt-0, but the default utility p-4 overrides it via tailwind-merge.
+    expect(content).toHaveClass('p-4');
   });
 });
 

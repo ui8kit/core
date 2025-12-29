@@ -39,6 +39,31 @@ We are moving UI8Kit styling to a declarative system driven by a whitelist:
 - **No arbitrary values**: forbid bracket syntax like `w-[...]`, `min-h-[...]`, `aspect-[...]` in CDL/core variants.
 - **Responsive is structural**: represent responsive behavior as a rule list, not via `md:` strings.
 
+### Utility props (CDL single-token map)
+
+We also maintain a **single-token utility-props map** generated from the current variants scan.
+
+- **Generated map**: `src/lib/utility-props.generated.ts`
+- **Runtime resolver**: `src/lib/utility-props.ts`
+
+The intent is to support **Tailwind-like props**:
+- prop name = token prefix before the first `-`
+- prop value = everything after the first `-`
+- `true` or `""` means a **bare token** (e.g. `border` / `border=""` -> `border`)
+- `undefined | null | false` is skipped
+
+Example:
+
+```tsx
+<Card grid="cols-12" gap="2" p="4" bg="card" rounded="lg" border>
+  Content
+</Card>
+```
+
+Notes:
+- Whitelist enforcement should happen via scripts/guards (not heavy runtime validation).
+- If a component needs many utility props, it is a signal to create a structured variant or semantic mapping.
+
 Example (Grid columns responsive rules):
 
 ```ts

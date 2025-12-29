@@ -1,0 +1,230 @@
+{
+  "generatedAt": "2025-12-29T08:17:44.800Z",
+  "input": ".project\\cdl\\variants.generated.json",
+  "rule": "Includes any axis option whose value expands to 3+ Tailwind tokens.",
+  "count": 17,
+  "items": [
+    {
+      "namespace": "badge",
+      "variant": "badgeSizeVariants",
+      "axis": "size",
+      "option": "default",
+      "tokenCount": 3,
+      "tokens": [
+        "px-2.5",
+        "py-0.5",
+        "text-xs"
+      ],
+      "source": "src/variants/badge.ts"
+    },
+    {
+      "namespace": "badge",
+      "variant": "badgeSizeVariants",
+      "axis": "size",
+      "option": "lg",
+      "tokenCount": 3,
+      "tokens": [
+        "px-3",
+        "py-1",
+        "text-sm"
+      ],
+      "source": "src/variants/badge.ts"
+    },
+    {
+      "namespace": "badge",
+      "variant": "badgeSizeVariants",
+      "axis": "size",
+      "option": "sm",
+      "tokenCount": 3,
+      "tokens": [
+        "px-2",
+        "py-0.5",
+        "text-xs"
+      ],
+      "source": "src/variants/badge.ts"
+    },
+    {
+      "namespace": "badge",
+      "variant": "badgeSizeVariants",
+      "axis": "size",
+      "option": "xs",
+      "tokenCount": 3,
+      "tokens": [
+        "px-1.5",
+        "py-0.5",
+        "text-xs"
+      ],
+      "source": "src/variants/badge.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonSizeVariants",
+      "axis": "size",
+      "option": "default",
+      "tokenCount": 3,
+      "tokens": [
+        "h-10",
+        "px-4",
+        "py-2"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonSizeVariants",
+      "axis": "size",
+      "option": "md",
+      "tokenCount": 3,
+      "tokens": [
+        "h-10",
+        "px-4",
+        "py-2"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonSizeVariants",
+      "axis": "size",
+      "option": "sm",
+      "tokenCount": 3,
+      "tokens": [
+        "h-9",
+        "px-3",
+        "text-sm"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonSizeVariants",
+      "axis": "size",
+      "option": "xl",
+      "tokenCount": 3,
+      "tokens": [
+        "h-12",
+        "px-10",
+        "text-base"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonSizeVariants",
+      "axis": "size",
+      "option": "xs",
+      "tokenCount": 3,
+      "tokens": [
+        "h-6",
+        "px-2",
+        "text-xs"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonStyleVariants",
+      "axis": "variant",
+      "option": "outline",
+      "tokenCount": 3,
+      "tokens": [
+        "border",
+        "border-input",
+        "bg-background"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1-2-3",
+      "tokenCount": 3,
+      "tokens": [
+        "grid-cols-1",
+        "md:grid-cols-2",
+        "lg:grid-cols-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1-2-3-4",
+      "tokenCount": 4,
+      "tokens": [
+        "grid-cols-1",
+        "md:grid-cols-2",
+        "lg:grid-cols-3",
+        "xl:grid-cols-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1-2-4",
+      "tokenCount": 3,
+      "tokens": [
+        "grid-cols-1",
+        "md:grid-cols-2",
+        "lg:grid-cols-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1-2-6",
+      "tokenCount": 3,
+      "tokens": [
+        "grid-cols-1",
+        "md:grid-cols-2",
+        "lg:grid-cols-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1-3-4",
+      "tokenCount": 3,
+      "tokens": [
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "lg:grid-cols-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1-3-6",
+      "tokenCount": 3,
+      "tokens": [
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "lg:grid-cols-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "2-3-4",
+      "tokenCount": 3,
+      "tokens": [
+        "grid-cols-2",
+        "md:grid-cols-3",
+        "lg:grid-cols-4"
+      ],
+      "source": "src/variants/grid.ts"
+    }
+  ]
+}

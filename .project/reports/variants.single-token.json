@@ -1,0 +1,6311 @@
+{
+  "generatedAt": "2025-12-29T08:17:44.821Z",
+  "input": ".project\\cdl\\variants.generated.json",
+  "rule": "Includes axis options whose value expands to exactly 1 Tailwind token.",
+  "count": 573,
+  "items": [
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "border",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "border"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "border",
+      "option": "2px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "border",
+      "option": "4px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "border",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "border-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderBottom",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-b"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderBottom",
+      "option": "2px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-b-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderBottom",
+      "option": "4px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-b-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderBottom",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "border-b-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderLeft",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-l"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderLeft",
+      "option": "2px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-l-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderLeft",
+      "option": "4px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-l-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderLeft",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "border-l-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderRight",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-r"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderRight",
+      "option": "2px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-r-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderRight",
+      "option": "4px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-r-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderRight",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "border-r-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderStyle",
+      "option": "dashed",
+      "tokenCount": 1,
+      "tokens": [
+        "border-dashed"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderStyle",
+      "option": "dotted",
+      "tokenCount": 1,
+      "tokens": [
+        "border-dotted"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderStyle",
+      "option": "solid",
+      "tokenCount": 1,
+      "tokens": [
+        "border-solid"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderTop",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-t"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderTop",
+      "option": "2px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-t-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderTop",
+      "option": "4px",
+      "tokenCount": 1,
+      "tokens": [
+        "border-t-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "borderTop",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "border-t-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ring",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ring",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-1"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ring",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ring",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ring",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-8"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ringOffset",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-offset-0"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ringOffset",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-offset-1"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ringOffset",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-offset-2"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ringOffset",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-offset-4"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "border",
+      "variant": "borderVariants",
+      "axis": "ringOffset",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "ring-offset-8"
+      ],
+      "source": "src/variants/border.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonContentAlignVariants",
+      "axis": "contentAlign",
+      "option": "between",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-between"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonContentAlignVariants",
+      "axis": "contentAlign",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-center"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonContentAlignVariants",
+      "axis": "contentAlign",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-end"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "button",
+      "variant": "buttonContentAlignVariants",
+      "axis": "contentAlign",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-start"
+      ],
+      "source": "src/variants/button.ts"
+    },
+    {
+      "namespace": "card",
+      "variant": "cardVariantVariants",
+      "axis": "variant",
+      "option": "default",
+      "tokenCount": 1,
+      "tokens": [
+        "border-border"
+      ],
+      "source": "src/variants/card.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "accentColor",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "accent-auto"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "accentColor",
+      "option": "current",
+      "tokenCount": 1,
+      "tokens": [
+        "accent-current"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "accentColor",
+      "option": "inherit",
+      "tokenCount": 1,
+      "tokens": [
+        "accent-inherit"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "accent",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-accent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "accent-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-accent-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "background",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-background"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "border",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-border"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "card",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-card"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "destructive",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-destructive"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "destructive-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-destructive-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "input",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-input"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "muted",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-muted"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "muted-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-muted-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "popover",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-popover"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "primary",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-primary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "primary-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-primary-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "ring",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-ring"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "secondary",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-secondary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "secondary-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-secondary-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "bg",
+      "option": "transparent",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-transparent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "accent",
+      "tokenCount": 1,
+      "tokens": [
+        "border-accent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "border",
+      "tokenCount": 1,
+      "tokens": [
+        "border-border"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "current",
+      "tokenCount": 1,
+      "tokens": [
+        "border-current"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "destructive",
+      "tokenCount": 1,
+      "tokens": [
+        "border-destructive"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "border-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "input",
+      "tokenCount": 1,
+      "tokens": [
+        "border-input"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "muted",
+      "tokenCount": 1,
+      "tokens": [
+        "border-muted"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "primary",
+      "tokenCount": 1,
+      "tokens": [
+        "border-primary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "ring",
+      "tokenCount": 1,
+      "tokens": [
+        "border-ring"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "secondary",
+      "tokenCount": 1,
+      "tokens": [
+        "border-secondary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "borderColor",
+      "option": "transparent",
+      "tokenCount": 1,
+      "tokens": [
+        "border-transparent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "accent",
+      "tokenCount": 1,
+      "tokens": [
+        "text-accent-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "destructive",
+      "tokenCount": 1,
+      "tokens": [
+        "text-destructive"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "destructive-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "text-destructive-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "text-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "muted",
+      "tokenCount": 1,
+      "tokens": [
+        "text-muted-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "primary",
+      "tokenCount": 1,
+      "tokens": [
+        "text-primary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "primary-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "text-primary-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "secondary",
+      "tokenCount": 1,
+      "tokens": [
+        "text-secondary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "c",
+      "option": "secondary-foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "text-secondary-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "caret",
+      "option": "accent",
+      "tokenCount": 1,
+      "tokens": [
+        "caret-accent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "caret",
+      "option": "current",
+      "tokenCount": 1,
+      "tokens": [
+        "caret-current"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "caret",
+      "option": "foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "caret-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "caret",
+      "option": "primary",
+      "tokenCount": 1,
+      "tokens": [
+        "caret-primary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "caret",
+      "option": "secondary",
+      "tokenCount": 1,
+      "tokens": [
+        "caret-secondary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "caret",
+      "option": "transparent",
+      "tokenCount": 1,
+      "tokens": [
+        "caret-transparent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "placeholder",
+      "option": "foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "placeholder-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "placeholder",
+      "option": "muted",
+      "tokenCount": 1,
+      "tokens": [
+        "placeholder-muted-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "selectionBg",
+      "option": "accent",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-accent"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "selectionBg",
+      "option": "primary",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-primary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "selectionBg",
+      "option": "secondary",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-secondary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "selectionText",
+      "option": "foreground",
+      "tokenCount": 1,
+      "tokens": [
+        "text-foreground"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "colors",
+      "variant": "colorVariants",
+      "axis": "selectionText",
+      "option": "primary",
+      "tokenCount": 1,
+      "tokens": [
+        "text-primary"
+      ],
+      "source": "src/variants/colors.ts"
+    },
+    {
+      "namespace": "container",
+      "variant": "containerLayoutVariants",
+      "axis": "centered",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-auto"
+      ],
+      "source": "src/variants/container.ts"
+    },
+    {
+      "namespace": "container",
+      "variant": "containerLayoutVariants",
+      "axis": "fluid",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-none"
+      ],
+      "source": "src/variants/container.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "align",
+      "option": "baseline",
+      "tokenCount": 1,
+      "tokens": [
+        "items-baseline"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "align",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "items-center"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "align",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "items-end"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "align",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "items-start"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "align",
+      "option": "stretch",
+      "tokenCount": 1,
+      "tokens": [
+        "items-stretch"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "basis",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "basis-0"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "basis",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "basis-auto"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "basis",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "basis-full"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "basis",
+      "option": "px",
+      "tokenCount": 1,
+      "tokens": [
+        "basis-px"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "direction",
+      "option": "col",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-col"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "direction",
+      "option": "col-reverse",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-col-reverse"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "direction",
+      "option": "row",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-row"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "direction",
+      "option": "row-reverse",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-row-reverse"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-10"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "3xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-12"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-6"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-4"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-0"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-2"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-8"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gap",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-1"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapX",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-6"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapX",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-4"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapX",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-0"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapX",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-2"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapX",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-8"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapX",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-1"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapY",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-6"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapY",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-4"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapY",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-0"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapY",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-2"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapY",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-8"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "gapY",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-1"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "grow",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "grow-0"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "grow",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "grow"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "justify",
+      "option": "around",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-around"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "justify",
+      "option": "between",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-between"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "justify",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-center"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "justify",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-end"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "justify",
+      "option": "evenly",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-evenly"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "justify",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-start"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "order-1"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "10",
+      "tokenCount": 1,
+      "tokens": [
+        "order-10"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "11",
+      "tokenCount": 1,
+      "tokens": [
+        "order-11"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "order-12"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "order-2"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "order-3"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "order-4"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "order-5"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "order-6"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "order-7"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "order-8"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "9",
+      "tokenCount": 1,
+      "tokens": [
+        "order-9"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "first",
+      "tokenCount": 1,
+      "tokens": [
+        "order-first"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "last",
+      "tokenCount": 1,
+      "tokens": [
+        "order-last"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "order",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "order-none"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "shrink",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "shrink-0"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "shrink",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "shrink"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "wrap",
+      "option": "nowrap",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-nowrap"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "wrap",
+      "option": "wrap",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-wrap"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "flex",
+      "variant": "flexVariants",
+      "axis": "wrap",
+      "option": "wrap-reverse",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-wrap-reverse"
+      ],
+      "source": "src/variants/flex.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "align",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "items-center"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "align",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "items-end"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "align",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "items-start"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "align",
+      "option": "stretch",
+      "tokenCount": 1,
+      "tokens": [
+        "items-stretch"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoCols",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-cols-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoCols",
+      "option": "fr",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-cols-fr"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoCols",
+      "option": "max",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-cols-max"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoCols",
+      "option": "min",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-cols-min"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoRows",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-rows-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoRows",
+      "option": "fr",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-rows-fr"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoRows",
+      "option": "max",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-rows-max"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "autoRows",
+      "option": "min",
+      "tokenCount": 1,
+      "tokens": [
+        "auto-rows-min"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "10",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-10"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "11",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-11"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-12"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "13",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-13"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-7"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "9",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-9"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colEnd",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "col-end-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-12"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "cols",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-cols-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "10",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-10"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "11",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-11"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-12"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "13",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-13"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-7"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "9",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-9"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colStart",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "col-start-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "content",
+      "option": "around",
+      "tokenCount": 1,
+      "tokens": [
+        "content-around"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "content",
+      "option": "between",
+      "tokenCount": 1,
+      "tokens": [
+        "content-between"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "content",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "content-center"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "content",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "content-end"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "content",
+      "option": "evenly",
+      "tokenCount": 1,
+      "tokens": [
+        "content-evenly"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "content",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "content-start"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "flow",
+      "option": "col",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-flow-col"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "flow",
+      "option": "colDense",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-flow-col-dense"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "flow",
+      "option": "dense",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-flow-dense"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "flow",
+      "option": "row",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-flow-row"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "flow",
+      "option": "rowDense",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-flow-row-dense"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gap",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gap",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gap",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-0"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gap",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gap",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gap",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapX",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapX",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapX",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-0"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapX",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapX",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapX",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-x-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapY",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapY",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapY",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-0"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapY",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapY",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "gapY",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "gap-y-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justify",
+      "option": "around",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-around"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justify",
+      "option": "between",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-between"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justify",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-center"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justify",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-end"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justify",
+      "option": "evenly",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-evenly"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justify",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-start"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justifyItems",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-items-center"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justifyItems",
+      "option": "end",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-items-end"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justifyItems",
+      "option": "start",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-items-start"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "justifyItems",
+      "option": "stretch",
+      "tokenCount": 1,
+      "tokens": [
+        "justify-items-stretch"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-7"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowEnd",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "row-end-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-12"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rows",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "grid-rows-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-7"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "rowStart",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "row-start-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "group",
+      "variant": "groupLayoutVariants",
+      "axis": "grow",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "flex-1"
+      ],
+      "source": "src/variants/group.ts"
+    },
+    {
+      "namespace": "group",
+      "variant": "groupLayoutVariants",
+      "axis": "preventGrowOverflow",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "min-w-0"
+      ],
+      "source": "src/variants/group.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "aspectRatioVariants",
+      "axis": "aspect",
+      "option": "square",
+      "tokenCount": 1,
+      "tokens": [
+        "aspect-square"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "aspectRatioVariants",
+      "axis": "aspect",
+      "option": "video",
+      "tokenCount": 1,
+      "tokens": [
+        "aspect-video"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imageBaseVariants",
+      "axis": "withPlaceholder",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "bg-muted"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imageFitVariants",
+      "axis": "fit",
+      "option": "contain",
+      "tokenCount": 1,
+      "tokens": [
+        "object-contain"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imageFitVariants",
+      "axis": "fit",
+      "option": "cover",
+      "tokenCount": 1,
+      "tokens": [
+        "object-cover"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imageFitVariants",
+      "axis": "fit",
+      "option": "fill",
+      "tokenCount": 1,
+      "tokens": [
+        "object-fill"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imageFitVariants",
+      "axis": "fit",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "object-none"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imageFitVariants",
+      "axis": "fit",
+      "option": "scale-down",
+      "tokenCount": 1,
+      "tokens": [
+        "object-scale-down"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imagePositionVariants",
+      "axis": "position",
+      "option": "bottom",
+      "tokenCount": 1,
+      "tokens": [
+        "object-bottom"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imagePositionVariants",
+      "axis": "position",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "object-center"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imagePositionVariants",
+      "axis": "position",
+      "option": "left",
+      "tokenCount": 1,
+      "tokens": [
+        "object-left"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imagePositionVariants",
+      "axis": "position",
+      "option": "right",
+      "tokenCount": 1,
+      "tokens": [
+        "object-right"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "image",
+      "variant": "imagePositionVariants",
+      "axis": "position",
+      "option": "top",
+      "tokenCount": 1,
+      "tokens": [
+        "object-top"
+      ],
+      "source": "src/variants/image.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "bottom",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "bottom-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "bottom",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "bottom-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "block",
+      "tokenCount": 1,
+      "tokens": [
+        "block"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "contents",
+      "tokenCount": 1,
+      "tokens": [
+        "contents"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "flex",
+      "tokenCount": 1,
+      "tokens": [
+        "flex"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "grid",
+      "tokenCount": 1,
+      "tokens": [
+        "grid"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "hidden",
+      "tokenCount": 1,
+      "tokens": [
+        "hidden"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "inline",
+      "tokenCount": 1,
+      "tokens": [
+        "inline"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "inline-block",
+      "tokenCount": 1,
+      "tokens": [
+        "inline-block"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "inline-flex",
+      "tokenCount": 1,
+      "tokens": [
+        "inline-flex"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "display",
+      "option": "inline-grid",
+      "tokenCount": 1,
+      "tokens": [
+        "inline-grid"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "h-px"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "h-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "fit",
+      "tokenCount": 1,
+      "tokens": [
+        "h-fit"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "h-full"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "max",
+      "tokenCount": 1,
+      "tokens": [
+        "h-max"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "min",
+      "tokenCount": 1,
+      "tokens": [
+        "h-min"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "h",
+      "option": "screen",
+      "tokenCount": 1,
+      "tokens": [
+        "h-screen"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "inset",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "inset-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "inset",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "inset-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "left",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "left-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "left",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "left-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxH",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "max-h-full"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxH",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "max-h-none"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxH",
+      "option": "screen",
+      "tokenCount": 1,
+      "tokens": [
+        "max-h-screen"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-2xl"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-full"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-lg"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-md"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-none"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "screen2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-2xl"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "screenLg",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-lg"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "screenMd",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-md"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "screenSm",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-sm"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "screenXl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-xl"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-sm"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "maxW",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-xl"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "minH",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "min-h-full"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "minH",
+      "option": "screen",
+      "tokenCount": 1,
+      "tokens": [
+        "min-h-screen"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "minW",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "min-w-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "minW",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "min-w-full"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "minW",
+      "option": "max",
+      "tokenCount": 1,
+      "tokens": [
+        "min-w-max"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "minW",
+      "option": "min",
+      "tokenCount": 1,
+      "tokens": [
+        "min-w-min"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflow",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflow",
+      "option": "hidden",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-hidden"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflow",
+      "option": "scroll",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-scroll"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflow",
+      "option": "visible",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-visible"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowX",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-x-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowX",
+      "option": "hidden",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-x-hidden"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowX",
+      "option": "scroll",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-x-scroll"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowX",
+      "option": "visible",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-x-visible"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowY",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-y-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowY",
+      "option": "hidden",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-y-hidden"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowY",
+      "option": "scroll",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-y-scroll"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "overflowY",
+      "option": "visible",
+      "tokenCount": 1,
+      "tokens": [
+        "overflow-y-visible"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "pointerEvents",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "pointer-events-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "pointerEvents",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "pointer-events-none"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "position",
+      "option": "absolute",
+      "tokenCount": 1,
+      "tokens": [
+        "absolute"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "position",
+      "option": "fixed",
+      "tokenCount": 1,
+      "tokens": [
+        "fixed"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "position",
+      "option": "relative",
+      "tokenCount": 1,
+      "tokens": [
+        "relative"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "position",
+      "option": "static",
+      "tokenCount": 1,
+      "tokens": [
+        "static"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "position",
+      "option": "sticky",
+      "tokenCount": 1,
+      "tokens": [
+        "sticky"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "right",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "right-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "right",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "right-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "top",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "top-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "top",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "top-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "visibility",
+      "option": "collapse",
+      "tokenCount": 1,
+      "tokens": [
+        "collapse"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "visibility",
+      "option": "invisible",
+      "tokenCount": 1,
+      "tokens": [
+        "invisible"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "visibility",
+      "option": "visible",
+      "tokenCount": 1,
+      "tokens": [
+        "visible"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "1px",
+      "tokenCount": 1,
+      "tokens": [
+        "w-px"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "w-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "fit",
+      "tokenCount": 1,
+      "tokens": [
+        "w-fit"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "w-full"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "max",
+      "tokenCount": 1,
+      "tokens": [
+        "w-max"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "min",
+      "tokenCount": 1,
+      "tokens": [
+        "w-min"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "w",
+      "option": "screen",
+      "tokenCount": 1,
+      "tokens": [
+        "w-screen"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "0",
+      "tokenCount": 1,
+      "tokens": [
+        "z-0"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "10",
+      "tokenCount": 1,
+      "tokens": [
+        "z-10"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "20",
+      "tokenCount": 1,
+      "tokens": [
+        "z-20"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "30",
+      "tokenCount": 1,
+      "tokens": [
+        "z-30"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "40",
+      "tokenCount": 1,
+      "tokens": [
+        "z-40"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "50",
+      "tokenCount": 1,
+      "tokens": [
+        "z-50"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "layout",
+      "variant": "layoutVariants",
+      "axis": "z",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "z-auto"
+      ],
+      "source": "src/variants/layout.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedBottom",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-b-full"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedBottom",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-b-lg"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedBottom",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-b-md"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedBottom",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-b-none"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedBottom",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-b-sm"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedBottom",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-b-xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedLeft",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-l-full"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedLeft",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-l-lg"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedLeft",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-l-md"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedLeft",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-l-none"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedLeft",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-l-sm"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedLeft",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-l-xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedRight",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-r-full"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedRight",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-r-lg"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedRight",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-r-md"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedRight",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-r-none"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedRight",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-r-sm"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedRight",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-r-xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedTop",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-t-full"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedTop",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-t-lg"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedTop",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-t-md"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedTop",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-t-none"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedTop",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-t-sm"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedSideVariants",
+      "axis": "roundedTop",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-t-xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-2xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "3xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-3xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "default",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-full"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-lg"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-md"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-none"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-sm"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "rounded",
+      "variant": "roundedVariants",
+      "axis": "rounded",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "rounded-xl"
+      ],
+      "source": "src/variants/rounded.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-2xl"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "inner",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-inner"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-lg"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-md"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-none"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-sm"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "shadow",
+      "variant": "shadowVariants",
+      "axis": "shadow",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "shadow-xl"
+      ],
+      "source": "src/variants/shadow.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-2xl"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "4xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-4xl"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "6xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-6xl"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-none"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-xl"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-lg"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-md"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-2xl"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "sizing",
+      "variant": "containerSizeVariants",
+      "axis": "size",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "max-w-screen-sm"
+      ],
+      "source": "src/variants/sizing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "m-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "m-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "m-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "m-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "m-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "m-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "m-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "m",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "m-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mb",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "mb-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "ml",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "ml-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mr",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "mr-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mt",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "mt-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "mx",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "mx-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "my-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "my-auto"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "my-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "my-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "my-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "my-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "my-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "my",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "my-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "p-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "p-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "p-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "p-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "p-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "p-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "p",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "p-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pb",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "pb-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pl",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "pl-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pr",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "pr-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "pt",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "pt-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "px-12"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "px-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "px-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "px-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "px-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "px-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "px",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "px-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "py-48"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "py-16"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "py-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "py-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "py-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "py-32"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "py",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "py-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceX",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "space-x-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceX",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "space-x-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceX",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "space-x-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceX",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "space-x-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceX",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "space-x-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceX",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "space-x-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceY",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "space-y-6"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceY",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "space-y-4"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceY",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "space-y-0"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceY",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "space-y-2"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceY",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "space-y-8"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "spacing",
+      "variant": "spacingVariants",
+      "axis": "spaceY",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "space-y-1"
+      ],
+      "source": "src/variants/spacing.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "breakVariants",
+      "axis": "break",
+      "option": "all",
+      "tokenCount": 1,
+      "tokens": [
+        "break-all"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "breakVariants",
+      "axis": "break",
+      "option": "normal",
+      "tokenCount": 1,
+      "tokens": [
+        "break-normal"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "breakVariants",
+      "axis": "break",
+      "option": "words",
+      "tokenCount": 1,
+      "tokens": [
+        "break-words"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "fontWeightVariants",
+      "axis": "fw",
+      "option": "bold",
+      "tokenCount": 1,
+      "tokens": [
+        "font-bold"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "fontWeightVariants",
+      "axis": "fw",
+      "option": "medium",
+      "tokenCount": 1,
+      "tokens": [
+        "font-medium"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "fontWeightVariants",
+      "axis": "fw",
+      "option": "normal",
+      "tokenCount": 1,
+      "tokens": [
+        "font-normal"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "fontWeightVariants",
+      "axis": "fw",
+      "option": "semibold",
+      "tokenCount": 1,
+      "tokens": [
+        "font-semibold"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "hyphenVariants",
+      "axis": "hyphens",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "hyphens-auto"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "hyphenVariants",
+      "axis": "hyphens",
+      "option": "manual",
+      "tokenCount": 1,
+      "tokens": [
+        "hyphens-manual"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "hyphenVariants",
+      "axis": "hyphens",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "hyphens-none"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "leadingVariants",
+      "axis": "leading",
+      "option": "normal",
+      "tokenCount": 1,
+      "tokens": [
+        "leading-normal"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "leadingVariants",
+      "axis": "leading",
+      "option": "relaxed",
+      "tokenCount": 1,
+      "tokens": [
+        "leading-relaxed"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "leadingVariants",
+      "axis": "leading",
+      "option": "tight",
+      "tokenCount": 1,
+      "tokens": [
+        "leading-tight"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textAlignVariants",
+      "axis": "ta",
+      "option": "center",
+      "tokenCount": 1,
+      "tokens": [
+        "text-center"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textAlignVariants",
+      "axis": "ta",
+      "option": "justify",
+      "tokenCount": 1,
+      "tokens": [
+        "text-justify"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textAlignVariants",
+      "axis": "ta",
+      "option": "left",
+      "tokenCount": 1,
+      "tokens": [
+        "text-left"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textAlignVariants",
+      "axis": "ta",
+      "option": "right",
+      "tokenCount": 1,
+      "tokens": [
+        "text-right"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "2xl",
+      "tokenCount": 1,
+      "tokens": [
+        "text-2xl"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "3xl",
+      "tokenCount": 1,
+      "tokens": [
+        "text-3xl"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "4xl",
+      "tokenCount": 1,
+      "tokens": [
+        "text-4xl"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "5xl",
+      "tokenCount": 1,
+      "tokens": [
+        "text-5xl"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "lg",
+      "tokenCount": 1,
+      "tokens": [
+        "text-lg"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "md",
+      "tokenCount": 1,
+      "tokens": [
+        "text-base"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "sm",
+      "tokenCount": 1,
+      "tokens": [
+        "text-sm"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "xl",
+      "tokenCount": 1,
+      "tokens": [
+        "text-xl"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textSizeVariants",
+      "axis": "size",
+      "option": "xs",
+      "tokenCount": 1,
+      "tokens": [
+        "text-xs"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textTransformVariants",
+      "axis": "transform",
+      "option": "capitalize",
+      "tokenCount": 1,
+      "tokens": [
+        "capitalize"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textTransformVariants",
+      "axis": "transform",
+      "option": "lowercase",
+      "tokenCount": 1,
+      "tokens": [
+        "lowercase"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textTransformVariants",
+      "axis": "transform",
+      "option": "normal",
+      "tokenCount": 1,
+      "tokens": [
+        "normal-case"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "textTransformVariants",
+      "axis": "transform",
+      "option": "uppercase",
+      "tokenCount": 1,
+      "tokens": [
+        "uppercase"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "trackingVariants",
+      "axis": "tracking",
+      "option": "normal",
+      "tokenCount": 1,
+      "tokens": [
+        "tracking-normal"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "trackingVariants",
+      "axis": "tracking",
+      "option": "tight",
+      "tokenCount": 1,
+      "tokens": [
+        "tracking-tight"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "trackingVariants",
+      "axis": "tracking",
+      "option": "tighter",
+      "tokenCount": 1,
+      "tokens": [
+        "tracking-tighter"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "trackingVariants",
+      "axis": "tracking",
+      "option": "wide",
+      "tokenCount": 1,
+      "tokens": [
+        "tracking-wide"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "trackingVariants",
+      "axis": "tracking",
+      "option": "wider",
+      "tokenCount": 1,
+      "tokens": [
+        "tracking-wider"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "trackingVariants",
+      "axis": "tracking",
+      "option": "widest",
+      "tokenCount": 1,
+      "tokens": [
+        "tracking-widest"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "typographyModifierVariants",
+      "axis": "italic",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "italic"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "typographyModifierVariants",
+      "axis": "truncate",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "truncate"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "typographyModifierVariants",
+      "axis": "underline",
+      "option": "true",
+      "tokenCount": 1,
+      "tokens": [
+        "underline"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "whitespaceVariants",
+      "axis": "whitespace",
+      "option": "breakSpaces",
+      "tokenCount": 1,
+      "tokens": [
+        "whitespace-break-spaces"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "whitespaceVariants",
+      "axis": "whitespace",
+      "option": "normal",
+      "tokenCount": 1,
+      "tokens": [
+        "whitespace-normal"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "whitespaceVariants",
+      "axis": "whitespace",
+      "option": "nowrap",
+      "tokenCount": 1,
+      "tokens": [
+        "whitespace-nowrap"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "whitespaceVariants",
+      "axis": "whitespace",
+      "option": "pre",
+      "tokenCount": 1,
+      "tokens": [
+        "whitespace-pre"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "whitespaceVariants",
+      "axis": "whitespace",
+      "option": "preLine",
+      "tokenCount": 1,
+      "tokens": [
+        "whitespace-pre-line"
+      ],
+      "source": "src/variants/typography.ts"
+    },
+    {
+      "namespace": "typography",
+      "variant": "whitespaceVariants",
+      "axis": "whitespace",
+      "option": "preWrap",
+      "tokenCount": 1,
+      "tokens": [
+        "whitespace-pre-wrap"
+      ],
+      "source": "src/variants/typography.ts"
+    }
+  ]
+}

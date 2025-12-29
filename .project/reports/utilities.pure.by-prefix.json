@@ -1,0 +1,914 @@
+{
+  "generatedAt": "2025-12-29T08:44:48.541Z",
+  "input": ".project\\reports\\variants.single-token.json",
+  "groupingRule": "prefix = token.split(\"-\", 1)[0]; value = token.slice(prefix.length + 1)",
+  "reconstructionRule": "tailwindClass = value ? `${prefix}-${value}` : prefix",
+  "prefixCount": 76,
+  "totalUniqueTokens": 524,
+  "table": {
+    "absolute": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "accent": {
+      "count": 3,
+      "values": [
+        "auto",
+        "current",
+        "inherit"
+      ]
+    },
+    "aspect": {
+      "count": 2,
+      "values": [
+        "square",
+        "video"
+      ]
+    },
+    "auto": {
+      "count": 8,
+      "values": [
+        "cols-auto",
+        "cols-fr",
+        "cols-max",
+        "cols-min",
+        "rows-auto",
+        "rows-fr",
+        "rows-max",
+        "rows-min"
+      ]
+    },
+    "basis": {
+      "count": 4,
+      "values": [
+        "0",
+        "auto",
+        "full",
+        "px"
+      ]
+    },
+    "bg": {
+      "count": 18,
+      "values": [
+        "accent",
+        "accent-foreground",
+        "background",
+        "border",
+        "card",
+        "destructive",
+        "destructive-foreground",
+        "foreground",
+        "input",
+        "muted",
+        "muted-foreground",
+        "popover",
+        "primary",
+        "primary-foreground",
+        "ring",
+        "secondary",
+        "secondary-foreground",
+        "transparent"
+      ]
+    },
+    "block": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "border": {
+      "count": 34,
+      "values": [
+        "",
+        "0",
+        "2",
+        "4",
+        "accent",
+        "b",
+        "b-0",
+        "b-2",
+        "b-4",
+        "border",
+        "current",
+        "dashed",
+        "destructive",
+        "dotted",
+        "foreground",
+        "input",
+        "l",
+        "l-0",
+        "l-2",
+        "l-4",
+        "muted",
+        "primary",
+        "r",
+        "r-0",
+        "r-2",
+        "r-4",
+        "ring",
+        "secondary",
+        "solid",
+        "t",
+        "t-0",
+        "t-2",
+        "t-4",
+        "transparent"
+      ]
+    },
+    "bottom": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ]
+    },
+    "break": {
+      "count": 3,
+      "values": [
+        "all",
+        "normal",
+        "words"
+      ]
+    },
+    "capitalize": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "caret": {
+      "count": 6,
+      "values": [
+        "accent",
+        "current",
+        "foreground",
+        "primary",
+        "secondary",
+        "transparent"
+      ]
+    },
+    "col": {
+      "count": 28,
+      "values": [
+        "end-1",
+        "end-10",
+        "end-11",
+        "end-12",
+        "end-13",
+        "end-2",
+        "end-3",
+        "end-4",
+        "end-5",
+        "end-6",
+        "end-7",
+        "end-8",
+        "end-9",
+        "end-auto",
+        "start-1",
+        "start-10",
+        "start-11",
+        "start-12",
+        "start-13",
+        "start-2",
+        "start-3",
+        "start-4",
+        "start-5",
+        "start-6",
+        "start-7",
+        "start-8",
+        "start-9",
+        "start-auto"
+      ]
+    },
+    "collapse": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "content": {
+      "count": 6,
+      "values": [
+        "around",
+        "between",
+        "center",
+        "end",
+        "evenly",
+        "start"
+      ]
+    },
+    "contents": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "fixed": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "flex": {
+      "count": 9,
+      "values": [
+        "",
+        "1",
+        "col",
+        "col-reverse",
+        "nowrap",
+        "row",
+        "row-reverse",
+        "wrap",
+        "wrap-reverse"
+      ]
+    },
+    "font": {
+      "count": 4,
+      "values": [
+        "bold",
+        "medium",
+        "normal",
+        "semibold"
+      ]
+    },
+    "gap": {
+      "count": 20,
+      "values": [
+        "0",
+        "1",
+        "10",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "x-0",
+        "x-1",
+        "x-2",
+        "x-4",
+        "x-6",
+        "x-8",
+        "y-0",
+        "y-1",
+        "y-2",
+        "y-4",
+        "y-6",
+        "y-8"
+      ]
+    },
+    "grid": {
+      "count": 20,
+      "values": [
+        "",
+        "cols-1",
+        "cols-12",
+        "cols-2",
+        "cols-3",
+        "cols-4",
+        "cols-5",
+        "cols-6",
+        "flow-col",
+        "flow-col-dense",
+        "flow-dense",
+        "flow-row",
+        "flow-row-dense",
+        "rows-1",
+        "rows-12",
+        "rows-2",
+        "rows-3",
+        "rows-4",
+        "rows-5",
+        "rows-6"
+      ]
+    },
+    "grow": {
+      "count": 2,
+      "values": [
+        "",
+        "0"
+      ]
+    },
+    "h": {
+      "count": 7,
+      "values": [
+        "auto",
+        "fit",
+        "full",
+        "max",
+        "min",
+        "px",
+        "screen"
+      ]
+    },
+    "hidden": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "hyphens": {
+      "count": 3,
+      "values": [
+        "auto",
+        "manual",
+        "none"
+      ]
+    },
+    "inline": {
+      "count": 4,
+      "values": [
+        "",
+        "block",
+        "flex",
+        "grid"
+      ]
+    },
+    "inset": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ]
+    },
+    "invisible": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "italic": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "items": {
+      "count": 5,
+      "values": [
+        "baseline",
+        "center",
+        "end",
+        "start",
+        "stretch"
+      ]
+    },
+    "justify": {
+      "count": 10,
+      "values": [
+        "around",
+        "between",
+        "center",
+        "end",
+        "evenly",
+        "items-center",
+        "items-end",
+        "items-start",
+        "items-stretch",
+        "start"
+      ]
+    },
+    "leading": {
+      "count": 3,
+      "values": [
+        "normal",
+        "relaxed",
+        "tight"
+      ]
+    },
+    "left": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ]
+    },
+    "lowercase": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "m": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "max": {
+      "count": 17,
+      "values": [
+        "h-full",
+        "h-none",
+        "h-screen",
+        "w-2xl",
+        "w-4xl",
+        "w-6xl",
+        "w-full",
+        "w-lg",
+        "w-md",
+        "w-none",
+        "w-screen-2xl",
+        "w-screen-lg",
+        "w-screen-md",
+        "w-screen-sm",
+        "w-screen-xl",
+        "w-sm",
+        "w-xl"
+      ]
+    },
+    "mb": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "min": {
+      "count": 6,
+      "values": [
+        "h-full",
+        "h-screen",
+        "w-0",
+        "w-full",
+        "w-max",
+        "w-min"
+      ]
+    },
+    "ml": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "mr": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "mt": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "mx": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "my": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ]
+    },
+    "normal": {
+      "count": 1,
+      "values": [
+        "case"
+      ]
+    },
+    "object": {
+      "count": 10,
+      "values": [
+        "bottom",
+        "center",
+        "contain",
+        "cover",
+        "fill",
+        "left",
+        "none",
+        "right",
+        "scale-down",
+        "top"
+      ]
+    },
+    "order": {
+      "count": 15,
+      "values": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "first",
+        "last",
+        "none"
+      ]
+    },
+    "overflow": {
+      "count": 12,
+      "values": [
+        "auto",
+        "hidden",
+        "scroll",
+        "visible",
+        "x-auto",
+        "x-hidden",
+        "x-scroll",
+        "x-visible",
+        "y-auto",
+        "y-hidden",
+        "y-scroll",
+        "y-visible"
+      ]
+    },
+    "p": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    "pb": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    "pl": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    "placeholder": {
+      "count": 2,
+      "values": [
+        "foreground",
+        "muted-foreground"
+      ]
+    },
+    "pointer": {
+      "count": 2,
+      "values": [
+        "events-auto",
+        "events-none"
+      ]
+    },
+    "pr": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    "pt": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    "px": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    "py": {
+      "count": 7,
+      "values": [
+        "0",
+        "16",
+        "2",
+        "32",
+        "4",
+        "48",
+        "8"
+      ]
+    },
+    "relative": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "right": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ]
+    },
+    "ring": {
+      "count": 10,
+      "values": [
+        "0",
+        "1",
+        "2",
+        "4",
+        "8",
+        "offset-0",
+        "offset-1",
+        "offset-2",
+        "offset-4",
+        "offset-8"
+      ]
+    },
+    "rounded": {
+      "count": 33,
+      "values": [
+        "",
+        "2xl",
+        "3xl",
+        "b-full",
+        "b-lg",
+        "b-md",
+        "b-none",
+        "b-sm",
+        "b-xl",
+        "full",
+        "l-full",
+        "l-lg",
+        "l-md",
+        "l-none",
+        "l-sm",
+        "l-xl",
+        "lg",
+        "md",
+        "none",
+        "r-full",
+        "r-lg",
+        "r-md",
+        "r-none",
+        "r-sm",
+        "r-xl",
+        "sm",
+        "t-full",
+        "t-lg",
+        "t-md",
+        "t-none",
+        "t-sm",
+        "t-xl",
+        "xl"
+      ]
+    },
+    "row": {
+      "count": 16,
+      "values": [
+        "end-1",
+        "end-2",
+        "end-3",
+        "end-4",
+        "end-5",
+        "end-6",
+        "end-7",
+        "end-auto",
+        "start-1",
+        "start-2",
+        "start-3",
+        "start-4",
+        "start-5",
+        "start-6",
+        "start-7",
+        "start-auto"
+      ]
+    },
+    "shadow": {
+      "count": 7,
+      "values": [
+        "2xl",
+        "inner",
+        "lg",
+        "md",
+        "none",
+        "sm",
+        "xl"
+      ]
+    },
+    "shrink": {
+      "count": 2,
+      "values": [
+        "",
+        "0"
+      ]
+    },
+    "space": {
+      "count": 12,
+      "values": [
+        "x-0",
+        "x-1",
+        "x-2",
+        "x-4",
+        "x-6",
+        "x-8",
+        "y-0",
+        "y-1",
+        "y-2",
+        "y-4",
+        "y-6",
+        "y-8"
+      ]
+    },
+    "static": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "sticky": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "text": {
+      "count": 22,
+      "values": [
+        "2xl",
+        "3xl",
+        "4xl",
+        "5xl",
+        "accent-foreground",
+        "base",
+        "center",
+        "destructive",
+        "destructive-foreground",
+        "foreground",
+        "justify",
+        "left",
+        "lg",
+        "muted-foreground",
+        "primary",
+        "primary-foreground",
+        "right",
+        "secondary",
+        "secondary-foreground",
+        "sm",
+        "xl",
+        "xs"
+      ]
+    },
+    "top": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ]
+    },
+    "tracking": {
+      "count": 6,
+      "values": [
+        "normal",
+        "tight",
+        "tighter",
+        "wide",
+        "wider",
+        "widest"
+      ]
+    },
+    "truncate": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "underline": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "uppercase": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "visible": {
+      "count": 1,
+      "values": [
+        ""
+      ]
+    },
+    "w": {
+      "count": 7,
+      "values": [
+        "auto",
+        "fit",
+        "full",
+        "max",
+        "min",
+        "px",
+        "screen"
+      ]
+    },
+    "whitespace": {
+      "count": 6,
+      "values": [
+        "break-spaces",
+        "normal",
+        "nowrap",
+        "pre",
+        "pre-line",
+        "pre-wrap"
+      ]
+    },
+    "z": {
+      "count": 7,
+      "values": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "auto"
+      ]
+    }
+  }
+}

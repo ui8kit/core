@@ -1,0 +1,3484 @@
+{
+  "generatedAt": "2025-12-29T08:38:27.701Z",
+  "input": ".project\\reports\\variants.single-token.json",
+  "groupingRule": "prefix = token.split(\"-\", 1)[0]; value = token.slice(prefix.length + 1)",
+  "reconstructionRule": "tailwindClass = value ? `${prefix}-${value}` : prefix",
+  "prefixCount": 76,
+  "totalUniqueTokens": 524,
+  "table": {
+    "absolute": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.position.absolute",
+          "token": "absolute",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "accent": {
+      "count": 3,
+      "values": [
+        "auto",
+        "current",
+        "inherit"
+      ],
+      "examples": [
+        {
+          "key": "colors.colorVariants.accentColor.auto",
+          "token": "accent-auto",
+          "value": "auto",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.accentColor.current",
+          "token": "accent-current",
+          "value": "current",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.accentColor.inherit",
+          "token": "accent-inherit",
+          "value": "inherit",
+          "source": "src/variants/colors.ts"
+        }
+      ]
+    },
+    "aspect": {
+      "count": 2,
+      "values": [
+        "square",
+        "video"
+      ],
+      "examples": [
+        {
+          "key": "image.aspectRatioVariants.aspect.square",
+          "token": "aspect-square",
+          "value": "square",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.aspectRatioVariants.aspect.video",
+          "token": "aspect-video",
+          "value": "video",
+          "source": "src/variants/image.ts"
+        }
+      ]
+    },
+    "auto": {
+      "count": 8,
+      "values": [
+        "cols-auto",
+        "cols-fr",
+        "cols-max",
+        "cols-min",
+        "rows-auto",
+        "rows-fr",
+        "rows-max",
+        "rows-min"
+      ],
+      "examples": [
+        {
+          "key": "grid.gridVariants.autoCols.auto",
+          "token": "auto-cols-auto",
+          "value": "cols-auto",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoCols.fr",
+          "token": "auto-cols-fr",
+          "value": "cols-fr",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoCols.max",
+          "token": "auto-cols-max",
+          "value": "cols-max",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoCols.min",
+          "token": "auto-cols-min",
+          "value": "cols-min",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoRows.auto",
+          "token": "auto-rows-auto",
+          "value": "rows-auto",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoRows.fr",
+          "token": "auto-rows-fr",
+          "value": "rows-fr",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoRows.max",
+          "token": "auto-rows-max",
+          "value": "rows-max",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.autoRows.min",
+          "token": "auto-rows-min",
+          "value": "rows-min",
+          "source": "src/variants/grid.ts"
+        }
+      ]
+    },
+    "basis": {
+      "count": 4,
+      "values": [
+        "0",
+        "auto",
+        "full",
+        "px"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.basis.0",
+          "token": "basis-0",
+          "value": "0",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.basis.auto",
+          "token": "basis-auto",
+          "value": "auto",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.basis.full",
+          "token": "basis-full",
+          "value": "full",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.basis.px",
+          "token": "basis-px",
+          "value": "px",
+          "source": "src/variants/flex.ts"
+        }
+      ]
+    },
+    "bg": {
+      "count": 18,
+      "values": [
+        "accent",
+        "accent-foreground",
+        "background",
+        "border",
+        "card",
+        "destructive",
+        "destructive-foreground",
+        "foreground",
+        "input",
+        "muted",
+        "muted-foreground",
+        "popover",
+        "primary",
+        "primary-foreground",
+        "ring",
+        "secondary",
+        "secondary-foreground",
+        "transparent"
+      ],
+      "examples": [
+        {
+          "key": "colors.colorVariants.bg.accent",
+          "token": "bg-accent",
+          "value": "accent",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.accent-foreground",
+          "token": "bg-accent-foreground",
+          "value": "accent-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.background",
+          "token": "bg-background",
+          "value": "background",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.border",
+          "token": "bg-border",
+          "value": "border",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.card",
+          "token": "bg-card",
+          "value": "card",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.destructive",
+          "token": "bg-destructive",
+          "value": "destructive",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.destructive-foreground",
+          "token": "bg-destructive-foreground",
+          "value": "destructive-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.foreground",
+          "token": "bg-foreground",
+          "value": "foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.input",
+          "token": "bg-input",
+          "value": "input",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.bg.muted",
+          "token": "bg-muted",
+          "value": "muted",
+          "source": "src/variants/colors.ts"
+        }
+      ]
+    },
+    "block": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.display.block",
+          "token": "block",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "border": {
+      "count": 34,
+      "values": [
+        "",
+        "0",
+        "2",
+        "4",
+        "accent",
+        "b",
+        "b-0",
+        "b-2",
+        "b-4",
+        "border",
+        "current",
+        "dashed",
+        "destructive",
+        "dotted",
+        "foreground",
+        "input",
+        "l",
+        "l-0",
+        "l-2",
+        "l-4",
+        "muted",
+        "primary",
+        "r",
+        "r-0",
+        "r-2",
+        "r-4",
+        "ring",
+        "secondary",
+        "solid",
+        "t",
+        "t-0",
+        "t-2",
+        "t-4",
+        "transparent"
+      ],
+      "examples": [
+        {
+          "key": "border.borderVariants.border.1px",
+          "token": "border",
+          "value": "",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.border.2px",
+          "token": "border-2",
+          "value": "2",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.border.4px",
+          "token": "border-4",
+          "value": "4",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.border.none",
+          "token": "border-0",
+          "value": "0",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.borderBottom.1px",
+          "token": "border-b",
+          "value": "b",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.borderBottom.2px",
+          "token": "border-b-2",
+          "value": "b-2",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.borderBottom.4px",
+          "token": "border-b-4",
+          "value": "b-4",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.borderBottom.none",
+          "token": "border-b-0",
+          "value": "b-0",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.borderLeft.1px",
+          "token": "border-l",
+          "value": "l",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.borderLeft.2px",
+          "token": "border-l-2",
+          "value": "l-2",
+          "source": "src/variants/border.ts"
+        }
+      ]
+    },
+    "bottom": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.bottom.0",
+          "token": "bottom-0",
+          "value": "0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.bottom.auto",
+          "token": "bottom-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "break": {
+      "count": 3,
+      "values": [
+        "all",
+        "normal",
+        "words"
+      ],
+      "examples": [
+        {
+          "key": "typography.breakVariants.break.all",
+          "token": "break-all",
+          "value": "all",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.breakVariants.break.normal",
+          "token": "break-normal",
+          "value": "normal",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.breakVariants.break.words",
+          "token": "break-words",
+          "value": "words",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "capitalize": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "typography.textTransformVariants.transform.capitalize",
+          "token": "capitalize",
+          "value": "",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "caret": {
+      "count": 6,
+      "values": [
+        "accent",
+        "current",
+        "foreground",
+        "primary",
+        "secondary",
+        "transparent"
+      ],
+      "examples": [
+        {
+          "key": "colors.colorVariants.caret.accent",
+          "token": "caret-accent",
+          "value": "accent",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.caret.current",
+          "token": "caret-current",
+          "value": "current",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.caret.foreground",
+          "token": "caret-foreground",
+          "value": "foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.caret.primary",
+          "token": "caret-primary",
+          "value": "primary",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.caret.secondary",
+          "token": "caret-secondary",
+          "value": "secondary",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.caret.transparent",
+          "token": "caret-transparent",
+          "value": "transparent",
+          "source": "src/variants/colors.ts"
+        }
+      ]
+    },
+    "col": {
+      "count": 28,
+      "values": [
+        "end-1",
+        "end-10",
+        "end-11",
+        "end-12",
+        "end-13",
+        "end-2",
+        "end-3",
+        "end-4",
+        "end-5",
+        "end-6",
+        "end-7",
+        "end-8",
+        "end-9",
+        "end-auto",
+        "start-1",
+        "start-10",
+        "start-11",
+        "start-12",
+        "start-13",
+        "start-2",
+        "start-3",
+        "start-4",
+        "start-5",
+        "start-6",
+        "start-7",
+        "start-8",
+        "start-9",
+        "start-auto"
+      ],
+      "examples": [
+        {
+          "key": "grid.gridVariants.colEnd.1",
+          "token": "col-end-1",
+          "value": "end-1",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.10",
+          "token": "col-end-10",
+          "value": "end-10",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.11",
+          "token": "col-end-11",
+          "value": "end-11",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.12",
+          "token": "col-end-12",
+          "value": "end-12",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.13",
+          "token": "col-end-13",
+          "value": "end-13",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.2",
+          "token": "col-end-2",
+          "value": "end-2",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.3",
+          "token": "col-end-3",
+          "value": "end-3",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.4",
+          "token": "col-end-4",
+          "value": "end-4",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.5",
+          "token": "col-end-5",
+          "value": "end-5",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.colEnd.6",
+          "token": "col-end-6",
+          "value": "end-6",
+          "source": "src/variants/grid.ts"
+        }
+      ]
+    },
+    "collapse": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.visibility.collapse",
+          "token": "collapse",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "content": {
+      "count": 6,
+      "values": [
+        "around",
+        "between",
+        "center",
+        "end",
+        "evenly",
+        "start"
+      ],
+      "examples": [
+        {
+          "key": "grid.gridVariants.content.around",
+          "token": "content-around",
+          "value": "around",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.content.between",
+          "token": "content-between",
+          "value": "between",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.content.center",
+          "token": "content-center",
+          "value": "center",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.content.end",
+          "token": "content-end",
+          "value": "end",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.content.evenly",
+          "token": "content-evenly",
+          "value": "evenly",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.content.start",
+          "token": "content-start",
+          "value": "start",
+          "source": "src/variants/grid.ts"
+        }
+      ]
+    },
+    "contents": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.display.contents",
+          "token": "contents",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "fixed": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.position.fixed",
+          "token": "fixed",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "flex": {
+      "count": 9,
+      "values": [
+        "",
+        "1",
+        "col",
+        "col-reverse",
+        "nowrap",
+        "row",
+        "row-reverse",
+        "wrap",
+        "wrap-reverse"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.direction.col",
+          "token": "flex-col",
+          "value": "col",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.direction.col-reverse",
+          "token": "flex-col-reverse",
+          "value": "col-reverse",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.direction.row",
+          "token": "flex-row",
+          "value": "row",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.direction.row-reverse",
+          "token": "flex-row-reverse",
+          "value": "row-reverse",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.wrap.nowrap",
+          "token": "flex-nowrap",
+          "value": "nowrap",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.wrap.wrap",
+          "token": "flex-wrap",
+          "value": "wrap",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.wrap.wrap-reverse",
+          "token": "flex-wrap-reverse",
+          "value": "wrap-reverse",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "group.groupLayoutVariants.grow.true",
+          "token": "flex-1",
+          "value": "1",
+          "source": "src/variants/group.ts"
+        },
+        {
+          "key": "layout.layoutVariants.display.flex",
+          "token": "flex",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "font": {
+      "count": 4,
+      "values": [
+        "bold",
+        "medium",
+        "normal",
+        "semibold"
+      ],
+      "examples": [
+        {
+          "key": "typography.fontWeightVariants.fw.bold",
+          "token": "font-bold",
+          "value": "bold",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.fontWeightVariants.fw.medium",
+          "token": "font-medium",
+          "value": "medium",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.fontWeightVariants.fw.normal",
+          "token": "font-normal",
+          "value": "normal",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.fontWeightVariants.fw.semibold",
+          "token": "font-semibold",
+          "value": "semibold",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "gap": {
+      "count": 20,
+      "values": [
+        "0",
+        "1",
+        "10",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "x-0",
+        "x-1",
+        "x-2",
+        "x-4",
+        "x-6",
+        "x-8",
+        "y-0",
+        "y-1",
+        "y-2",
+        "y-4",
+        "y-6",
+        "y-8"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.gap.2xl",
+          "token": "gap-10",
+          "value": "10",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.3xl",
+          "token": "gap-12",
+          "value": "12",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.lg",
+          "token": "gap-6",
+          "value": "6",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.md",
+          "token": "gap-4",
+          "value": "4",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.none",
+          "token": "gap-0",
+          "value": "0",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.sm",
+          "token": "gap-2",
+          "value": "2",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.xl",
+          "token": "gap-8",
+          "value": "8",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gap.xs",
+          "token": "gap-1",
+          "value": "1",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gapX.lg",
+          "token": "gap-x-6",
+          "value": "x-6",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.gapX.md",
+          "token": "gap-x-4",
+          "value": "x-4",
+          "source": "src/variants/flex.ts"
+        }
+      ]
+    },
+    "grid": {
+      "count": 20,
+      "values": [
+        "",
+        "cols-1",
+        "cols-12",
+        "cols-2",
+        "cols-3",
+        "cols-4",
+        "cols-5",
+        "cols-6",
+        "flow-col",
+        "flow-col-dense",
+        "flow-dense",
+        "flow-row",
+        "flow-row-dense",
+        "rows-1",
+        "rows-12",
+        "rows-2",
+        "rows-3",
+        "rows-4",
+        "rows-5",
+        "rows-6"
+      ],
+      "examples": [
+        {
+          "key": "grid.gridVariants.cols.1",
+          "token": "grid-cols-1",
+          "value": "cols-1",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.cols.12",
+          "token": "grid-cols-12",
+          "value": "cols-12",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.cols.2",
+          "token": "grid-cols-2",
+          "value": "cols-2",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.cols.3",
+          "token": "grid-cols-3",
+          "value": "cols-3",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.cols.4",
+          "token": "grid-cols-4",
+          "value": "cols-4",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.cols.5",
+          "token": "grid-cols-5",
+          "value": "cols-5",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.cols.6",
+          "token": "grid-cols-6",
+          "value": "cols-6",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.flow.col",
+          "token": "grid-flow-col",
+          "value": "flow-col",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.flow.colDense",
+          "token": "grid-flow-col-dense",
+          "value": "flow-col-dense",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.flow.dense",
+          "token": "grid-flow-dense",
+          "value": "flow-dense",
+          "source": "src/variants/grid.ts"
+        }
+      ]
+    },
+    "grow": {
+      "count": 2,
+      "values": [
+        "",
+        "0"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.grow.0",
+          "token": "grow-0",
+          "value": "0",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.grow.1",
+          "token": "grow",
+          "value": "",
+          "source": "src/variants/flex.ts"
+        }
+      ]
+    },
+    "h": {
+      "count": 7,
+      "values": [
+        "auto",
+        "fit",
+        "full",
+        "max",
+        "min",
+        "px",
+        "screen"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.h.1px",
+          "token": "h-px",
+          "value": "px",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.h.auto",
+          "token": "h-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.h.fit",
+          "token": "h-fit",
+          "value": "fit",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.h.full",
+          "token": "h-full",
+          "value": "full",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.h.max",
+          "token": "h-max",
+          "value": "max",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.h.min",
+          "token": "h-min",
+          "value": "min",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.h.screen",
+          "token": "h-screen",
+          "value": "screen",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "hidden": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.display.hidden",
+          "token": "hidden",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "hyphens": {
+      "count": 3,
+      "values": [
+        "auto",
+        "manual",
+        "none"
+      ],
+      "examples": [
+        {
+          "key": "typography.hyphenVariants.hyphens.auto",
+          "token": "hyphens-auto",
+          "value": "auto",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.hyphenVariants.hyphens.manual",
+          "token": "hyphens-manual",
+          "value": "manual",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.hyphenVariants.hyphens.none",
+          "token": "hyphens-none",
+          "value": "none",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "inline": {
+      "count": 4,
+      "values": [
+        "",
+        "block",
+        "flex",
+        "grid"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.display.inline",
+          "token": "inline",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.display.inline-block",
+          "token": "inline-block",
+          "value": "block",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.display.inline-flex",
+          "token": "inline-flex",
+          "value": "flex",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.display.inline-grid",
+          "token": "inline-grid",
+          "value": "grid",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "inset": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.inset.0",
+          "token": "inset-0",
+          "value": "0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.inset.auto",
+          "token": "inset-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "invisible": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.visibility.invisible",
+          "token": "invisible",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "italic": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "typography.typographyModifierVariants.italic.true",
+          "token": "italic",
+          "value": "",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "items": {
+      "count": 5,
+      "values": [
+        "baseline",
+        "center",
+        "end",
+        "start",
+        "stretch"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.align.baseline",
+          "token": "items-baseline",
+          "value": "baseline",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.align.center",
+          "token": "items-center",
+          "value": "center",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.align.end",
+          "token": "items-end",
+          "value": "end",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.align.start",
+          "token": "items-start",
+          "value": "start",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.align.stretch",
+          "token": "items-stretch",
+          "value": "stretch",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "grid.gridVariants.align.center",
+          "token": "items-center",
+          "value": "center",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.align.end",
+          "token": "items-end",
+          "value": "end",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.align.start",
+          "token": "items-start",
+          "value": "start",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.align.stretch",
+          "token": "items-stretch",
+          "value": "stretch",
+          "source": "src/variants/grid.ts"
+        }
+      ]
+    },
+    "justify": {
+      "count": 10,
+      "values": [
+        "around",
+        "between",
+        "center",
+        "end",
+        "evenly",
+        "items-center",
+        "items-end",
+        "items-start",
+        "items-stretch",
+        "start"
+      ],
+      "examples": [
+        {
+          "key": "button.buttonContentAlignVariants.contentAlign.between",
+          "token": "justify-between",
+          "value": "between",
+          "source": "src/variants/button.ts"
+        },
+        {
+          "key": "button.buttonContentAlignVariants.contentAlign.center",
+          "token": "justify-center",
+          "value": "center",
+          "source": "src/variants/button.ts"
+        },
+        {
+          "key": "button.buttonContentAlignVariants.contentAlign.end",
+          "token": "justify-end",
+          "value": "end",
+          "source": "src/variants/button.ts"
+        },
+        {
+          "key": "button.buttonContentAlignVariants.contentAlign.start",
+          "token": "justify-start",
+          "value": "start",
+          "source": "src/variants/button.ts"
+        },
+        {
+          "key": "flex.flexVariants.justify.around",
+          "token": "justify-around",
+          "value": "around",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.justify.between",
+          "token": "justify-between",
+          "value": "between",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.justify.center",
+          "token": "justify-center",
+          "value": "center",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.justify.end",
+          "token": "justify-end",
+          "value": "end",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.justify.evenly",
+          "token": "justify-evenly",
+          "value": "evenly",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.justify.start",
+          "token": "justify-start",
+          "value": "start",
+          "source": "src/variants/flex.ts"
+        }
+      ]
+    },
+    "leading": {
+      "count": 3,
+      "values": [
+        "normal",
+        "relaxed",
+        "tight"
+      ],
+      "examples": [
+        {
+          "key": "typography.leadingVariants.leading.normal",
+          "token": "leading-normal",
+          "value": "normal",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.leadingVariants.leading.relaxed",
+          "token": "leading-relaxed",
+          "value": "relaxed",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.leadingVariants.leading.tight",
+          "token": "leading-tight",
+          "value": "tight",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "left": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.left.0",
+          "token": "left-0",
+          "value": "0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.left.auto",
+          "token": "left-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "lowercase": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "typography.textTransformVariants.transform.lowercase",
+          "token": "lowercase",
+          "value": "",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "m": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.m.2xl",
+          "token": "m-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.auto",
+          "token": "m-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.lg",
+          "token": "m-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.md",
+          "token": "m-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.none",
+          "token": "m-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.sm",
+          "token": "m-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.xl",
+          "token": "m-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.m.xs",
+          "token": "m-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "max": {
+      "count": 17,
+      "values": [
+        "h-full",
+        "h-none",
+        "h-screen",
+        "w-2xl",
+        "w-4xl",
+        "w-6xl",
+        "w-full",
+        "w-lg",
+        "w-md",
+        "w-none",
+        "w-screen-2xl",
+        "w-screen-lg",
+        "w-screen-md",
+        "w-screen-sm",
+        "w-screen-xl",
+        "w-sm",
+        "w-xl"
+      ],
+      "examples": [
+        {
+          "key": "container.containerLayoutVariants.fluid.true",
+          "token": "max-w-none",
+          "value": "w-none",
+          "source": "src/variants/container.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxH.full",
+          "token": "max-h-full",
+          "value": "h-full",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxH.none",
+          "token": "max-h-none",
+          "value": "h-none",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxH.screen",
+          "token": "max-h-screen",
+          "value": "h-screen",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxW.2xl",
+          "token": "max-w-2xl",
+          "value": "w-2xl",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxW.full",
+          "token": "max-w-full",
+          "value": "w-full",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxW.lg",
+          "token": "max-w-lg",
+          "value": "w-lg",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxW.md",
+          "token": "max-w-md",
+          "value": "w-md",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxW.none",
+          "token": "max-w-none",
+          "value": "w-none",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.maxW.screen2xl",
+          "token": "max-w-screen-2xl",
+          "value": "w-screen-2xl",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "mb": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.mb.2xl",
+          "token": "mb-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.auto",
+          "token": "mb-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.lg",
+          "token": "mb-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.md",
+          "token": "mb-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.none",
+          "token": "mb-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.sm",
+          "token": "mb-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.xl",
+          "token": "mb-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mb.xs",
+          "token": "mb-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "min": {
+      "count": 6,
+      "values": [
+        "h-full",
+        "h-screen",
+        "w-0",
+        "w-full",
+        "w-max",
+        "w-min"
+      ],
+      "examples": [
+        {
+          "key": "group.groupLayoutVariants.preventGrowOverflow.true",
+          "token": "min-w-0",
+          "value": "w-0",
+          "source": "src/variants/group.ts"
+        },
+        {
+          "key": "layout.layoutVariants.minH.full",
+          "token": "min-h-full",
+          "value": "h-full",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.minH.screen",
+          "token": "min-h-screen",
+          "value": "h-screen",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.minW.0",
+          "token": "min-w-0",
+          "value": "w-0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.minW.full",
+          "token": "min-w-full",
+          "value": "w-full",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.minW.max",
+          "token": "min-w-max",
+          "value": "w-max",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.minW.min",
+          "token": "min-w-min",
+          "value": "w-min",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "ml": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.ml.2xl",
+          "token": "ml-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.auto",
+          "token": "ml-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.lg",
+          "token": "ml-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.md",
+          "token": "ml-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.none",
+          "token": "ml-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.sm",
+          "token": "ml-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.xl",
+          "token": "ml-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.ml.xs",
+          "token": "ml-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "mr": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.mr.2xl",
+          "token": "mr-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.auto",
+          "token": "mr-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.lg",
+          "token": "mr-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.md",
+          "token": "mr-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.none",
+          "token": "mr-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.sm",
+          "token": "mr-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.xl",
+          "token": "mr-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mr.xs",
+          "token": "mr-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "mt": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.mt.2xl",
+          "token": "mt-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.auto",
+          "token": "mt-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.lg",
+          "token": "mt-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.md",
+          "token": "mt-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.none",
+          "token": "mt-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.sm",
+          "token": "mt-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.xl",
+          "token": "mt-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mt.xs",
+          "token": "mt-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "mx": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "container.containerLayoutVariants.centered.true",
+          "token": "mx-auto",
+          "value": "auto",
+          "source": "src/variants/container.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.2xl",
+          "token": "mx-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.auto",
+          "token": "mx-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.lg",
+          "token": "mx-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.md",
+          "token": "mx-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.none",
+          "token": "mx-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.sm",
+          "token": "mx-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.xl",
+          "token": "mx-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.mx.xs",
+          "token": "mx-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "my": {
+      "count": 8,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.my.2xl",
+          "token": "my-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.auto",
+          "token": "my-auto",
+          "value": "auto",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.lg",
+          "token": "my-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.md",
+          "token": "my-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.none",
+          "token": "my-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.sm",
+          "token": "my-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.xl",
+          "token": "my-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.my.xs",
+          "token": "my-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "normal": {
+      "count": 1,
+      "values": [
+        "case"
+      ],
+      "examples": [
+        {
+          "key": "typography.textTransformVariants.transform.normal",
+          "token": "normal-case",
+          "value": "case",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "object": {
+      "count": 10,
+      "values": [
+        "bottom",
+        "center",
+        "contain",
+        "cover",
+        "fill",
+        "left",
+        "none",
+        "right",
+        "scale-down",
+        "top"
+      ],
+      "examples": [
+        {
+          "key": "image.imageFitVariants.fit.contain",
+          "token": "object-contain",
+          "value": "contain",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imageFitVariants.fit.cover",
+          "token": "object-cover",
+          "value": "cover",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imageFitVariants.fit.fill",
+          "token": "object-fill",
+          "value": "fill",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imageFitVariants.fit.none",
+          "token": "object-none",
+          "value": "none",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imageFitVariants.fit.scale-down",
+          "token": "object-scale-down",
+          "value": "scale-down",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imagePositionVariants.position.bottom",
+          "token": "object-bottom",
+          "value": "bottom",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imagePositionVariants.position.center",
+          "token": "object-center",
+          "value": "center",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imagePositionVariants.position.left",
+          "token": "object-left",
+          "value": "left",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imagePositionVariants.position.right",
+          "token": "object-right",
+          "value": "right",
+          "source": "src/variants/image.ts"
+        },
+        {
+          "key": "image.imagePositionVariants.position.top",
+          "token": "object-top",
+          "value": "top",
+          "source": "src/variants/image.ts"
+        }
+      ]
+    },
+    "order": {
+      "count": 15,
+      "values": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "first",
+        "last",
+        "none"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.order.1",
+          "token": "order-1",
+          "value": "1",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.10",
+          "token": "order-10",
+          "value": "10",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.11",
+          "token": "order-11",
+          "value": "11",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.12",
+          "token": "order-12",
+          "value": "12",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.2",
+          "token": "order-2",
+          "value": "2",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.3",
+          "token": "order-3",
+          "value": "3",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.4",
+          "token": "order-4",
+          "value": "4",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.5",
+          "token": "order-5",
+          "value": "5",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.6",
+          "token": "order-6",
+          "value": "6",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.order.7",
+          "token": "order-7",
+          "value": "7",
+          "source": "src/variants/flex.ts"
+        }
+      ]
+    },
+    "overflow": {
+      "count": 12,
+      "values": [
+        "auto",
+        "hidden",
+        "scroll",
+        "visible",
+        "x-auto",
+        "x-hidden",
+        "x-scroll",
+        "x-visible",
+        "y-auto",
+        "y-hidden",
+        "y-scroll",
+        "y-visible"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.overflow.auto",
+          "token": "overflow-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflow.hidden",
+          "token": "overflow-hidden",
+          "value": "hidden",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflow.scroll",
+          "token": "overflow-scroll",
+          "value": "scroll",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflow.visible",
+          "token": "overflow-visible",
+          "value": "visible",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflowX.auto",
+          "token": "overflow-x-auto",
+          "value": "x-auto",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflowX.hidden",
+          "token": "overflow-x-hidden",
+          "value": "x-hidden",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflowX.scroll",
+          "token": "overflow-x-scroll",
+          "value": "x-scroll",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflowX.visible",
+          "token": "overflow-x-visible",
+          "value": "x-visible",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflowY.auto",
+          "token": "overflow-y-auto",
+          "value": "y-auto",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.overflowY.hidden",
+          "token": "overflow-y-hidden",
+          "value": "y-hidden",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "p": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.p.2xl",
+          "token": "p-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.p.lg",
+          "token": "p-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.p.md",
+          "token": "p-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.p.none",
+          "token": "p-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.p.sm",
+          "token": "p-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.p.xl",
+          "token": "p-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.p.xs",
+          "token": "p-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "pb": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.pb.2xl",
+          "token": "pb-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pb.lg",
+          "token": "pb-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pb.md",
+          "token": "pb-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pb.none",
+          "token": "pb-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pb.sm",
+          "token": "pb-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pb.xl",
+          "token": "pb-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pb.xs",
+          "token": "pb-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "pl": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.pl.2xl",
+          "token": "pl-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pl.lg",
+          "token": "pl-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pl.md",
+          "token": "pl-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pl.none",
+          "token": "pl-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pl.sm",
+          "token": "pl-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pl.xl",
+          "token": "pl-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pl.xs",
+          "token": "pl-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "placeholder": {
+      "count": 2,
+      "values": [
+        "foreground",
+        "muted-foreground"
+      ],
+      "examples": [
+        {
+          "key": "colors.colorVariants.placeholder.foreground",
+          "token": "placeholder-foreground",
+          "value": "foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.placeholder.muted",
+          "token": "placeholder-muted-foreground",
+          "value": "muted-foreground",
+          "source": "src/variants/colors.ts"
+        }
+      ]
+    },
+    "pointer": {
+      "count": 2,
+      "values": [
+        "events-auto",
+        "events-none"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.pointerEvents.auto",
+          "token": "pointer-events-auto",
+          "value": "events-auto",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.pointerEvents.none",
+          "token": "pointer-events-none",
+          "value": "events-none",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "pr": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.pr.2xl",
+          "token": "pr-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pr.lg",
+          "token": "pr-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pr.md",
+          "token": "pr-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pr.none",
+          "token": "pr-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pr.sm",
+          "token": "pr-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pr.xl",
+          "token": "pr-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pr.xs",
+          "token": "pr-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "pt": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.pt.2xl",
+          "token": "pt-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pt.lg",
+          "token": "pt-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pt.md",
+          "token": "pt-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pt.none",
+          "token": "pt-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pt.sm",
+          "token": "pt-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pt.xl",
+          "token": "pt-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.pt.xs",
+          "token": "pt-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "px": {
+      "count": 7,
+      "values": [
+        "0",
+        "1",
+        "12",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.px.2xl",
+          "token": "px-12",
+          "value": "12",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.px.lg",
+          "token": "px-6",
+          "value": "6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.px.md",
+          "token": "px-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.px.none",
+          "token": "px-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.px.sm",
+          "token": "px-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.px.xl",
+          "token": "px-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.px.xs",
+          "token": "px-1",
+          "value": "1",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "py": {
+      "count": 7,
+      "values": [
+        "0",
+        "16",
+        "2",
+        "32",
+        "4",
+        "48",
+        "8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.py.2xl",
+          "token": "py-48",
+          "value": "48",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.py.lg",
+          "token": "py-16",
+          "value": "16",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.py.md",
+          "token": "py-8",
+          "value": "8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.py.none",
+          "token": "py-0",
+          "value": "0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.py.sm",
+          "token": "py-4",
+          "value": "4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.py.xl",
+          "token": "py-32",
+          "value": "32",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.py.xs",
+          "token": "py-2",
+          "value": "2",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "relative": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.position.relative",
+          "token": "relative",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "right": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.right.0",
+          "token": "right-0",
+          "value": "0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.right.auto",
+          "token": "right-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "ring": {
+      "count": 10,
+      "values": [
+        "0",
+        "1",
+        "2",
+        "4",
+        "8",
+        "offset-0",
+        "offset-1",
+        "offset-2",
+        "offset-4",
+        "offset-8"
+      ],
+      "examples": [
+        {
+          "key": "border.borderVariants.ring.0",
+          "token": "ring-0",
+          "value": "0",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ring.1",
+          "token": "ring-1",
+          "value": "1",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ring.2",
+          "token": "ring-2",
+          "value": "2",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ring.4",
+          "token": "ring-4",
+          "value": "4",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ring.8",
+          "token": "ring-8",
+          "value": "8",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ringOffset.0",
+          "token": "ring-offset-0",
+          "value": "offset-0",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ringOffset.1",
+          "token": "ring-offset-1",
+          "value": "offset-1",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ringOffset.2",
+          "token": "ring-offset-2",
+          "value": "offset-2",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ringOffset.4",
+          "token": "ring-offset-4",
+          "value": "offset-4",
+          "source": "src/variants/border.ts"
+        },
+        {
+          "key": "border.borderVariants.ringOffset.8",
+          "token": "ring-offset-8",
+          "value": "offset-8",
+          "source": "src/variants/border.ts"
+        }
+      ]
+    },
+    "rounded": {
+      "count": 33,
+      "values": [
+        "",
+        "2xl",
+        "3xl",
+        "b-full",
+        "b-lg",
+        "b-md",
+        "b-none",
+        "b-sm",
+        "b-xl",
+        "full",
+        "l-full",
+        "l-lg",
+        "l-md",
+        "l-none",
+        "l-sm",
+        "l-xl",
+        "lg",
+        "md",
+        "none",
+        "r-full",
+        "r-lg",
+        "r-md",
+        "r-none",
+        "r-sm",
+        "r-xl",
+        "sm",
+        "t-full",
+        "t-lg",
+        "t-md",
+        "t-none",
+        "t-sm",
+        "t-xl",
+        "xl"
+      ],
+      "examples": [
+        {
+          "key": "rounded.roundedSideVariants.roundedBottom.full",
+          "token": "rounded-b-full",
+          "value": "b-full",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedBottom.lg",
+          "token": "rounded-b-lg",
+          "value": "b-lg",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedBottom.md",
+          "token": "rounded-b-md",
+          "value": "b-md",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedBottom.none",
+          "token": "rounded-b-none",
+          "value": "b-none",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedBottom.sm",
+          "token": "rounded-b-sm",
+          "value": "b-sm",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedBottom.xl",
+          "token": "rounded-b-xl",
+          "value": "b-xl",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedLeft.full",
+          "token": "rounded-l-full",
+          "value": "l-full",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedLeft.lg",
+          "token": "rounded-l-lg",
+          "value": "l-lg",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedLeft.md",
+          "token": "rounded-l-md",
+          "value": "l-md",
+          "source": "src/variants/rounded.ts"
+        },
+        {
+          "key": "rounded.roundedSideVariants.roundedLeft.none",
+          "token": "rounded-l-none",
+          "value": "l-none",
+          "source": "src/variants/rounded.ts"
+        }
+      ]
+    },
+    "row": {
+      "count": 16,
+      "values": [
+        "end-1",
+        "end-2",
+        "end-3",
+        "end-4",
+        "end-5",
+        "end-6",
+        "end-7",
+        "end-auto",
+        "start-1",
+        "start-2",
+        "start-3",
+        "start-4",
+        "start-5",
+        "start-6",
+        "start-7",
+        "start-auto"
+      ],
+      "examples": [
+        {
+          "key": "grid.gridVariants.rowEnd.1",
+          "token": "row-end-1",
+          "value": "end-1",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.2",
+          "token": "row-end-2",
+          "value": "end-2",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.3",
+          "token": "row-end-3",
+          "value": "end-3",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.4",
+          "token": "row-end-4",
+          "value": "end-4",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.5",
+          "token": "row-end-5",
+          "value": "end-5",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.6",
+          "token": "row-end-6",
+          "value": "end-6",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.7",
+          "token": "row-end-7",
+          "value": "end-7",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowEnd.auto",
+          "token": "row-end-auto",
+          "value": "end-auto",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowStart.1",
+          "token": "row-start-1",
+          "value": "start-1",
+          "source": "src/variants/grid.ts"
+        },
+        {
+          "key": "grid.gridVariants.rowStart.2",
+          "token": "row-start-2",
+          "value": "start-2",
+          "source": "src/variants/grid.ts"
+        }
+      ]
+    },
+    "shadow": {
+      "count": 7,
+      "values": [
+        "2xl",
+        "inner",
+        "lg",
+        "md",
+        "none",
+        "sm",
+        "xl"
+      ],
+      "examples": [
+        {
+          "key": "shadow.shadowVariants.shadow.2xl",
+          "token": "shadow-2xl",
+          "value": "2xl",
+          "source": "src/variants/shadow.ts"
+        },
+        {
+          "key": "shadow.shadowVariants.shadow.inner",
+          "token": "shadow-inner",
+          "value": "inner",
+          "source": "src/variants/shadow.ts"
+        },
+        {
+          "key": "shadow.shadowVariants.shadow.lg",
+          "token": "shadow-lg",
+          "value": "lg",
+          "source": "src/variants/shadow.ts"
+        },
+        {
+          "key": "shadow.shadowVariants.shadow.md",
+          "token": "shadow-md",
+          "value": "md",
+          "source": "src/variants/shadow.ts"
+        },
+        {
+          "key": "shadow.shadowVariants.shadow.none",
+          "token": "shadow-none",
+          "value": "none",
+          "source": "src/variants/shadow.ts"
+        },
+        {
+          "key": "shadow.shadowVariants.shadow.sm",
+          "token": "shadow-sm",
+          "value": "sm",
+          "source": "src/variants/shadow.ts"
+        },
+        {
+          "key": "shadow.shadowVariants.shadow.xl",
+          "token": "shadow-xl",
+          "value": "xl",
+          "source": "src/variants/shadow.ts"
+        }
+      ]
+    },
+    "shrink": {
+      "count": 2,
+      "values": [
+        "",
+        "0"
+      ],
+      "examples": [
+        {
+          "key": "flex.flexVariants.shrink.0",
+          "token": "shrink-0",
+          "value": "0",
+          "source": "src/variants/flex.ts"
+        },
+        {
+          "key": "flex.flexVariants.shrink.1",
+          "token": "shrink",
+          "value": "",
+          "source": "src/variants/flex.ts"
+        }
+      ]
+    },
+    "space": {
+      "count": 12,
+      "values": [
+        "x-0",
+        "x-1",
+        "x-2",
+        "x-4",
+        "x-6",
+        "x-8",
+        "y-0",
+        "y-1",
+        "y-2",
+        "y-4",
+        "y-6",
+        "y-8"
+      ],
+      "examples": [
+        {
+          "key": "spacing.spacingVariants.spaceX.lg",
+          "token": "space-x-6",
+          "value": "x-6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceX.md",
+          "token": "space-x-4",
+          "value": "x-4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceX.none",
+          "token": "space-x-0",
+          "value": "x-0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceX.sm",
+          "token": "space-x-2",
+          "value": "x-2",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceX.xl",
+          "token": "space-x-8",
+          "value": "x-8",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceX.xs",
+          "token": "space-x-1",
+          "value": "x-1",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceY.lg",
+          "token": "space-y-6",
+          "value": "y-6",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceY.md",
+          "token": "space-y-4",
+          "value": "y-4",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceY.none",
+          "token": "space-y-0",
+          "value": "y-0",
+          "source": "src/variants/spacing.ts"
+        },
+        {
+          "key": "spacing.spacingVariants.spaceY.sm",
+          "token": "space-y-2",
+          "value": "y-2",
+          "source": "src/variants/spacing.ts"
+        }
+      ]
+    },
+    "static": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.position.static",
+          "token": "static",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "sticky": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.position.sticky",
+          "token": "sticky",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "text": {
+      "count": 22,
+      "values": [
+        "2xl",
+        "3xl",
+        "4xl",
+        "5xl",
+        "accent-foreground",
+        "base",
+        "center",
+        "destructive",
+        "destructive-foreground",
+        "foreground",
+        "justify",
+        "left",
+        "lg",
+        "muted-foreground",
+        "primary",
+        "primary-foreground",
+        "right",
+        "secondary",
+        "secondary-foreground",
+        "sm",
+        "xl",
+        "xs"
+      ],
+      "examples": [
+        {
+          "key": "colors.colorVariants.c.accent",
+          "token": "text-accent-foreground",
+          "value": "accent-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.destructive",
+          "token": "text-destructive",
+          "value": "destructive",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.destructive-foreground",
+          "token": "text-destructive-foreground",
+          "value": "destructive-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.foreground",
+          "token": "text-foreground",
+          "value": "foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.muted",
+          "token": "text-muted-foreground",
+          "value": "muted-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.primary",
+          "token": "text-primary",
+          "value": "primary",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.primary-foreground",
+          "token": "text-primary-foreground",
+          "value": "primary-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.secondary",
+          "token": "text-secondary",
+          "value": "secondary",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.c.secondary-foreground",
+          "token": "text-secondary-foreground",
+          "value": "secondary-foreground",
+          "source": "src/variants/colors.ts"
+        },
+        {
+          "key": "colors.colorVariants.selectionText.foreground",
+          "token": "text-foreground",
+          "value": "foreground",
+          "source": "src/variants/colors.ts"
+        }
+      ]
+    },
+    "top": {
+      "count": 2,
+      "values": [
+        "0",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.top.0",
+          "token": "top-0",
+          "value": "0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.top.auto",
+          "token": "top-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "tracking": {
+      "count": 6,
+      "values": [
+        "normal",
+        "tight",
+        "tighter",
+        "wide",
+        "wider",
+        "widest"
+      ],
+      "examples": [
+        {
+          "key": "typography.trackingVariants.tracking.normal",
+          "token": "tracking-normal",
+          "value": "normal",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.trackingVariants.tracking.tight",
+          "token": "tracking-tight",
+          "value": "tight",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.trackingVariants.tracking.tighter",
+          "token": "tracking-tighter",
+          "value": "tighter",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.trackingVariants.tracking.wide",
+          "token": "tracking-wide",
+          "value": "wide",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.trackingVariants.tracking.wider",
+          "token": "tracking-wider",
+          "value": "wider",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.trackingVariants.tracking.widest",
+          "token": "tracking-widest",
+          "value": "widest",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "truncate": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "typography.typographyModifierVariants.truncate.true",
+          "token": "truncate",
+          "value": "",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "underline": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "typography.typographyModifierVariants.underline.true",
+          "token": "underline",
+          "value": "",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "uppercase": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "typography.textTransformVariants.transform.uppercase",
+          "token": "uppercase",
+          "value": "",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "visible": {
+      "count": 1,
+      "values": [
+        ""
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.visibility.visible",
+          "token": "visible",
+          "value": "",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "w": {
+      "count": 7,
+      "values": [
+        "auto",
+        "fit",
+        "full",
+        "max",
+        "min",
+        "px",
+        "screen"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.w.1px",
+          "token": "w-px",
+          "value": "px",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.w.auto",
+          "token": "w-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.w.fit",
+          "token": "w-fit",
+          "value": "fit",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.w.full",
+          "token": "w-full",
+          "value": "full",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.w.max",
+          "token": "w-max",
+          "value": "max",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.w.min",
+          "token": "w-min",
+          "value": "min",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.w.screen",
+          "token": "w-screen",
+          "value": "screen",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    },
+    "whitespace": {
+      "count": 6,
+      "values": [
+        "break-spaces",
+        "normal",
+        "nowrap",
+        "pre",
+        "pre-line",
+        "pre-wrap"
+      ],
+      "examples": [
+        {
+          "key": "typography.whitespaceVariants.whitespace.breakSpaces",
+          "token": "whitespace-break-spaces",
+          "value": "break-spaces",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.whitespaceVariants.whitespace.normal",
+          "token": "whitespace-normal",
+          "value": "normal",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.whitespaceVariants.whitespace.nowrap",
+          "token": "whitespace-nowrap",
+          "value": "nowrap",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.whitespaceVariants.whitespace.pre",
+          "token": "whitespace-pre",
+          "value": "pre",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.whitespaceVariants.whitespace.preLine",
+          "token": "whitespace-pre-line",
+          "value": "pre-line",
+          "source": "src/variants/typography.ts"
+        },
+        {
+          "key": "typography.whitespaceVariants.whitespace.preWrap",
+          "token": "whitespace-pre-wrap",
+          "value": "pre-wrap",
+          "source": "src/variants/typography.ts"
+        }
+      ]
+    },
+    "z": {
+      "count": 7,
+      "values": [
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "auto"
+      ],
+      "examples": [
+        {
+          "key": "layout.layoutVariants.z.0",
+          "token": "z-0",
+          "value": "0",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.z.10",
+          "token": "z-10",
+          "value": "10",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.z.20",
+          "token": "z-20",
+          "value": "20",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.z.30",
+          "token": "z-30",
+          "value": "30",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.z.40",
+          "token": "z-40",
+          "value": "40",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.z.50",
+          "token": "z-50",
+          "value": "50",
+          "source": "src/variants/layout.ts"
+        },
+        {
+          "key": "layout.layoutVariants.z.auto",
+          "token": "z-auto",
+          "value": "auto",
+          "source": "src/variants/layout.ts"
+        }
+      ]
+    }
+  }
+}

@@ -216,6 +216,32 @@ Shadows, borders, and rounded corners:
 </Box>
 ```
 
+## CDL Utility Props (experimental direction)
+
+UI8Kit is moving towards a **constants-first CDL** where:
+
+- Styling is expressed as **whitelisted Tailwind tokens**
+- Components can accept **Tailwind-like props** (prefix/value) instead of custom variant APIs
+- Validation is handled by **scripts/guards** (not heavy runtime checks)
+
+### What it looks like
+
+Instead of pushing ad-hoc strings into `className`, you can pass whitelisted utility props:
+
+```tsx
+import { Card } from "@ui8kit/core";
+
+<Card grid="cols-12" gap="2" p="4" bg="card" rounded="lg" shadow="sm" border>
+  Content
+</Card>;
+```
+
+### Why this matters
+
+- **Consistency**: props are mapped to a single whitelist-driven surface area.
+- **Control**: it’s easy to see how styling grows; 3+ adjustments is a signal to create a variant/semantic mapping.
+- **Speed (dev mode)**: fewer variant functions and less indirection can make development iteration faster.
+
 ## 🌓 Dark Mode
 
 Built-in dark mode support with ThemeProvider:
