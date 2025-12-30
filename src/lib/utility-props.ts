@@ -1,12 +1,12 @@
 import { cn } from "./utils";
-import { utilityProps } from "./utility-props.generated";
+import { utilityPropsMap } from "../cdl/utility-props.map";
 
-export type UtilityPropPrefix = keyof typeof utilityProps;
+export type UtilityPropPrefix = keyof typeof utilityPropsMap;
 
 export type UtilityPropBag = Partial<Record<UtilityPropPrefix, string | number | boolean | null | undefined>>;
 
 export type UtilityPropValue<P extends UtilityPropPrefix> =
-  | (typeof utilityProps)[P][number]
+  | (typeof utilityPropsMap)[P][number]
   | string
   | number
   | boolean
@@ -20,7 +20,7 @@ function toValueString(v: string | number | boolean | null | undefined): string 
 }
 
 function isAllowed(prefix: string, value: string) {
-  const allowed = (utilityProps as any)[prefix] as readonly string[] | undefined;
+  const allowed = (utilityPropsMap as any)[prefix] as readonly string[] | undefined;
   if (!allowed) return false;
   return allowed.includes(value);
 }
@@ -118,7 +118,7 @@ export function splitUtilityProps<T extends Record<string, any>>(props: T): {
   const rest: Record<string, any> = {};
 
   for (const [k, v] of Object.entries(props)) {
-    if (k in utilityProps) {
+    if (k in utilityPropsMap) {
       (utility as any)[k] = v;
       continue;
     }
@@ -136,7 +136,7 @@ export function resolveUtilityClassName<T extends Record<string, any>>(props: T)
   return { utilityClassName: ux(utility), rest };
 }
 
-export { utilityProps };
+export { utilityPropsMap };
 
 // =============================================================================
 // MISSING UTILITY CLASSES (to be added to CDL whitelist)
@@ -154,6 +154,23 @@ export { utilityProps };
 // - Image.tsx: aspect variants (auto, square, video) - currently hardcoded aspectProps object
 // - Text.tsx: typography variants (size, weight, align, leading, tracking, modifiers) - currently removed, use utility props
 // - Title.tsx: typography variants (size, weight, align, leading, tracking, truncate) - currently removed, use utility props
+//
+// COMPONENTS PLANNED FOR CDL UTILITY PROPS MIGRATION:
+// - Grid.tsx: Currently uses gridVariants CVA, planned for utility props migration
+//   * MISSING GRID CLASSES TO ADD TO WHITELIST:
+//     - grid-cols-7, grid-cols-8, grid-cols-9, grid-cols-10, grid-cols-11
+//     - gap-3, gap-5, gap-md, gap-lg, gap-xl, gap-xs, gap-sm (currently only 0,1,2,4,6,8,10,12)
+//     - items-baseline (already exists), items-stretch (already exists)
+//     - justify-items-* variants
+//     - content-* (content-start, content-center, etc.)
+//     - col-span-*, col-start-*, col-end-* (currently missing col-span entirely)
+//     - order-* (currently missing entirely)
+//   * Complex responsive patterns (cols rule lists like "1-2", "1-3") need special CDL handling
+//   * Auto-rows/cols classes need verification
+//   * STEP 1: Add missing grid classes to CDL whitelist
+//   * STEP 2: Regenerate utility-props.generated.ts
+//   * STEP 3: Migrate Grid.tsx from gridVariants to utility props
+//   * STEP 4: Update Grid.Col to use utility props instead of gridVariants
 //
 // SOLUTION: Create CDL variant generation for component-specific variants
 // 1. Add variant definitions to .project/cdl/variants.json:

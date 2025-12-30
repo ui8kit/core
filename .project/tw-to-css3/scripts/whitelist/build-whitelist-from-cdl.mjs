@@ -1,3 +1,4 @@
+// .project/tw-to-css3/scripts/whitelist/build-whitelist-from-cdl.mjs
 import fs from 'node:fs'
 import path from 'node:path'
 

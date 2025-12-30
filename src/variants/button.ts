@@ -19,7 +19,7 @@ export const buttonSizeVariants = cva("", {
 });
 
 // Button style variants
-export const buttonStyleVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors shrink-0 outline-none", {
+export const buttonStyleVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium rounded-md transition-colors shrink-0 outline-none", {
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground0",

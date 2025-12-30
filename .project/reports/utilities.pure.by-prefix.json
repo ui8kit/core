@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-12-29T08:44:48.541Z",
+  "generatedAt": "2025-12-30T12:57:18.752Z",
   "input": ".project\\reports\\variants.single-token.json",
   "groupingRule": "prefix = token.split(\"-\", 1)[0]; value = token.slice(prefix.length + 1)",
   "reconstructionRule": "tailwindClass = value ? `${prefix}-${value}` : prefix",
   "prefixCount": 76,
-  "totalUniqueTokens": 524,
+  "totalUniqueTokens": 538,
   "table": {
     "absolute": {
       "count": 1,
@@ -150,8 +150,9 @@
       ]
     },
     "col": {
-      "count": 28,
+      "count": 42,
       "values": [
+        "auto",
         "end-1",
         "end-10",
         "end-11",
@@ -166,6 +167,19 @@
         "end-8",
         "end-9",
         "end-auto",
+        "span-1",
+        "span-10",
+        "span-11",
+        "span-12",
+        "span-2",
+        "span-3",
+        "span-4",
+        "span-5",
+        "span-6",
+        "span-7",
+        "span-8",
+        "span-9",
+        "span-full",
         "start-1",
         "start-10",
         "start-11",

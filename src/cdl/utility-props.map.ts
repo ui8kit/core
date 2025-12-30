@@ -1,13 +1,9 @@
 /* eslint-disable */
 /**
- * AUTO-GENERATED FILE.
- * Source: .project\reports\utilities.pure.by-prefix.json
- *
- * Do not edit by hand. Run:
- * - bun run cdl:utilities:pure:emit
- * - bun run cdl:utilities:emit:ts
+ * CDL Utility Props Map
+ * src/cdl/utility-props.map.ts
  */
-export const utilityProps = {
+export const utilityPropsMap = {
   "absolute": [
     ""
   ],
@@ -557,6 +553,7 @@ export const utilityProps = {
     "t-none",
     "t-sm",
     "t-xl",
+    "xs",
     "xl"
   ],
   "row": [

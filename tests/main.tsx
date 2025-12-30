@@ -46,7 +46,7 @@ function TestApp() {
 
       <div className="grid gap-6">
         <Block
-          variant="section"
+          component="section"
           className="bg-primary text-primary-foreground rounded-lg p-4"
         >
           <Card variant="filled">
@@ -97,6 +97,18 @@ function TestApp() {
               <Button size="icon" aria-label="Icon button">
                 ⌁
               </Button>
+            </div>
+            <div className="flex flex-wrap gap-3 items-center mt-4">
+              <Button rounded="none">None rounded-none</Button>
+              <Button rounded="xs">XS rounded-xs</Button>
+              <Button rounded="sm">SM rounded-sm</Button>
+              <Button rounded="md">MD rounded-md</Button>
+              <Button rounded="lg">LG rounded-lg</Button>
+              <Button rounded="xl">XL rounded-xl</Button>
+              <Button rounded="2xl">2XL rounded-2xl</Button>
+              <Button rounded="3xl">3XL rounded-3xl</Button>
+              <Button rounded="full">Full rounded-full</Button>
+              <Button rounded="default">Default rounded-default</Button>
             </div>
           </CardContent>
           <CardFooter>

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2025-12-29T08:17:44.821Z",
+  "generatedAt": "2025-12-30T12:54:58.750Z",
   "input": ".project\\cdl\\variants.generated.json",
   "rule": "Includes axis options whose value expands to exactly 1 Tailwind token.",
-  "count": 573,
+  "count": 602,
   "items": [
     {
       "namespace": "border",
@@ -1020,7 +1020,7 @@
       "namespace": "container",
       "variant": "containerLayoutVariants",
       "axis": "centered",
-      "option": "true",
+      "option": "center",
       "tokenCount": 1,
       "tokens": [
         "mx-auto"
@@ -1031,7 +1031,7 @@
       "namespace": "container",
       "variant": "containerLayoutVariants",
       "axis": "fluid",
-      "option": "true",
+      "option": "fluid",
       "tokenCount": 1,
       "tokens": [
         "max-w-none"
@@ -2075,6 +2075,160 @@
     {
       "namespace": "grid",
       "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "10",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-10"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "11",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-11"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-12"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-7"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "9",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-9"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "auto",
+      "tokenCount": 1,
+      "tokens": [
+        "col-auto"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "colSpan",
+      "option": "full",
+      "tokenCount": 1,
+      "tokens": [
+        "col-span-full"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
       "axis": "colStart",
       "option": "1",
       "tokenCount": 1,
@@ -2658,6 +2812,171 @@
     {
       "namespace": "grid",
       "variant": "gridVariants",
+      "axis": "order",
+      "option": "1",
+      "tokenCount": 1,
+      "tokens": [
+        "order-1"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "10",
+      "tokenCount": 1,
+      "tokens": [
+        "order-10"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "11",
+      "tokenCount": 1,
+      "tokens": [
+        "order-11"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "12",
+      "tokenCount": 1,
+      "tokens": [
+        "order-12"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "2",
+      "tokenCount": 1,
+      "tokens": [
+        "order-2"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "3",
+      "tokenCount": 1,
+      "tokens": [
+        "order-3"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "4",
+      "tokenCount": 1,
+      "tokens": [
+        "order-4"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "5",
+      "tokenCount": 1,
+      "tokens": [
+        "order-5"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "6",
+      "tokenCount": 1,
+      "tokens": [
+        "order-6"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "7",
+      "tokenCount": 1,
+      "tokens": [
+        "order-7"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "8",
+      "tokenCount": 1,
+      "tokens": [
+        "order-8"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "9",
+      "tokenCount": 1,
+      "tokens": [
+        "order-9"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "first",
+      "tokenCount": 1,
+      "tokens": [
+        "order-first"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "last",
+      "tokenCount": 1,
+      "tokens": [
+        "order-last"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
+      "axis": "order",
+      "option": "none",
+      "tokenCount": 1,
+      "tokens": [
+        "order-none"
+      ],
+      "source": "src/variants/grid.ts"
+    },
+    {
+      "namespace": "grid",
+      "variant": "gridVariants",
       "axis": "rowEnd",
       "option": "1",
       "tokenCount": 1,
@@ -2912,7 +3231,7 @@
       "namespace": "group",
       "variant": "groupLayoutVariants",
       "axis": "grow",
-      "option": "true",
+      "option": "grow",
       "tokenCount": 1,
       "tokens": [
         "flex-1"
@@ -2923,7 +3242,7 @@
       "namespace": "group",
       "variant": "groupLayoutVariants",
       "axis": "preventGrowOverflow",
-      "option": "true",
+      "option": "prevent-grow-overflow",
       "tokenCount": 1,
       "tokens": [
         "min-w-0"
@@ -2956,7 +3275,7 @@
       "namespace": "image",
       "variant": "imageBaseVariants",
       "axis": "withPlaceholder",
-      "option": "true",
+      "option": "with-placeholder",
       "tokenCount": 1,
       "tokens": [
         "bg-muted"
@@ -6212,7 +6531,7 @@
       "namespace": "typography",
       "variant": "typographyModifierVariants",
       "axis": "italic",
-      "option": "true",
+      "option": "italic",
       "tokenCount": 1,
       "tokens": [
         "italic"
@@ -6223,7 +6542,7 @@
       "namespace": "typography",
       "variant": "typographyModifierVariants",
       "axis": "truncate",
-      "option": "true",
+      "option": "truncate",
       "tokenCount": 1,
       "tokens": [
         "truncate"
@@ -6234,7 +6553,7 @@
       "namespace": "typography",
       "variant": "typographyModifierVariants",
       "axis": "underline",
-      "option": "true",
+      "option": "underline",
       "tokenCount": 1,
       "tokens": [
         "underline"

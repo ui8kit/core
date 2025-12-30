@@ -1,3 +1,4 @@
+// .project/tw-to-css3/scripts/whitelist/emit-utility-props-ts.mjs
 import fs from "node:fs";
 import path from "node:path";
 
@@ -38,9 +39,9 @@ function main() {
       .sort((a, b) => a.localeCompare(b));
   }
 
-  const outDir = path.join(root, "src", "lib");
+  const outDir = path.join(root, "src", "cdl", "compat");
   ensureDir(outDir);
-  const outPath = path.join(outDir, "utility-props.generated.ts");
+  const outPath = path.join(outDir, "variants.generated.ts");
 
   const header = `/* eslint-disable */
 /**

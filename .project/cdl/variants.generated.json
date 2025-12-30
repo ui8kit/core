@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-28T09:22:08.447Z",
+  "generatedAt": "2025-12-30T12:56:12.274Z",
   "map": {
     "badge": {
       "badgeSizeVariants": {
@@ -583,19 +583,22 @@
         "base": [],
         "variants": {
           "centered": {
-            "true": [
+            "center": [
               "mx-auto"
             ],
-            "false": []
+            "left": []
           },
           "fluid": {
-            "true": [
+            "fluid": [
               "max-w-none"
             ],
-            "false": []
+            "fixed": []
           }
         },
-        "defaultVariants": {},
+        "defaultVariants": {
+          "centered": "center",
+          "fluid": "fixed"
+        },
         "source": "src/variants/container.ts"
       }
     },
@@ -1146,6 +1149,50 @@
               "row-end-auto"
             ]
           },
+          "colSpan": {
+            "1": [
+              "col-span-1"
+            ],
+            "2": [
+              "col-span-2"
+            ],
+            "3": [
+              "col-span-3"
+            ],
+            "4": [
+              "col-span-4"
+            ],
+            "5": [
+              "col-span-5"
+            ],
+            "6": [
+              "col-span-6"
+            ],
+            "7": [
+              "col-span-7"
+            ],
+            "8": [
+              "col-span-8"
+            ],
+            "9": [
+              "col-span-9"
+            ],
+            "10": [
+              "col-span-10"
+            ],
+            "11": [
+              "col-span-11"
+            ],
+            "12": [
+              "col-span-12"
+            ],
+            "auto": [
+              "col-auto"
+            ],
+            "full": [
+              "col-span-full"
+            ]
+          },
           "colStart": {
             "1": [
               "col-start-1"
@@ -1273,6 +1320,53 @@
             "xl": [
               "gap-y-8"
             ]
+          },
+          "order": {
+            "1": [
+              "order-1"
+            ],
+            "2": [
+              "order-2"
+            ],
+            "3": [
+              "order-3"
+            ],
+            "4": [
+              "order-4"
+            ],
+            "5": [
+              "order-5"
+            ],
+            "6": [
+              "order-6"
+            ],
+            "7": [
+              "order-7"
+            ],
+            "8": [
+              "order-8"
+            ],
+            "9": [
+              "order-9"
+            ],
+            "10": [
+              "order-10"
+            ],
+            "11": [
+              "order-11"
+            ],
+            "12": [
+              "order-12"
+            ],
+            "first": [
+              "order-first"
+            ],
+            "last": [
+              "order-last"
+            ],
+            "none": [
+              "order-none"
+            ]
           }
         },
         "defaultVariants": {},
@@ -1284,19 +1378,22 @@
         "base": [],
         "variants": {
           "grow": {
-            "true": [
+            "grow": [
               "flex-1"
             ],
-            "false": []
+            "no-grow": []
           },
           "preventGrowOverflow": {
-            "true": [
+            "prevent-grow-overflow": [
               "min-w-0"
             ],
-            "false": []
+            "allow-grow-overflow": []
           }
         },
-        "defaultVariants": {},
+        "defaultVariants": {
+          "grow": "no-grow",
+          "preventGrowOverflow": "prevent-grow-overflow"
+        },
         "source": "src/variants/group.ts"
       }
     },
@@ -1307,13 +1404,15 @@
         ],
         "variants": {
           "withPlaceholder": {
-            "true": [
+            "with-placeholder": [
               "bg-muted"
             ],
-            "false": []
+            "no-placeholder": []
           }
         },
-        "defaultVariants": {},
+        "defaultVariants": {
+          "withPlaceholder": "no-placeholder"
+        },
         "source": "src/variants/image.ts"
       },
       "imageFitVariants": {
@@ -2441,25 +2540,29 @@
         "base": [],
         "variants": {
           "truncate": {
-            "true": [
+            "truncate": [
               "truncate"
             ],
-            "false": []
+            "no-truncate": []
           },
           "italic": {
-            "true": [
+            "italic": [
               "italic"
             ],
-            "false": []
+            "no-italic": []
           },
           "underline": {
-            "true": [
+            "underline": [
               "underline"
             ],
-            "false": []
+            "no-underline": []
           }
         },
-        "defaultVariants": {},
+        "defaultVariants": {
+          "truncate": "no-truncate",
+          "italic": "no-italic",
+          "underline": "no-underline"
+        },
         "source": "src/variants/typography.ts"
       },
       "trackingVariants": {

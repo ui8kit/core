@@ -1,3 +1,4 @@
+// .project/tw-to-css3/scripts/whitelist/extract-cdl-from-variants.mjs
 import fs from 'node:fs'
 import path from 'node:path'
 

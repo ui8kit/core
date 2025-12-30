@@ -12,6 +12,7 @@ build/
 bun.lock
 bun.lockb
 package-lock.json
+*.log
 
 ## testing
 html/

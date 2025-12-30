@@ -1,3 +1,4 @@
+// .project/tw-to-css3/scripts/whitelist/emit-utility-pure-props-table.mjs
 import fs from "node:fs";
 import path from "node:path";
 
