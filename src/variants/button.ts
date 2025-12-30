@@ -51,3 +51,4 @@ export const buttonContentAlignVariants = cva("", {
 export interface ButtonSizeProps extends VariantProps<typeof buttonSizeVariants> {}
 export interface ButtonStyleProps extends VariantProps<typeof buttonStyleVariants> {} 
 export interface ButtonContentAlignProps extends VariantProps<typeof buttonContentAlignVariants> {}
+export type ButtonVariantProps = VariantProps<typeof buttonStyleVariants> & VariantProps<typeof buttonSizeVariants> & VariantProps<typeof buttonContentAlignVariants>;

@@ -23,6 +23,10 @@ export const cardContentVariants = cva("pt-0");
 
 export const cardFooterVariants = cva("flex items-center pt-0");
 
-export interface CardVariantProps extends VariantProps<typeof cardVariantVariants> {}
-
-
+export interface CardHeaderProps extends VariantProps<typeof cardHeaderVariants> {}
+export interface CardTitleProps extends VariantProps<typeof cardTitleVariants> {}
+export interface CardDescriptionProps extends VariantProps<typeof cardDescriptionVariants> {}
+export interface CardContentProps extends VariantProps<typeof cardContentVariants> {}
+export interface CardFooterProps extends VariantProps<typeof cardFooterVariants> {}
+export type CardVariantProps = VariantProps<typeof cardVariantVariants> & VariantProps<typeof cardHeaderVariants> & VariantProps<typeof cardTitleVariants> & VariantProps<typeof cardDescriptionVariants> & VariantProps<typeof cardContentVariants> & VariantProps<typeof cardFooterVariants>;
+export type CardProps = CardVariantProps & CardHeaderProps & CardTitleProps & CardDescriptionProps & CardContentProps & CardFooterProps;

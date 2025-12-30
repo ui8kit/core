@@ -1,62 +1,40 @@
 import type { ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import {
-  spacingVariants,
-  roundedVariants,
-  shadowVariants,
-  layoutVariants,
-  buttonSizeVariants,
-  buttonStyleVariants,
-  type VariantSpacingProps,
-  type RoundedProps,
-  type ShadowProps,
-  type VariantLayoutProps,
-  type ButtonSizeProps,
-  type ButtonStyleProps,
-} from "../../variants";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
+import { buttonStyleVariants, buttonSizeVariants, type ButtonVariantProps } from "../../variants";
 
-export type ButtonProps 
-  = React.ButtonHTMLAttributes<HTMLButtonElement> &
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my' | 'mr'> &
-    RoundedProps &
-    ShadowProps &
-    Pick<VariantLayoutProps, 'w'> &
-    ButtonSizeProps &
-    ButtonStyleProps & {
+type ButtonDomProps = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, UtilityPropPrefix>;
+
+export type ButtonProps
+  = ButtonDomProps &
+    UtilityPropBag &
+    ButtonVariantProps & {
   children: ReactNode;
   disabled?: boolean;
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     variant = 'default',
     size = 'default',
-    rounded = 'lg',
-    shadow,
-    // Spacing props  
-    m, mx, my, mr,
-    // Layout props
-    w,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
+
     return (
       <button
         ref={ref}
         data-class="button"
         className={cn(
-          // Variants (CVA)
-          buttonSizeVariants({ size }),
           buttonStyleVariants({ variant }),
-          roundedVariants({ rounded }),
-          shadowVariants({ shadow }),
-          spacingVariants({ m, mx, my, mr }),
-          layoutVariants({ w }),
+          buttonSizeVariants({ size }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </button>

@@ -2,27 +2,12 @@ import type { ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../lib/utils";
 import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../lib/utility-props";
-import {
-  textSizeVariants,
-  cardVariantVariants,
-  cardHeaderVariants,
-  cardTitleVariants,
-  cardDescriptionVariants,
-  cardContentVariants,
-  cardFooterVariants,
-  type TextSizeProps
-} from "../variants";
+import { cardVariantVariants, cardHeaderVariants, cardTitleVariants, cardDescriptionVariants, cardContentVariants, cardFooterVariants, type CardVariantProps, type CardProps } from "../variants";
 
-type CardDomProps = Omit<React.HTMLAttributes<HTMLDivElement>, UtilityPropPrefix>;
+type CardDomProps = Omit<React.HTMLAttributes<HTMLDivElement>, UtilityPropPrefix> & CardVariantProps;
 
 // Main Card component interface (CDL utility-props only)
-interface CardProps extends CardDomProps, UtilityPropBag {
-  children: ReactNode;
-  variant?: "default" | "outlined" | "filled";
-}
-
-// Enhanced Card component with prop forwarding
-const Card = forwardRef<HTMLDivElement, CardProps>(
+const Card = forwardRef<HTMLDivElement, CardDomProps>(
   ({ 
     children, 
     className,
@@ -94,20 +79,18 @@ const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
 CardHeader.displayName = "CardHeader";
 
 // Card.Title component
-interface CardTitleProps 
-  extends React.HTMLAttributes<HTMLHeadingElement>,
-    TextSizeProps {
+interface CardTitleProps
+  extends React.HTMLAttributes<HTMLHeadingElement> {
   children: ReactNode;
   order?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
-    size = 'lg',
     order = 3,
-    ...props 
+    ...props
   }, ref) => {
     // Create props for the heading element
     const headingProps = {
@@ -115,7 +98,6 @@ const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
       'data-class': 'card-title',
       className: cn(
         cardTitleVariants(),
-        textSizeVariants({ size }),
         className
       ),
       ...props

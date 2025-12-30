@@ -64,14 +64,17 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveClass('underline-offset-4');
   });
 
-  it('applies spacing and layout props', () => {
+  it('supports fast utility props without leaking them to DOM attributes', () => {
     render(
-      <Button m="md" mr="sm" w="full">
+      <Button m="4" mr="2" w="full" data-testid="button">
         Spaced
       </Button>
     );
-    const button = screen.getByRole('button');
+    const button = screen.getByTestId('button');
     expect(button).toHaveClass('m-4', 'mr-2', 'w-full');
+    expect(button.getAttribute('m')).toBeNull();
+    expect(button.getAttribute('mr')).toBeNull();
+    expect(button.getAttribute('w')).toBeNull();
   });
 
   it('applies rounded and shadow props', () => {

@@ -1,65 +1,37 @@
 import type { ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import {
-  spacingVariants,
-  roundedVariants,
-  shadowVariants,
-  borderVariants,
-  badgeSizeVariants,
-  badgeStyleVariants,
-  type VariantSpacingProps,
-  type RoundedProps,
-  type ShadowProps,
-  type BorderProps,
-  type BadgeSizeProps,
-  type BadgeStyleProps,
-} from "../../variants";
+import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
+import { badgeStyleVariants, type BadgeVariantProps } from "../../variants";
 
-export type BadgeProps 
-  = React.HTMLAttributes<HTMLDivElement> &
-    Pick<VariantSpacingProps, 'm' | 'mx' | 'my'> &
-    RoundedProps &
-    ShadowProps &
-    BorderProps &
-    BadgeSizeProps &
-    BadgeStyleProps & {
+type BadgeDomProps = Omit<React.HTMLAttributes<HTMLDivElement>, UtilityPropPrefix>;
+
+export type BadgeProps
+  = BadgeDomProps &
+    UtilityPropBag &
+    BadgeVariantProps & {
   children: ReactNode;
 };
 
 export const Badge = forwardRef<HTMLDivElement, BadgeProps>(
-  ({ 
-    children, 
+  ({
+    children,
     className,
     variant = 'default',
-    size = 'default',
-    rounded = 'md',
-    shadow,
-    // Spacing props  
-    m, mx, my,
-    // Border props
-    border,
-    borderTop,
-    borderBottom,
-    borderLeft,
-    borderRight,
-    ...props 
+    ...props
   }, ref) => {
+    const { utilityClassName, rest } = resolveUtilityClassName(props);
+
     return (
       <div
         ref={ref}
         data-class="badge"
         className={cn(
-          // Variants (CVA)
-          badgeSizeVariants({ size }),
           badgeStyleVariants({ variant }),
-          roundedVariants({ rounded }),
-          shadowVariants({ shadow }),
-          spacingVariants({ m, mx, my }),
-          borderVariants({ border, borderTop, borderBottom, borderLeft, borderRight }),
+          utilityClassName,
           className
         )}
-        {...props}
+        {...rest}
       >
         {children}
       </div>
