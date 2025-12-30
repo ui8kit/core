@@ -6,7 +6,7 @@
  */
 import React, { forwardRef } from "react";
 import { cn } from "@/lib/utils";
-import { gridVariants } from "@/variants";
+import { gridVariants, type VariantGridProps } from "@/variants";
 
 // =============================================================================
 // USING EXISTING VARIANTS - No duplication of Tailwind classes
@@ -15,80 +15,9 @@ import { gridVariants } from "@/variants";
 // All grid-related base classes come from gridVariants (CDL-backed).
 // Responsive behavior is represented structurally and compiled here (no "md:" strings in CDL).
 
-const COL_SPAN_CLASSES = {
-  1: "col-span-1",
-  2: "col-span-2",
-  3: "col-span-3",
-  4: "col-span-4",
-  5: "col-span-5",
-  6: "col-span-6",
-  7: "col-span-7",
-  8: "col-span-8",
-  9: "col-span-9",
-  10: "col-span-10",
-  11: "col-span-11",
-  12: "col-span-12",
-  auto: "col-auto",
-  full: "col-span-full"
-} as const;
-
-const COL_START_CLASSES = {
-  auto: "col-start-auto",
-  1: "col-start-1",
-  2: "col-start-2",
-  3: "col-start-3",
-  4: "col-start-4",
-  5: "col-start-5",
-  6: "col-start-6",
-  7: "col-start-7",
-  8: "col-start-8",
-  9: "col-start-9",
-  10: "col-start-10",
-  11: "col-start-11",
-  12: "col-start-12",
-  13: "col-start-13"
-} as const;
-
-const COL_END_CLASSES = {
-  auto: "col-end-auto",
-  1: "col-end-1",
-  2: "col-end-2",
-  3: "col-end-3",
-  4: "col-end-4",
-  5: "col-end-5",
-  6: "col-end-6",
-  7: "col-end-7",
-  8: "col-end-8",
-  9: "col-end-9",
-  10: "col-end-10",
-  11: "col-end-11",
-  12: "col-end-12",
-  13: "col-end-13"
-} as const;
-
-const ORDER_CLASSES = {
-  first: "order-first",
-  last: "order-last",
-  none: "order-none",
-  1: "order-1",
-  2: "order-2",
-  3: "order-3",
-  4: "order-4",
-  5: "order-5",
-  6: "order-6",
-  7: "order-7",
-  8: "order-8",
-  9: "order-9",
-  10: "order-10",
-  11: "order-11",
-  12: "order-12"
-} as const;
-
 // =============================================================================
 // TYPES - Using VariantGridProps from existing variants
 // =============================================================================
-
-import type { VariantGridProps } from "@/variants";
 
 type GridColsValue = number | NonNullable<VariantGridProps["cols"]>;
 type GridGap = NonNullable<VariantGridProps["gap"]>;
@@ -150,11 +79,11 @@ function compileCols(cols?: GridColsValue | GridColsRule[]): string {
   return out.join(" ").trim();
 }
 
-// Grid item specific types (not in gridVariants)
-type GridColSpan = keyof typeof COL_SPAN_CLASSES;
-type GridColStart = keyof typeof COL_START_CLASSES;
-type GridColEnd = keyof typeof COL_END_CLASSES;
-type GridOrder = keyof typeof ORDER_CLASSES;
+// Grid item specific types (using gridVariants)
+type GridColSpan = NonNullable<VariantGridProps["colSpan"]>;
+type GridColStart = NonNullable<VariantGridProps["colStart"]>;
+type GridColEnd = NonNullable<VariantGridProps["colEnd"]>;
+type GridOrder = NonNullable<VariantGridProps["order"]>;
 
 export interface GridProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Number of columns or responsive rules list */
@@ -246,10 +175,12 @@ const GridCol = forwardRef<HTMLDivElement, GridColProps>((props, ref) => {
   const { span, start, end, order, children, className, ...rest } = props;
 
   const colClassName = cn(
-    span && COL_SPAN_CLASSES[span],
-    start && COL_START_CLASSES[start],
-    end && COL_END_CLASSES[end],
-    order && ORDER_CLASSES[order],
+    gridVariants({
+      colSpan: span,
+      colStart: start,
+      colEnd: end,
+      order: order
+    }),
     className
   );
 

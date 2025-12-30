@@ -128,6 +128,22 @@ export const gridVariants = cva("", {
       6: "row-end-6",
       7: "row-end-7"
     },
+    colSpan: {
+      1: "col-span-1",
+      2: "col-span-2",
+      3: "col-span-3",
+      4: "col-span-4",
+      5: "col-span-5",
+      6: "col-span-6",
+      7: "col-span-7",
+      8: "col-span-8",
+      9: "col-span-9",
+      10: "col-span-10",
+      11: "col-span-11",
+      12: "col-span-12",
+      auto: "col-auto",
+      full: "col-span-full"
+    },
     colStart: {
       auto: "col-start-auto",
       1: "col-start-1",
@@ -176,6 +192,23 @@ export const gridVariants = cva("", {
       md: "gap-y-4",
       lg: "gap-y-6",
       xl: "gap-y-8"
+    },
+    order: {
+      1: "order-1",
+      2: "order-2",
+      3: "order-3",
+      4: "order-4",
+      5: "order-5",
+      6: "order-6",
+      7: "order-7",
+      8: "order-8",
+      9: "order-9",
+      10: "order-10",
+      11: "order-11",
+      12: "order-12",
+      first: "order-first",
+      last: "order-last",
+      none: "order-none"
     }
   }
 });
