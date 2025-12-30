@@ -13,6 +13,13 @@ bun.lock
 bun.lockb
 package-lock.json
 
+## testing
+html/
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+
 ## build
 vite.config.d.ts
 tsconfig.tsbuildinfo

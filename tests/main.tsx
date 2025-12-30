@@ -6,6 +6,7 @@ import { Button } from '@ui8kit/core';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@ui8kit/core';
 import { Grid } from '@ui8kit/core';
 import { Block } from '@ui8kit/core';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@ui8kit/core';
 
 function TestApp() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -155,6 +156,45 @@ function TestApp() {
               </CardFooter>
             </Card>
           </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Accordion</CardTitle>
+            <CardDescription>Collapsible content sections (single mode)</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>What is UI8Kit?</AccordionTrigger>
+                <AccordionContent>
+                  UI8Kit is a minimalist React UI component library built on utility-first Tailwind CSS.
+                  It provides a clean, semantic approach to building interfaces with minimal code.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>How does CDL work?</AccordionTrigger>
+                <AccordionContent>
+                  CDL (Component Definition Language) uses utility props to define component styling.
+                  Instead of hardcoded classes, you use props like <code>p="4"</code>, <code>bg="primary"</code>, etc.
+                  This enables cross-platform compilation and maintains consistency.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Why utility props?</AccordionTrigger>
+                <AccordionContent>
+                  Utility props provide a declarative way to style components without inline strings.
+                  They enable better type safety, cross-platform compilation (to CSS, inline styles, etc.),
+                  and prevent style drift while keeping components focused on logic and structure.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </CardContent>
+          <CardFooter>
+            <span className="text-sm text-muted-foreground">
+              Click any question to expand/collapse. Only one section open at a time.
+            </span>
+          </CardFooter>
         </Card>
       </div>
     </div>
