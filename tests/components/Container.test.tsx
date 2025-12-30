@@ -9,42 +9,24 @@ describe('Container', () => {
     expect(el).toHaveAttribute('data-class', 'container');
   });
 
-  it('renders with a custom element type via component prop', () => {
-    render(<Container component="section">Section</Container>);
-    const el = screen.getByText('Section');
-    expect(el.tagName).toBe('SECTION');
-  });
-
-  it('applies size when not fluid', () => {
+  it('has default mx-auto centering', () => {
     render(
-      <Container size="sm" centered data-testid="c">
-        X
-      </Container>
-    );
-    const el = screen.getByTestId('c');
-    expect(el).toHaveClass('max-w-screen-md');
-    expect(el).toHaveClass('mx-auto');
-  });
-
-  it('applies max-w-none when fluid (and overrides size)', () => {
-    render(
-      <Container size="sm" centered fluid data-testid="c">
+      <Container data-testid="c">
         X
       </Container>
     );
     const el = screen.getByTestId('c');
     expect(el).toHaveClass('mx-auto');
-    expect(el).toHaveClass('max-w-none');
-    expect(el).not.toHaveClass('max-w-screen-md');
   });
 
-  it('does not apply mx-auto when centered is false', () => {
+  it('allows overriding default centering', () => {
     render(
-      <Container centered={false} data-testid="c">
+      <Container mx="4" data-testid="c">
         X
       </Container>
     );
     const el = screen.getByTestId('c');
+    expect(el).toHaveClass('mx-4');
     expect(el).not.toHaveClass('mx-auto');
   });
 

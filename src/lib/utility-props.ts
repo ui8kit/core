@@ -138,4 +138,28 @@ export function resolveUtilityClassName<T extends Record<string, any>>(props: T)
 
 export { utilityProps };
 
+// =============================================================================
+// MISSING UTILITY CLASSES (to be added to CDL whitelist)
+// =============================================================================
+// These classes were discovered during component refactoring but are not yet
+// in the utility-props.generated.ts map. Add them to CDL whitelist and regenerate.
+//
+// FOUND IN Group.tsx:
+// - min-w-0 (for preventGrowOverflow prop)
+//
+// POTENTIAL FUTURE NEEDS (anticipate based on common UI patterns):
+// - min-w-full, min-w-max, min-w-min, min-w-fit
+// - max-w-0, max-w-none, max-w-xs, max-w-sm, max-w-md, etc.
+// - flex-auto, flex-initial, flex-none
+// - grow-0, shrink-0, shrink
+// - basis-auto, basis-full, basis-0
+// - aspect-square, aspect-video, aspect-auto
+// - object-contain, object-cover, object-fill, object-none, object-scale-down
+// - mix-blend-multiply, mix-blend-screen, etc.
+// - backdrop-blur, backdrop-brightness, backdrop-contrast, etc.
+//
+// ADD TO CDL WHITELIST: scripts/cdl-whitelist.mjs or .project/cdl/whitelist.json
+// THEN REGENERATE: bun run cdl:utilities:emit
+// =============================================================================
+
 
