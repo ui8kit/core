@@ -23,25 +23,25 @@ describe('Group', () => {
     expect(item.parentElement?.tagName).toBe('UL');
   });
 
-  it('applies grow and overflow flags', () => {
+  it('applies grow flag', () => {
     render(
-      <Group grow preventGrowOverflow data-testid="g">
+      <Group grow data-testid="g">
         A
       </Group>
     );
     const el = screen.getByTestId('g');
     expect(el).toHaveClass('flex-1');
-    expect(el).toHaveClass('min-w-0');
+    expect(el).toHaveClass('min-w-0'); // always applied
   });
 
-  it('does not apply overflow flag when disabled', () => {
+  it('always applies overflow prevention (min-w-0)', () => {
     render(
-      <Group preventGrowOverflow={false} data-testid="g">
+      <Group data-testid="g">
         B
       </Group>
     );
     const el = screen.getByTestId('g');
-    expect(el).not.toHaveClass('min-w-0');
+    expect(el).toHaveClass('min-w-0');
   });
 
   it('supports fast utility props without leaking them to DOM attributes', () => {

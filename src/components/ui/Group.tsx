@@ -11,14 +11,14 @@ export type GroupProps
   children: ReactNode;
   component?: ElementType;
   grow?: boolean;
-  preventGrowOverflow?: boolean;
 };
 
 const defaultProps = ux({
   flex: '',        // display: flex (bare token)
   gap: '4',        // default gap
   items: 'center', // default align
-  justify: 'start' // default justify
+  justify: 'start', // default justify
+  min: 'w-0'      // prevent overflow by default (preventGrowOverflow=true)
 });
 
 export const Group = forwardRef<HTMLElement, GroupProps>(
@@ -27,16 +27,14 @@ export const Group = forwardRef<HTMLElement, GroupProps>(
     className,
     component = 'div',
     grow = false,
-    preventGrowOverflow = true,
     ...props
   }, ref) => {
     const { utilityClassName, rest } = resolveUtilityClassName(props);
     const Element = component as ElementType;
 
-    // Handle specific props that map to utility classes
+    // Handle grow prop that maps to utility class
     const specificUtilities = ux({
-      ...(grow && { flex: '1' }),              // flex-1
-      ...(preventGrowOverflow && { min: 'w-0' }) // min-w-0
+      ...(grow && { flex: '1' }) // flex-1 when grow=true
     });
 
     return (

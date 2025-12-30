@@ -145,7 +145,7 @@ export { utilityProps };
 // in the utility-props.generated.ts map. Add them to CDL whitelist and regenerate.
 //
 // FOUND IN Group.tsx:
-// - min-w-0 (for preventGrowOverflow prop)
+// - min-w-0 (for preventGrowOverflow prop - now always enabled by default)
 //
 // POTENTIAL FUTURE NEEDS (anticipate based on common UI patterns):
 // - min-w-full, min-w-max, min-w-min, min-w-fit

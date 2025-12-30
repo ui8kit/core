@@ -16,3 +16,36 @@ bun run cdl:utilities:emit
 # Было: min: 'w-0' (работает, но не идеально)
 # Станет: minW: '0' (если добавим новый префикс)
 ```
+
+==========================
+
+## ✅ **Group.tsx рефакторинг завершен!**
+
+### **Что изменилось:**
+
+#### **❌ Убрано (упрощение API):**
+- `preventGrowOverflow?: boolean` - теперь всегда `true`
+- Сложная логика с conditional `min-w-0`
+
+#### **✅ Упрощено (CDL-first подход):**
+- **Default props** теперь включают `min: 'w-0'` (предотвращение overflow)
+- **Только один specific prop** - `grow?: boolean`
+- **Четкая карта utility props** - `flex: '1'` для grow
+
+### **Итоговый API Group:**
+```typescript
+<Group 
+  grow           // flex-1
+  gap="2"        // custom gap  
+  items="start"  // custom align
+  // + все utility props: p, m, bg, etc.
+/>
+```
+
+### **Что всегда применяется:**
+- `display: flex`
+- `gap: 1rem` 
+- `align-items: center`
+- `justify-content: flex-start`
+- `min-width: 0` (предотвращает overflow)
+
