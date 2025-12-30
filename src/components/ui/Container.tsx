@@ -1,11 +1,14 @@
-
-import { forwardRef } from "react";
+import { ElementType, forwardRef, ReactNode } from "react";
 import { cn } from "../../lib/utils";
 import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 
 type ContainerDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
 
-export type ContainerProps = ContainerDomProps & UtilityPropBag;
+export type ContainerProps = ContainerDomProps & UtilityPropBag & {
+  component?: ElementType;
+  className?: string;
+  children?: ReactNode;
+};
 
 const defaultProps = ux({
   mx: 'auto'
@@ -13,15 +16,18 @@ const defaultProps = ux({
 
 export const Container = forwardRef<HTMLElement, ContainerProps>(
   ({
+    component = "div",
     children,
     className,
     ...props
   }, ref) => {
     const { utilityClassName, rest } = resolveUtilityClassName(props);
 
+    const Element = component as ElementType;
+
     return (
-      <div
-        ref={ref as any}
+      <Element
+        ref={ref}
         data-class="container"
         className={cn(
           defaultProps,
@@ -31,7 +37,7 @@ export const Container = forwardRef<HTMLElement, ContainerProps>(
         {...rest}
       >
         {children}
-      </div>
+      </Element>
     );
   }
 );

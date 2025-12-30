@@ -10,20 +10,17 @@ export type BlockProps
     UtilityPropBag & {
   children: ReactNode;
   component?: ElementType;
-  variant?: 'section' | 'main' | 'nav' | 'article' | 'header' | 'footer' | 'aside' | 'div';
 };
 
 export const Block = forwardRef<HTMLElement, BlockProps>(
   ({
     children,
     className,
-    component,
-    variant = 'div',
+    component = 'div',
     ...props
   }, ref) => {
     const { utilityClassName, rest } = resolveUtilityClassName(props);
-    const elementType = component || variant;
-    const Element = elementType as ElementType;
+    const Element = component as ElementType;
 
     return (
       <Element

@@ -1,15 +1,6 @@
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
-import {
-  imageBaseVariants,
-  imageFitVariants,
-  imagePositionVariants,
-  aspectRatioVariants,
-  type ImageFitProps,
-  type ImagePositionProps,
-  type AspectRatioProps
-} from "../../variants";
+import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 
 type ImageDomProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, UtilityPropPrefix | 'width' | 'height'>;
 
@@ -20,9 +11,41 @@ export type ImageProps
   height?: string | number;
   fallbackSrc?: string;
   withPlaceholder?: boolean;
-} & ImageFitProps &
-    ImagePositionProps &
-    AspectRatioProps;
+  fit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+  position?: 'bottom' | 'center' | 'left' | 'left-bottom' | 'left-top' | 'right' | 'right-bottom' | 'right-top' | 'top';
+  aspect?: 'auto' | 'square' | 'video';
+};
+
+const defaultProps = ux({
+  max: 'full',    // max-width: 100%
+  h: 'auto'        // height: auto
+});
+
+const fitProps = {
+  contain: ux({ object: 'contain' }),
+  cover: ux({ object: 'cover' }),
+  fill: ux({ object: 'fill' }),
+  none: ux({ object: 'none' }),
+  'scale-down': ux({ object: 'scale-down' })
+};
+
+const positionProps = {
+  bottom: ux({ object: 'bottom' }),
+  center: ux({ object: 'center' }),
+  left: ux({ object: 'left' }),
+  'left-bottom': ux({ object: 'left-bottom' }),
+  'left-top': ux({ object: 'left-top' }),
+  right: ux({ object: 'right' }),
+  'right-bottom': ux({ object: 'right-bottom' }),
+  'right-top': ux({ object: 'right-top' }),
+  top: ux({ object: 'top' })
+};
+
+const aspectProps = {
+  auto: ux({ aspect: 'auto' }),
+  square: ux({ aspect: 'square' }),
+  video: ux({ aspect: 'video' })
+};
 
 export const Image = forwardRef<HTMLImageElement, ImageProps>(
   ({
@@ -48,6 +71,11 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
       onError?.(e);
     };
 
+    const fitClasses = fitProps[fit];
+    const positionClasses = positionProps[position];
+    const aspectClasses = aspectProps[aspect];
+    const placeholderClasses = withPlaceholder ? ux({ bg: 'muted' }) : '';
+
     return (
       <img
         ref={ref}
@@ -58,10 +86,11 @@ export const Image = forwardRef<HTMLImageElement, ImageProps>(
         height={height}
         onError={handleError}
         className={cn(
-          imageBaseVariants({ withPlaceholder: withPlaceholder ? 'with-placeholder' : 'no-placeholder' }),
-          imageFitVariants({ fit }),
-          imagePositionVariants({ position }),
-          aspectRatioVariants({ aspect }),
+          defaultProps,
+          fitClasses,
+          positionClasses,
+          aspectClasses,
+          placeholderClasses,
           utilityClassName,
           className
         )}

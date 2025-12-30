@@ -147,6 +147,33 @@ export { utilityProps };
 // FOUND IN Group.tsx:
 // - min-w-0 (for preventGrowOverflow prop - now always enabled by default)
 //
+// FOUND HARDCODED VARIANTS (need proper CDL variants):
+// - Icon.tsx: size variants (xs, sm, md, lg, xl) - currently hardcoded sizeProps object
+// - Image.tsx: fit variants (contain, cover, fill, none, scale-down) - currently hardcoded fitProps object
+// - Image.tsx: position variants (bottom, center, left, left-bottom, etc.) - currently hardcoded positionProps object
+// - Image.tsx: aspect variants (auto, square, video) - currently hardcoded aspectProps object
+//
+// SOLUTION: Create CDL variant generation for component-specific variants
+// 1. Add variant definitions to .project/cdl/variants.json:
+//    {
+//      "icon": {
+//        "size": {
+//          "xs": { "w": "3", "h": "3" },
+//          "sm": { "w": "4", "h": "4" },
+//          ...
+//        }
+//      },
+//      "image": {
+//        "fit": { "contain": { "object": "contain" }, ... },
+//        "position": { "center": { "object": "center" }, ... },
+//        "aspect": { "square": { "aspect": "square" }, ... }
+//      }
+//    }
+// 2. Generate variant functions via scripts/cdl-emit-component-variants.mjs
+// 3. Replace hardcoded objects with generated functions:
+//    const sizeClasses = iconVariants({ size });
+//    const fitClasses = imageVariants({ fit });
+//
 // POTENTIAL FUTURE NEEDS (anticipate based on common UI patterns):
 // - min-w-full, min-w-max, min-w-min, min-w-fit
 // - max-w-0, max-w-none, max-w-xs, max-w-sm, max-w-md, etc.
