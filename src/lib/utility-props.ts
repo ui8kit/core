@@ -1,5 +1,5 @@
 import { cn } from "./utils";
-import { utilityPropsMap } from "../cdl/utility-props.map";
+import { utilityPropsMap } from "./utility-props.map";
 
 export type UtilityPropPrefix = keyof typeof utilityPropsMap;
 
@@ -12,59 +12,6 @@ export type UtilityPropValue<P extends UtilityPropPrefix> =
   | boolean
   | null
   | undefined;
-
-function toValueString(v: string | number | boolean | null | undefined): string {
-  if (v === null || v === undefined) return "";
-  if (typeof v === "boolean") return v ? "" : "";
-  return String(v);
-}
-
-function isAllowed(prefix: string, value: string) {
-  const allowed = (utilityPropsMap as any)[prefix] as readonly string[] | undefined;
-  if (!allowed) return false;
-  return allowed.includes(value);
-}
-
-/**
- * Builds Tailwind class tokens from "utility prop" values derived from CDL scan.
- *
- * Rule:
- * - prefix = first segment before '-'
- * - value = everything after first '-'
- * - class = value ? `${prefix}-${value}` : prefix
- *
- * Example:
- * - u({ p: "4", mx: "12", row: "start-1", auto: "rows-auto" })
- *   => "p-4 mx-12 row-start-1 auto-rows-auto"
- */
-export function u(props: UtilityPropBag): string {
-  const tokens: string[] = [];
-
-  for (const [k, raw] of Object.entries(props)) {
-    const value = toValueString(raw as any);
-    if (raw === false) continue;
-
-    // Support "bare" token props like { block: true } → "block"
-    if (raw === true) {
-      if (isAllowed(k, "")) tokens.push(k);
-      continue;
-    }
-
-    // Normal form: { p: "4" } -> "p-4"
-    if (isAllowed(k, value)) {
-      tokens.push(value ? `${k}-${value}` : k);
-    }
-  }
-
-  return tokens.join(" ");
-}
-
-/**
- * cn(...) + u(...) helper (most common usage in components).
- */
-export function ucn(props: UtilityPropBag, ...rest: Parameters<typeof cn>) {
-  return cn(u(props), ...rest);
-}
 
 /**
  * Fast utility props -> className resolver (NO runtime validation).

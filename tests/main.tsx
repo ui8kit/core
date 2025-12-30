@@ -108,7 +108,7 @@ function TestApp() {
               <Button rounded="2xl">2XL rounded-2xl</Button>
               <Button rounded="3xl">3XL rounded-3xl</Button>
               <Button rounded="full">Full rounded-full</Button>
-              <Button rounded="default">Default rounded-default</Button>
+              <Button rounded>Empty rounded</Button>
             </div>
           </CardContent>
           <CardFooter>

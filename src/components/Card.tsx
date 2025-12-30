@@ -2,12 +2,17 @@ import type { ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../lib/utils";
 import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../lib/utility-props";
-import { cardVariantVariants, cardHeaderVariants, cardTitleVariants, cardDescriptionVariants, cardContentVariants, cardFooterVariants, type CardVariantProps, type CardProps } from "../variants";
+import { cardVariantVariants, cardHeaderVariants, cardTitleVariants, cardDescriptionVariants, cardContentVariants, cardFooterVariants } from "../variants";
 
-type CardDomProps = Omit<React.HTMLAttributes<HTMLDivElement>, UtilityPropPrefix> & CardVariantProps;
+type CardDomProps = Omit<React.HTMLAttributes<HTMLDivElement>, UtilityPropPrefix>;
 
-// Main Card component interface (CDL utility-props only)
-const Card = forwardRef<HTMLDivElement, CardDomProps>(
+// Main Card component interface (CDL utility-props + variant)
+interface CardProps extends CardDomProps, UtilityPropBag {
+  children: ReactNode;
+  variant?: 'default' | 'outlined' | 'filled';
+}
+
+const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ 
     children, 
     className,
@@ -229,5 +234,12 @@ const CompoundCard = Object.assign(Card, {
 });
 
 // Export types and components
-export type { CardProps, CardHeaderProps, CardTitleProps, CardDescriptionProps, CardContentProps, CardFooterProps };
+export type {
+  CardProps,
+  CardHeaderProps,
+  CardTitleProps,
+  CardDescriptionProps,
+  CardContentProps,
+  CardFooterProps
+} from "../variants";
 export { CompoundCard as Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }; 

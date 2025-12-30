@@ -26,24 +26,25 @@ For any change in `src/components/**` (including `src/components/ui/**`):
 
 ### Goal
 
-We are moving UI8Kit styling to a declarative system driven by a whitelist:
-- **Whitelist**: the single source of truth for allowed utility classes
-- **class → CSS map**: converts whitelisted classes to CSS declarations
-- **CDL variants map**: structured variant definitions (no class modifiers)
+We are moving UI8Kit styling to a declarative system driven by the CDL utility-props map:
+- **CDL map**: `src/cdl/utility-props.map.ts` - the single source of truth for all allowed Tailwind utility prefixes and their values
+- **Runtime resolver**: `src/lib/utility-props.ts` - fast utility props -> className conversion
+- **CVA variants**: `src/variants/` - structured variant definitions for multi-class combinations (grid, button, badge, card, image)
 - **Semantic map**: app-specific semantic names mapped to whitelisted utilities
 
 ### Rules
 
-- **Whitelist-first**: any new class must be added to the whitelist and mapped in `class → CSS`.
-- **No modifiers in CDL**: CDL and core variant maps must not contain `md:`, `hover:`, `focus:`, `dark:`, etc.
-- **No arbitrary values**: forbid bracket syntax like `w-[...]`, `min-h-[...]`, `aspect-[...]` in CDL/core variants.
+- **CDL-first**: any new utility prop must be defined in `src/cdl/utility-props.map.ts`
+- **No modifiers in CDL**: CDL map must not contain `md:`, `hover:`, `focus:`, `dark:`, etc.
+- **No arbitrary values**: forbid bracket syntax like `w-[...]`, `min-h-[...]`, `aspect-[...]` in CDL map.
 - **Responsive is structural**: represent responsive behavior as a rule list, not via `md:` strings.
+- **Single-token only**: CDL map contains only single Tailwind classes (one class per prop-value combination)
 
 ### Utility props (CDL single-token map)
 
-We also maintain a **single-token utility-props map** generated from the current variants scan.
+The **CDL utility-props map** (`src/cdl/utility-props.map.ts`) contains all allowed Tailwind utility prefixes and their values.
 
-- **Generated map**: `src/lib/utility-props.generated.ts`
+- **Map location**: `src/cdl/utility-props.map.ts`
 - **Runtime resolver**: `src/lib/utility-props.ts`
 
 The intent is to support **Tailwind-like props**:
@@ -61,8 +62,9 @@ Example:
 ```
 
 Notes:
-- Whitelist enforcement should happen via scripts/guards (not heavy runtime validation).
-- If a component needs many utility props, it is a signal to create a structured variant or semantic mapping.
+- Runtime validation is minimal (fast key lookup in map).
+- If a component needs many utility props, it is a signal to create a structured CVA variant.
+- Only 5 core components still use CVA variants: Grid, Button, Badge, Card, Image.
 
 Example (Grid columns responsive rules):
 
@@ -79,35 +81,45 @@ Compilers can turn this into:
 - Tailwind classes (`grid-cols-1 md:grid-cols-2 ...`) for web
 - `@media` CSS rules (`grid-template-columns: repeat(...)`) for head CSS output
 
-### Styling rule (strict, variants-only in UI components)
+### Component Layer Rules
 
-In `src/components/ui/**`:
-- Do not hardcode any Tailwind utility strings in `className` (no string/template literals).
-- Compose styles via variant functions from `src/variants/**` and merge with `cn(...)`.
+#### Primitive Components (`src/components/ui/**`)
+- **No styles**: Never hardcode Tailwind utility strings in `className`
+- **No logic**: No state, effects, or business logic
+- **CDL props only**: Use `resolveUtilityClassName()` and default `ux()` calls
+- **CVA variants**: Only for multi-class combinations (grid, button, badge, card, image)
+- **JIT-ready**: All classes must be statically analyzable for Tailwind JIT
 
-This rule is enforced by:
+#### Composite Components (`src/components/**`)
+- **Full control**: Logic, state, styling, and custom classes allowed
+- **CDL foundation**: Build on primitives with utility props
+- **CVA variants**: Use for complex styling combinations
+- **Application-level**: Can include business logic and custom styling
+
+### Styling Enforcement
+
+The classname policy is enforced by:
 - `scripts/classname-policy-guard.mjs`
 - command: `bun run test:guard`
 
-To scan the entire components tree (not only changed files), run:
+To scan the entire components tree:
 - `bun run test:policy:all`
-
-Note:
-- `src/components/` contains composite components where custom `className` usage can be allowed by the application.
 
 ### Coverage rule (strict for changed components)
 
-Changes to `src/components/**` are allowed only if:
-- there is a matching test file in `tests/components/`
-- the changed component file has **100% coverage** (lines/statements/functions/branches)
+Changes to `src/components/**` require:
+- A matching test file in `tests/components/`
+- **100% coverage** (lines/statements/functions/branches) for the changed file
 
 This rule is enforced by:
 - `scripts/coverage-guard.mjs`
 - command: `bun run test:guard`
 
 Example:
-- Changing `src/components/ui/Badge.tsx` requires `tests/components/Badge.test.tsx`
-  and 100% coverage for that file.
+- Changing `src/components/ui/Button.tsx` requires `tests/components/Button.test.tsx` with 100% coverage
+- Changing `src/components/Card.tsx` requires `tests/components/Card.test.tsx` with 100% coverage
+
+Note: Both primitive (`ui/`) and composite (`components/`) components follow the same testing requirements.
 
 ## Coverage artifacts
 

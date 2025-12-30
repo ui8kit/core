@@ -1,7 +1,4 @@
-// Export variants
-export * from './variants';
-
-// Export components
+// Export components (includes component-specific types)
 export * from './components';
 
 // Export utilities

@@ -1,50 +1,50 @@
-# @ui8kit/core Composite UI Components
+# @ui8kit/core UI Components
 
 ## Overview
 
-This directory contains the middle-tier composite components that provide the ideal prop forwarding API for developers. These components use the base primitives from `core/ui/` and apply variants from `core/variants/` to create a beautiful, user-friendly interface.
+This directory contains UI components organized into two layers:
+
+- **`src/components/ui/`** - Primitive components for JIT compilation (no styles, no logic, no state)
+- **`src/components/`** - Composite components with logic, state, and styling
+
+All styling uses the **CDL (Component Definition Language)** system:
+- Single-token utilities via `src/cdl/utility-props.map.ts`
+- Multi-class variants via CVA in `src/variants/`
+- Fast runtime resolution via `src/lib/utility-props.ts`
 
 ## Architecture
 
 ```
 USER LEVEL               COMPOSITE LEVEL           PRIMITIVE LEVEL
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│ <Card           │────▶│ components/ui/Card │────▶│ core/ui/Card    │
-│   p="lg"        │     │ + spacingVariants│     │ (no styles)     │
-│   rounded="md"  │     │ + roundedVariants│     │                 │
-│   shadow="sm"   │     │ + shadowVariants │     │                 │
-│   bg="card"     │     │ = Beautiful API  │     │                 │
+│ <Card           │────▶│ components/Card │────▶│ ui/Button       │
+│   p="lg"        │     │ + CVA variants  │     │ (no styles)     │
+│   bg="card"     │     │ + logic/state   │     │                 │
+│   variant="filled"│   │ + default ux()  │     │                 │
 │ />              │     │                  │     │                 │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
 ```
 
 ## Components
 
-### Layout Components
+### Primitive Components (`src/components/ui/`)
+
+These are minimal, JIT-compilation ready components with no styles, no logic, no state. All styling goes through CVA variants or default `ux()` calls.
 
 #### Block
-Section wrapper component with full styling control.
+Basic element wrapper.
 
 ```tsx
-<Block 
-  component="section"
-  py="xl" 
-  bg="background"
-  rounded="lg"
->
+<Block component="section" p="4" bg="muted" rounded="lg">
   Content
 </Block>
 ```
 
 #### Container
-Responsive container with size presets.
+Responsive container.
 
 ```tsx
-<Container 
-  size="lg" 
-  px="md" 
-  centered
->
+<Container p="4" mx="auto" max="w-4xl">
   Content
 </Container>
 ```
@@ -53,11 +53,7 @@ Responsive container with size presets.
 Vertical flex layout.
 
 ```tsx
-<Stack 
-  gap="lg" 
-  align="center"
-  p="md"
->
+<Stack gap="4" items="center" justify="center">
   <Title>Heading</Title>
   <Text>Description</Text>
 </Stack>
@@ -67,180 +63,176 @@ Vertical flex layout.
 Horizontal flex layout.
 
 ```tsx
-<Group 
-  gap="md" 
-  align="center" 
-  justify="between"
->
+<Group gap="4" items="center" justify="between">
   <Button>Left</Button>
   <Button>Right</Button>
 </Group>
 ```
 
 #### Grid
-CSS Grid layout with responsive presets.
+CSS Grid with CVA variants.
 
 ```tsx
-<Grid 
-  cols="1-2-3" 
-  gap="lg"
-  p="md"
->
-  <GridCol span={2}>Wide column</GridCol>
-  <GridCol>Regular column</GridCol>
+<Grid cols="3" gap="4">
+  <GridCol span="2">Wide</GridCol>
+  <GridCol>Normal</GridCol>
 </Grid>
 ```
 
-### UI Components
-
-#### Card
-Card component with compound structure.
+#### Text
+Typography component.
 
 ```tsx
-<Card 
-  p="lg" 
-  rounded="xl" 
-  shadow="md" 
-  bg="card"
->
+<Text size="lg" fw="semibold" text="center">
+  Content
+</Text>
+```
+
+#### Title
+Semantic headings.
+
+```tsx
+<Title order={1} size="2xl" fw="bold">
+  Heading
+</Title>
+```
+
+#### Image
+Image component.
+
+```tsx
+<Image src="/img.jpg" w="full" h="auto" rounded="lg" />
+```
+
+#### Icon
+Icon wrapper.
+
+```tsx
+<Icon w="6" h="6" text="primary" />
+```
+
+#### Badge
+Status indicators (CVA variants).
+
+```tsx
+<Badge variant="success">Active</Badge>
+```
+
+#### Button
+Interactive button (CVA variants).
+
+```tsx
+<Button variant="default" size="md">Click</Button>
+```
+
+### Composite Components (`src/components/`)
+
+These components include logic, state, and complex styling.
+
+#### Card
+Card with compound structure and CVA variants.
+
+```tsx
+<Card variant="filled" p="6" rounded="xl">
   <CardHeader>
     <CardTitle>Title</CardTitle>
-    <CardDescription>Description</CardDescription>
   </CardHeader>
   <CardContent>
     Content
   </CardContent>
-  <CardFooter>
-    <Button>Action</Button>
-  </CardFooter>
 </Card>
 ```
 
-#### Button
-Interactive button with variants and states.
+#### Accordion
+Collapsible content sections.
 
 ```tsx
-<Button 
-  variant="default" 
-  size="lg" 
-  rounded="md"
-  shadow="sm"
-  leftSection={<Icon />}
-  loading={isLoading}
->
-  Click me
-</Button>
+<Accordion type="single">
+  <AccordionItem value="1">
+    <AccordionTrigger>Question</AccordionTrigger>
+    <AccordionContent>Answer</AccordionContent>
+  </AccordionItem>
+</Accordion>
 ```
 
-#### Badge
-Small status indicators.
+#### Sheet
+Modal/overlay component.
 
 ```tsx
-<Badge 
-  variant="success" 
-  size="sm" 
-  rounded="full"
-  dot
-  rightSection={<Icon />}
->
-  Active
-</Badge>
+<Sheet>
+  <SheetTrigger>Open</SheetTrigger>
+  <SheetContent>Content</SheetContent>
+</Sheet>
 ```
 
-#### Title
-Semantic headings with typography control.
+## Universal Props (CDL)
 
-```tsx
-<Title 
-  order={1} // h1
-  size="3xl" 
-  fw="bold"
-  c="primary"
-  mb="md"
->
-  Main Heading
-</Title>
-```
+All components support these **CDL utility props** from `src/cdl/utility-props.map.ts`:
 
-#### Text
-Text elements with full typography control.
-
-```tsx
-<Text 
-  size="lg" 
-  c="muted-foreground"
-  ta="center"
-  truncate
->
-  Description text
-</Text>
-```
-
-#### Image
-Enhanced image component.
-
-```tsx
-<Image 
-  src="/image.jpg"
-  alt="Description"
-  aspect="video"
-  fit="cover"
-  rounded="lg"
-  shadow="md"
-/>
-```
-
-#### Icon
-Icon wrapper with size and color control.
-
-```tsx
-<Icon 
-  lucideIcon={ChevronDown}
-  size="lg"
-  c="primary"
-  mx="sm"
-/>
-```
-
-## Universal Props
-
-All components support these universal props through CVA variants:
-
-### Spacing Props
+### Spacing
 - **Padding**: `p`, `px`, `py`, `pt`, `pb`, `pl`, `pr`
 - **Margin**: `m`, `mx`, `my`, `mt`, `mb`, `ml`, `mr`
-- **Values**: `none`, `xs`, `sm`, `md`, `lg`, `xl`, `2xl`, `auto`
+- **Gap**: `gap`, `gap-x`, `gap-y`
 
-### Visual Props
-- **Rounded**: `none`, `sm`, `md`, `lg`, `xl`, `2xl`, `3xl`, `full`
-- **Shadow**: `none`, `sm`, `md`, `lg`, `xl`, `2xl`
-- **Colors**: All design system colors
-
-### Layout Props
-- **Width/Height**: `auto`, `full`, `screen`, `fit`, `min`, `max`
+### Layout
+- **Display**: `block`, `inline`, `flex`, `grid`, `hidden`
 - **Position**: `static`, `relative`, `absolute`, `fixed`, `sticky`
+- **Sizing**: `w`, `h`, `min-w`, `max-w`, `min-h`, `max-h`
+
+### Flexbox/Grid
+- **Flex**: `flex`, `flex-col`, `flex-row`, `flex-1`, `shrink`, `shrink-0`, `grow`
+- **Alignment**: `items-start`, `items-center`, `items-end`, `justify-start`, `justify-center`, etc.
+- **Grid**: `grid-cols-1` to `grid-cols-12`, `grid-flow-row`, etc.
+
+### Visual
+- **Colors**: `bg`, `text`, `border` with design tokens
+- **Borders**: `border`, `border-t`, `border-b`, `rounded`, `ring`
+- **Shadows**: `shadow-sm`, `shadow-md`, `shadow-lg`, etc.
+- **Typography**: `font`, `text`, `leading`, `tracking`
+
+### Interactive
+- **States**: `hover:`, `focus:`, `active:` (through CVA variants)
+- **Transitions**: `transition`, `duration`, `ease`
 
 ## Data Classes
 
-Every component in the `components/ui` directory contains semantic `data-class` attributes for easy targeting:
+All components include semantic `data-class` attributes for easy targeting:
 
 ```tsx
-<Card data-class="card">
-  <CardHeader data-class="card-header">
-    <CardTitle data-class="card-title">Title</CardTitle>
-  </CardHeader>
-</Card>
+// Primitive components (ui/)
+<Button data-class="button" />
+<Card data-class="card" />
+
+// Composite components (components/)
+<Accordion data-class="accordion">
+  <AccordionItem data-class="accordion-item">
+    <AccordionTrigger data-class="accordion-trigger">Title</AccordionTrigger>
+    <AccordionContent data-class="accordion-content">Content</AccordionContent>
+  </AccordionItem>
+</Accordion>
 ```
 
-`data-class` enables easy CSS targeting and semantic understanding of the markup.
+`data-class` enables easy CSS targeting, testing selectors, and semantic markup understanding.
 
 ## Best Practices
 
-1. **Use semantic tag components**: Choose `Block` with appropriate `component` prop for sections
-2. **Leverage compound components**: Use `CardHeader`, `CardContent` structure
-3. **Apply consistent spacing**: Use the spacing scale for predictable layouts
-4. **Follow the prop naming**: Use short, consistent prop names (`p`, `m`, `bg`, `c`)
-5. **Utilize data-class**: Use for custom styling and testing selectors
+### For Primitive Components (`ui/`)
+1. **No styles**: Never add `className` strings directly
+2. **No logic**: No state, effects, or business logic
+3. **CDL props only**: Use `resolveUtilityClassName()` and default `ux()` calls
+4. **CVA variants**: Use only for multi-class combinations
+
+### For Composite Components (`components/`)
+1. **Full control**: Logic, state, styling, and custom classes allowed
+2. **CDL foundation**: Build on primitives with utility props
+3. **CVA variants**: Use for complex styling combinations
+4. **Data attributes**: Use `data-class` for testing and styling hooks
+
+### General Rules
+1. **CDL-first**: Prefer utility props from `src/cdl/utility-props.map.ts`
+2. **Variants for complexity**: Use CVA when 3+ utility props would be needed
+3. **Consistent naming**: Short prop names (`p`, `m`, `bg`, `text`)
+4. **JIT-friendly**: All classes must be statically analyzable
 
 ## Migration from Old Components
 
@@ -250,10 +242,15 @@ Every component in the `components/ui` directory contains semantic `data-class` 
   Content
 </OldCard>
 
-// New approach - clean prop forwarding
-<Card p="xl" rounded="xl" shadow="md" bg="card">
+// New approach - CDL utility props
+<Card p="8" rounded="xl" shadow="md" bg="card">
+  Content
+</Card>
+
+// Or with variants for complex cases
+<Card variant="elevated" p="6">
   Content
 </Card>
 ```
 
-The new architecture provides perfect prop forwarding with maximum flexibility and consistency. 
+The CDL architecture provides perfect prop forwarding with maximum flexibility and consistency. 
