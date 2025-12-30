@@ -11,9 +11,9 @@ describe("Block", () => {
     expect(screen.getByTestId("b")).toHaveTextContent("Hi");
   });
 
-  it("supports semantic variant tag", () => {
+  it("supports custom component tag", () => {
     render(
-      <Block variant="section" data-testid="b">
+      <Block component="section" data-testid="b">
         X
       </Block>
     );

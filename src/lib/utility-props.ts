@@ -152,6 +152,8 @@ export { utilityProps };
 // - Image.tsx: fit variants (contain, cover, fill, none, scale-down) - currently hardcoded fitProps object
 // - Image.tsx: position variants (bottom, center, left, left-bottom, etc.) - currently hardcoded positionProps object
 // - Image.tsx: aspect variants (auto, square, video) - currently hardcoded aspectProps object
+// - Text.tsx: typography variants (size, weight, align, leading, tracking, modifiers) - currently removed, use utility props
+// - Title.tsx: typography variants (size, weight, align, leading, tracking, truncate) - currently removed, use utility props
 //
 // SOLUTION: Create CDL variant generation for component-specific variants
 // 1. Add variant definitions to .project/cdl/variants.json:

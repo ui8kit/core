@@ -1,30 +1,29 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
-import { flexVariants, textAlignVariants, type VariantFlexProps, type TextAlignProps } from "../../variants";
+import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 
 type StackDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
 
 export type StackProps
   = StackDomProps &
-    UtilityPropBag &
-    Pick<VariantFlexProps, 'gap' | 'align' | 'justify' | 'direction'> &
-    TextAlignProps & {
+    UtilityPropBag & {
   children: ReactNode;
   component?: ElementType;
 };
+
+const defaultProps = ux({
+  flex: 'col',     // flex-direction: column + display: flex
+  gap: '4',        // gap: 1rem
+  items: 'start',  // align-items: flex-start
+  justify: 'start' // justify-content: flex-start
+});
 
 export const Stack = forwardRef<HTMLElement, StackProps>(
   ({
     children,
     className,
     component = 'div',
-    gap = 'md',
-    direction = 'col',
-    align = 'start',
-    justify = 'start',
-    ta,
     ...props
   }, ref) => {
     const { utilityClassName, rest } = resolveUtilityClassName(props);
@@ -35,8 +34,7 @@ export const Stack = forwardRef<HTMLElement, StackProps>(
         ref={ref}
         data-class="stack"
         className={cn(
-          flexVariants({ gap, align, justify, direction }),
-          textAlignVariants({ ta }),
+          defaultProps,
           utilityClassName,
           className
         )}

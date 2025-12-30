@@ -1,49 +1,29 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
-import {
-  textSizeVariants,
-  fontWeightVariants,
-  textAlignVariants,
-  leadingVariants,
-  typographyModifierVariants,
-  trackingVariants,
-  type TextSizeProps,
-  type FontWeightProps,
-  type TextAlignProps,
-  type LeadingProps,
-  type TypographyModifierProps,
-  type TrackingProps
-} from "../../variants";
+import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 
 type TitleDomProps = Omit<React.HTMLAttributes<HTMLHeadingElement>, UtilityPropPrefix>;
 
 export type TitleProps
   = TitleDomProps &
-    UtilityPropBag &
-    TextSizeProps &
-    FontWeightProps &
-    TextAlignProps &
-    LeadingProps &
-    TrackingProps &
-    Pick<TypographyModifierProps, 'truncate'> & {
+    UtilityPropBag & {
   children: ReactNode;
   component?: ElementType;
   order?: 1 | 2 | 3 | 4 | 5 | 6;
 };
+
+const defaultProps = ux({
+  text: 'xl',       // font-size: xl (20px)
+  font: 'bold',     // font-weight: bold
+  leading: 'normal' // line-height: normal
+});
 
 export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
   ({
     children,
     className,
     order = 1,
-    size = 'lg',
-    fw = 'bold',
-    ta,
-    leading = 'normal',
-    tracking,
-    truncate = 'no-truncate',
     ...props
   }, ref) => {
     const { utilityClassName, rest } = resolveUtilityClassName(props);
@@ -56,12 +36,7 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(
         ref={ref}
         data-class="title"
         className={cn(
-          textSizeVariants({ size }),
-          fontWeightVariants({ fw }),
-          textAlignVariants({ ta }),
-          leadingVariants({ leading }),
-          trackingVariants({ tracking }),
-          typographyModifierVariants({ truncate }),
+          defaultProps,
           utilityClassName,
           className
         )}

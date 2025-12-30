@@ -1,50 +1,28 @@
 import type { ElementType, ReactNode } from "react";
 import { forwardRef } from "react";
 import { cn } from "../../lib/utils";
-import { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
-import {
-  textSizeVariants,
-  fontWeightVariants,
-  textAlignVariants,
-  leadingVariants,
-  typographyModifierVariants,
-  trackingVariants,
-  type TextSizeProps,
-  type FontWeightProps,
-  type TextAlignProps,
-  type LeadingProps,
-  type TypographyModifierProps,
-  type TrackingProps
-} from "../../variants";
+import { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from "../../lib/utility-props";
 
 type TextDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;
 
 export type TextProps
   = TextDomProps &
-    UtilityPropBag &
-    TextSizeProps &
-    FontWeightProps &
-    TextAlignProps &
-    LeadingProps &
-    TrackingProps &
-    TypographyModifierProps & {
+    UtilityPropBag & {
   children: ReactNode;
   component?: ElementType;
 };
+
+const defaultProps = ux({
+  text: 'base',     // font-size: base (16px)
+  font: 'normal',   // font-weight: normal
+  leading: 'normal' // line-height: normal
+});
 
 export const Text = forwardRef<HTMLElement, TextProps>(
   ({
     children,
     className,
     component = 'p',
-    size = 'md',
-    fw = 'normal',
-    ta,
-    leading = 'normal',
-    tracking,
-    truncate = 'no-truncate',
-    italic = 'no-italic',
-    underline = 'no-underline',
     ...props
   }, ref) => {
     const { utilityClassName, rest } = resolveUtilityClassName(props);
@@ -55,12 +33,7 @@ export const Text = forwardRef<HTMLElement, TextProps>(
         ref={ref}
         data-class="text"
         className={cn(
-          textSizeVariants({ size }),
-          fontWeightVariants({ fw }),
-          textAlignVariants({ ta }),
-          leadingVariants({ leading }),
-          trackingVariants({ tracking }),
-          typographyModifierVariants({ truncate, italic, underline }),
+          defaultProps,
           utilityClassName,
           className
         )}
