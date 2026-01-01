@@ -11,7 +11,8 @@ export type ContainerProps = ContainerDomProps & UtilityPropBag & {
 };
 
 const defaultProps = ux({
-  mx: 'auto'
+  mx: 'auto',
+  px: '4'
 });
 
 export const Container = forwardRef<HTMLElement, ContainerProps>(
