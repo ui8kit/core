@@ -4,7 +4,20 @@ dist/
 *.tsbuildinfo
 tsconfig*.json
 .vscode/
+eslint.config.js
+vite.test-dev.config.ts
+vitest.config.ts
+
 .git/
+.github/
+.manual/
+.cursorignore
+.cursor/
+.project/
+scripts/
+packages/
+tests/
+AGENTS.md
 
 # Test files
 **/*.test.*
