@@ -1,241 +1,415 @@
 {
   "repo_notes": [
     {
-      "content": "UI8Kit/core is a modern React UI component library built with a utility-first approach and clean semantic HTML. The architecture follows a three-layer system: Core/UI (basic primitives), Components/UI (composite components), and Layouts (page templates). This implements atomic design principles: atoms → molecules → organisms. The library supports multiple integration methods: npm install, component-specific installation via npx buildy-ui add [component], JSON registry for programmatic access, git submodule for monorepos, and direct source integration. Key features include: CVA (class-variance-authority) based variant system, prop forwarding API, polymorphic components, and full TypeScript support. Critical directories: src/components/ui/ (base primitives like Block, Box, Button), src/variants/ (CVA variant definitions), src/components/ (extended components), src/layouts/ (layout templates), GUIDE_CREATE_FORM.md (form creation guide using Block+Box since no Form components exist). The library targets React developers using Tailwind CSS, supporting modern patterns like compound components, controlled/uncontrolled inputs, and semantic HTML5.",
+      "content": "UI8Kit is a UI framework combining React developer experience with semantic HTML5/CSS3 output. Dual development model: Development uses React components with full TypeScript; Production targets pure HTML5/CSS3 with semantic class names (Bootstrap/Uikit3-style). All utility props are resolved against `src/lib/utility-props.map.ts` and typically require neither className nor inline style overrides. Semantic class values map to design tokens derived from theme CSS custom properties (`--background`, `--foreground`, `--card`, etc.). Critical directories: src/components/ui/ (primitives: Block, Box, Button, Badge, Container, Field, Group, Icon, Image, Stack, Text, Title), src/components/ (composite: Accordion, Card, Grid, Sheet), src/variants/ (CVA definitions: badge, button, card, field, grid, image, typography), src/lib/ (utility-props.ts, utility-props.map.ts, utils.ts). Grid includes Grid.Col subcomponent.",
       "author": "UI Systems Architect"
     },
     {
-      "content": "Minimalism drives the design: complex UIs can be built with just 15 composite components and 12 reusable variants covering ~80% of design scenarios. This provides minimal bundle size, eliminates redundant CSS classes, and enables unlimited design flexibility without sacrificing performance or developer experience.",
+      "content": "Vision: Build interactive React apps during development, then generate production-ready static sites with semantic markup. Props-to-CSS mapping enables declarative prop system with semantic output. Component variants provide design system consistency. Static generation pipeline converts React routes to HTML5/CSS3.",
+      "author": "Framework Vision"
+    },
+    {
+      "content": "Minimalism: 18 components and 6 variant modules cover ~80% of design scenarios. Layout primitives (Block, Container, Stack, Group, Box), typography (Title, Text), interactive (Button, Badge, Field), media (Image, Icon), composite (Grid, Card, Sheet, Accordion). Zero-runtime styling, tree shaking, minimal bundle size.",
       "author": "Design Philosophy"
     },
     {
-      "content": "Prop forwarding enables extending base components with variant props from the core system. All components include consistent data-class attributes for DOM targeting and testing. The compound component pattern (Card.Header, Card.Content, Card.Footer) provides flexible composition while maintaining full type safety and IntelliSense support.",
-      "author": "Component Architecture"
+      "content": "Utility props system: `resolveUtilityClassName()` splits props into utility and rest. Keys in `utility-props.map.ts` map to Tailwind-like classes (e.g. p=\"2\" -> p-2, gap=\"md\" -> gap-4). Semantic aliases: gap md/lg/xl, flex direction, bare-token props (italic=\"italic\" -> italic). No runtime validation; whitelist safety is enforced by generated typings and guard scripts. In production, semantic classes are typically token-anchored (for example `bg=\"primary\"`, `textColor=\"destructive-foreground\"`, `shadow=\"sm\"`, `rounded=\"xl\"`).",
+      "author": "Utility Props"
     },
     {
-      "content": "Integration options include: standard npm installation (@ui8kit/core), per-component installation (npx buildy-ui add button), JSON registry for programmatic component discovery, git submodule for monorepo integration, and direct source imports for advanced customization. Each method supports tree shaking and optimal bundle sizes.",
-      "author": "Integration Methods"
-    },
-    {
-      "content": "The CVA-based variant system centralizes styling logic across: spacing (p, m, gap), colors (bg, c, border), layout (w, h, display), visual effects (shadow, rounded, border), typography (size, weight, align), and component-specific variants (button styles, badge variants). Variants are composable, reusable, and automatically merged to prevent conflicts.",
+      "content": "CVA variant system: gridVariants (cols semantic patterns), typographyVariants (fontSize, fontWeight, truncate), buttonVariants, badgeVariants, cardVariants, fieldVariants, imageVariants. Components combine variants with utility props via cn(). Prop forwarding, polymorphic component prop, data-class attributes for DOM targeting.",
       "author": "Variant System"
     },
     {
-      "content": "UI8Kit uses zero-runtime styling: all variants compile to Tailwind classes at build time. The library achieves ~15KB gzipped bundle size through aggressive tree shaking. Components support full TypeScript with generated types, polymorphic rendering (any HTML element via component prop), and semantic data-class attributes for reliable testing and styling.",
-      "author": "Performance & DX"
+      "content": "Integration: npm install @ui8kit/core, or use `npx ui8kit` / `bunx ui8kit@latest` for init/add workflow in Vite React projects. JSON registry (packages/registry) for programmatic access. Exports from src/index.ts, src/components/index.ts. Field component exists for form inputs.",
+      "author": "Integration"
     },
     {
-      "content": "Key components: Block (polymorphic container), Box (flexible primitive), Button (interactive with variants), Card (compound structure), Container (responsive wrapper), Stack/Group (flex layouts), Grid (CSS Grid), Title/Text (typography), Image/Icon (media). All support universal props: spacing, colors, layout, shadows, borders, and component-specific variants.",
-      "author": "Core Components"
+      "content": "ui8kit CLI (`npx ui8kit` / `bunx ui8kit@latest`) is maintained in separate package `ui8kit` from `https://github.com/ui8kit/cli` and published as `https://www.npmjs.com/package/ui8kit`. Commands in this project context include `init`, `add`, `list`, `diff`, `scan`, `build`, `info`, `reset`, `cache clear`, `registry clean`. Global options: --cwd, --verbose, --no-cache. `init`, `add`, `list`, `diff`, `scan`, `build`, and `info` support registry override flags (`--registry-url`, `--registry-version`, `--strict-cdn`). `add` supports dependency ordering and dry-run diff preview.",
+      "author": "CLI Commands"
     },
     {
-      "content": "No dedicated form components exist - use Block+Box composition for forms. Example: Block as form container, Box as input/textarea with proper ARIA labels. This approach provides maximum flexibility while maintaining consistent styling and behavior.",
-      "author": "Form Handling"
+      "content": "CLI source of truth for LLM navigation is external: `https://github.com/ui8kit/cli` (npm package `ui8kit`). The package separates command entrypoint, command modules, CDN/cache configuration, and import transform behavior in its own repository.",
+      "author": "CLI Source-of-Truth Map"
+    },
+    {
+      "content": "LLM orientation model: first anchor context in DESCRIPTION.md and CLI README, then use repository entrypoints (src/index.ts and src/components/index.ts), utility pipeline (src/lib/utility-props.ts + utility-props.map.ts), and variant layer (src/variants/*). For implementation work, prioritize src/lib and src/components, then cross-check registry/build tooling in packages/registry and CLI workflows in package scripts.",
+      "author": "LLM Navigation"
+    },
+    {
+      "content": "Key features: Type-safe components, semantic CSS class naming, responsive utilities (breakpoint variants), zero-runtime styling, static generation ready, compound components (Card.Header, Accordion.Content, Grid.Col), full TypeScript.",
+      "author": "Key Features"
+    },
+    {
+      "content": "Design token coverage in core is practical-first today; full token parity is expected to be covered by the separate generator CLI flow when shadcn map support is enabled. That pipeline will keep mapping exhaustive and allow token updates without changing consumer component APIs.",
+      "author": "Platform Roadmap"
     }
   ],
   "pages": [
     {
       "title": "Overview",
-      "purpose": "Library introduction, architectural principles, design philosophy, and key features",
+      "purpose": "Library introduction, dual development model, design philosophy, and key features",
       "page_notes": [
         {
-          "content": "Explain UI8Kit's minimalist approach: build complex UIs with 15 composite components and 12 variants covering 80% of design needs. Demonstrate zero-runtime styling, tree shaking benefits, and how the utility-first approach with semantic classes eliminates redundant CSS while maintaining full design flexibility."
+          "content": "Explain UI8Kit's vision: React dev → semantic HTML5/CSS3 production. Minimalist approach: 18 components, 6 variant modules. Zero-runtime styling, utility-props validation, Bootstrap/Uikit3-style class naming. Use cases: component docs, static sites, prototyping, enterprise apps."
         }
       ],
       "parent": null
     },
     {
       "title": "Getting Started",
-      "purpose": "Installation, configuration, and basic usage for different project setups",
+      "purpose": "Installation, Tailwind setup, and basic usage",
       "page_notes": [
         {
-          "content": "Cover npm installation, Tailwind setup, CSS variables configuration, theme provider setup, and basic component usage. Include examples for Vite, Next.js, and Create React App. Emphasize the importance of content paths in Tailwind config for proper styling."
+          "content": "Two paths: (1) npm install @ui8kit/core and import directly, or (2) `npx ui8kit init --yes` / `bunx ui8kit@latest init --yes`, then `npx ui8kit add button` / `bunx ui8kit@latest add button` (or card). Tailwind content paths, CSS variables. Basic example: Block, Stack, Title, Text, Button, Card, CardHeader, CardContent."
         }
       ],
       "parent": null
+    },
+    {
+      "title": "CLI Commands",
+      "purpose": "ui8kit CLI: init, add, list, diff, scan, build, and utilities",
+      "parent": "Getting Started",
+      "page_notes": [
+        {
+          "content": "`npx ui8kit` / `bunx ui8kit@latest` commands: init (project setup, ui8kit.config.json, --yes, --registry, --import-style (alias|package)), add (components, --all, --force, --dry-run, --retry), list (--json), diff, cache clear, info, registry clean, reset, scan, build. Global flags: --cwd, --verbose, --no-cache. `add` may create `src/lib`, `src/components`, `src/components/ui`, `src/blocks`, `src/layouts`, `src/variants`."
+        }
+      ]
+    },
+    {
+      "title": "CLI Reference",
+      "purpose": "Command-level CLI behavior and options matrix",
+      "parent": "CLI Commands",
+      "page_notes": [
+        {
+          "content": "Global options for all commands: `-c, --cwd <dir>`, `-v, --verbose`, `--no-cache`. `init`: non-interactive mode via `--yes`; interactive prompts for global css and component alias. `init` validates Vite React and React dependency, writes `ui8kit.config.json`, and installs core registry artifacts (`registry:lib` and `registry:variants`) + `src/variants/index.ts` when available. `add`: positional names + `--all`, `--force`, `--retry`, `--dry-run`; installs and sorts dependencies via registry tree; supports registry override flags; `--all` creates install directories (`components`, `lib`, `components/ui`, `blocks`, `layouts`, `variants`). `list`: groups components by registry type; `--json` emits raw registry component list. `diff`: optional component arg; `--json` emits summary. `cache clear`: purges filesystem cache at `~/.ui8kit/cache`. `info`: default human output plus `--cdn` and `--json`; prints cache + CDN resolution state. `registry clean`: clears `packages/registry` artifacts, `--all` additionally removes `src/registry.json`, `--dry-run` only prints paths. `reset`: removes `ui8kit.config.json`, generated component directories, and optional cache with `--with-cache`; supports `--yes/--force/--dry-run`. `scan`: builds `src/registry.json` from local components/variants/lib/blocks/layouts; supports `--source`, `--output`, `--registry`. `build`: builds package registry from `src/registry.json` or path arg; outputs to `packages/registry/r` by default and generates `packages/registry/ui8kit.map.json` when utility props files exist."
+        }
+      ]
+    },
+    {
+      "title": "CLI Config & Registry Model",
+      "purpose": "How config files, aliases, and CDN overrides affect CLI runtime",
+      "parent": "CLI Commands",
+      "page_notes": [
+        {
+          "content": "`ui8kit.config.json` schema is validated by zod and includes: `framework`, `typescript`, `globalCss`, `aliases`, `registry`, `componentsDir`, `libDir`, `registryUrl`, `registryVersion`, `strictCdn`, `importStyle`. Defaults: `framework=\"vite-react\"`, `typescript=true`, `globalCss=\"src/index.css\"`, components dir `./src/components`, lib dir `./src/lib`, aliases from `SCHEMA_CONFIG.defaultAliases`. `importStyle=alias` keeps local alias imports, `importStyle=package` rewrites UI imports to `@ui8kit/core`."
+        }
+      ]
+    },
+    {
+      "title": "CLI Data & Runtime Flow",
+      "purpose": "Where data comes from and how local/remote manifests move through CLI",
+      "parent": "CLI Commands",
+      "page_notes": [
+        {
+          "content": "Remote flow: `init`/`add` fetch registry through `getCdnUrls` order (`unpkg`, `jsdelivr`, GitHub raw), with optional override URL + version and strict mode. API layer caches index in memory and on disk at `~/.ui8kit/cache` with TTL. Local flow: `scan` analyzes source files and emits `src/registry.json`; `build` validates registry schema, enriches file content from fs, writes versioned artifacts under `packages/registry/r`, and updates `ui8kit.map.json`."
+        }
+      ]
+    },
+    {
+      "title": "CLI Error Glossary",
+      "purpose": "Common CLI errors and quick recovery steps",
+      "parent": "CLI Commands",
+      "page_notes": [
+        {
+          "content": "`ConfigNotFoundError`: ui8kit config missing, `add` will fail fast and suggest init. Fix with `npx ui8kit init --yes` / `bunx ui8kit@latest init --yes` or ensure `ui8kit.config.json` exists at project root/src/registry path. `ValidationError` from `handleValidationError`: project not ready or components missing; usually run `init` first, then install dependencies/components in dependency order. `Not a Vite project` / React missing: only Vite React is supported for init/add; install React and add `vite.config.*`."
+        },
+        {
+          "content": "`No local components found` in `diff`: usually normal on empty projects. Run `add` first or point registry path to an already initialized project. `Component not found`: check exact component name and run with `--dry-run` or `list` to confirm available components."
+        },
+        {
+          "content": "CDN/network errors (`No working ... CDN found`, registry fetch failures): run with `--retry`, or pass `--registry-url`/`--registry-version` and optionally `--strict-cdn` to control provider list. `--no-cache` is useful when testing newly published registry changes. `checkPrimaryCdn` failures in `info` do not block non-network commands but indicate diagnostics risk."
+        },
+        {
+          "content": "Dependency install failures during `add`: CLI logs missing/workspace/npm dependencies. Re-run with network available, or install missing packages manually. `--force` is for overwriting files, not bypassing missing registry/validation conditions."
+        }
+      ]
+    },
+    {
+      "title": "CLI Scan & Build Diagnostics",
+      "purpose": "Typical scan/build issues and what to inspect",
+      "parent": "CLI Commands",
+      "page_notes": [
+        {
+          "content": "`scan` warnings from `analyzeDeps`: usually indicate unresolved local imports or non-exported files. Fix by ensuring components export something and import paths are valid. If a target folder is missing, scan skips it without failure."
+        },
+        {
+          "content": "`scan` emits registry component type from directory mapping: ui => `registry:ui`, variants => `registry:variants`, blocks => `registry:block`, layouts => `registry:layout`, lib => `registry:lib`, and composites from `src/components` root/indices as `registry:composite`. If a component appears in unexpected place, check folder structure."
+        },
+        {
+          "content": "`build` schema failures usually come from `src/registry.json` not matching registry item schema (missing required fields or malformed file lists). Verify JSON from `scan` output and ensure each item has `name`, `type`, and `files` entries."
+        },
+        {
+          "content": "`build` also writes `ui8kit.map.json` only when `src/lib/utility-props.map.ts` and `src/lib/utility-props.ts` exist and are parseable. If map is missing, check map-source path (`SCHEMA_CONFIG.utilityMap.sources`) and file read/TypeScript parse errors in these files."
+        },
+        {
+          "content": "When `build` reports missing file from registry artifact path, `src/registry.json` likely references stale `path` values. Re-run `scan` in correct `--source` context, then `build` from repo root or pass accurate `registry` path."
+        }
+      ]
+    },
+    {
+      "title": "CLI Incident Playbooks",
+      "purpose": "Step-by-step recovery procedures for common CLI failures",
+      "parent": "CLI Commands",
+      "page_notes": [
+        {
+          "content": "Playbook: `diff` shows nothing / `No local components found`.\n1) Confirm the project has installed components in one of `src/components`, `src/components/ui`, `src/blocks`, `src/layouts`.\n2) Run `npx ui8kit add button` / `bunx ui8kit@latest add button` (or another component) and re-run `diff`.\n3) If still empty, run `npx ui8kit init --yes` / `bunx ui8kit@latest init --yes` to ensure config and core files exist.\n4) Ensure working directory is correct; with subprojects, use `-c <path>`.\n5) Re-check `ui8kit.config.json` path via `npx ui8kit info` / `bunx ui8kit@latest info`."
+        },
+        {
+          "content": "Playbook: `add` reports `Component \"X\" was not found in registry`.\n1) Run `npx ui8kit list --json` / `bunx ui8kit@latest list --json` and confirm the exact component name/case.\n2) Re-run `npx ui8kit add` / `bunx ui8kit@latest add` with `--registry-url` and/or `--registry-version` if registry CDN changed.\n3) Try `npx ui8kit --no-cache list --json` / `bunx ui8kit@latest --no-cache list --json` to avoid stale registry index.\n4) Try with `--retry` on unstable networks.\n5) If installed by URL, verify URL returns valid component JSON (`name`, `type`, `files`) and pass exact URL argument to `add`."
+        },
+        {
+          "content": "Playbook: `scan`/`build` schema errors.\n1) Open `src/registry.json` and verify each component has `name`, `type`, `files`, and valid `files[].path`.\n2) Regenerate manifest with `npx ui8kit scan --source ./src --output ./src/registry.json` / `bunx ui8kit@latest scan --source ./src --output ./src/registry.json`.\n3) Re-run `npx ui8kit build ./src/registry.json` / `bunx ui8kit@latest build ./src/registry.json`.\n4) If type errors persist, inspect where the file was picked up (`registry:ui`, `registry:block`, `registry:layout`, `registry:lib`, `registry:variants`, `registry:composite`) and move files to matching folders.\n5) For missing dependencies in output, fix source imports before rebuilding."
+        },
+        {
+          "content": "Playbook: `build` created incomplete registry artifacts.\n1) Confirm `src/lib/utility-props.map.ts` and `src/lib/utility-props.ts` exist when expecting `ui8kit.map.json`.\n2) Ensure source files referenced by manifest are present and readable from manifest paths.\n3) Run `npx ui8kit build --output ./packages/registry/r ./src/registry.json --no-cache` / `bunx ui8kit@latest build --output ./packages/registry/r ./src/registry.json --no-cache` after cleaning cache with `npx ui8kit cache clear` / `bunx ui8kit@latest cache clear`.\n4) Open generated files in `packages/registry/r` and `packages/registry/ui8kit.map.json` to verify structure.\n5) Keep `schema.json` and `schema/` under `packages/registry` synced after manual edits."
+        }
+      ]
+    },
+    {
+      "title": "CLI Quick Checks",
+      "purpose": "Short 60-second validation commands before deep troubleshooting",
+      "parent": "Troubleshooting",
+      "page_notes": [
+        {
+          "content": "`init readiness`: `npx ui8kit init --yes` / `bunx ui8kit@latest init --yes` only in Vite React project; then `npx ui8kit info --cdn` / `bunx ui8kit@latest info --cdn` to validate config + CDN status."
+        },
+        {
+          "content": "`component install path`: `npx ui8kit list --json` / `bunx ui8kit@latest list --json` to confirm availability, then `npx ui8kit add button --dry-run` / `bunx ui8kit@latest add button --dry-run` to verify directory/write planning without mutations."
+        },
+        {
+          "content": "`cache/state sanity`: `npx ui8kit cache clear` / `bunx ui8kit@latest cache clear`, then `npx ui8kit --no-cache info` / `bunx ui8kit@latest --no-cache info` to confirm fresh lookup and avoid stale CDN/index artifacts."
+        },
+        {
+          "content": "`local-vs-remote`: `npx ui8kit diff --json` / `bunx ui8kit@latest diff --json` for machine checks; if empty, install at least one component first and rerun."
+        },
+        {
+          "content": "`registry build sanity`: `npx ui8kit scan --source ./src --output ./src/registry.json` / `bunx ui8kit@latest scan --source ./src --output ./src/registry.json`, then `npx ui8kit build ./src/registry.json --output ./packages/registry/r` / `bunx ui8kit@latest build ./src/registry.json --output ./packages/registry/r`."
+        }
+      ]
+    },
+    {
+      "title": "Build System Quick Checks",
+      "purpose": "Short verification steps for compilation and artifact generation",
+      "parent": "Build System",
+      "page_notes": [
+        {
+          "content": "`core type/build check`: run `npm run type-check` and `npm run build` in the package root to verify TypeScript and bundling integrity before touching CLI workflows."
+        },
+        {
+          "content": "`output location check`: ensure outputs are produced in expected places (`dist/` for package publish artifacts, `packages/registry/r` for registry artifacts, `packages/registry/schema` for schema outputs)."
+        },
+        {
+          "content": "`package json sanity`: confirm required scripts and dependency groups in `package.json` and CLI package scripts are aligned with runtime expectations after dependency updates."
+        },
+        {
+          "content": "`clean rebuild`: remove temporary caches (`node_modules/.cache` + `~/.ui8kit/cache`), reinstall dependencies, then rerun type-check/build when build outputs look stale or inconsistent."
+        },
+        {
+          "content": "`pre-commit check`: run tests/lint pipeline used by CI (`npm run test`, `npm run lint`, optional static checks) before publishing or regenerating registry artifacts."
+        }
+      ]
+    },
+    {
+      "title": "LLM Navigation Playbook",
+      "purpose": "Fast file-first route for answering architecture/CLI questions",
+      "parent": null,
+      "page_notes": [
+        {
+          "content": "Question: \"How does component installation work?\" → start from CLI source docs: https://github.com/ui8kit/cli and inspect `add` command flow, then dependency resolver and import transform modules there."
+        },
+        {
+          "content": "Question: \"Why this command failed?\" → inspect nearest command implementation in `https://github.com/ui8kit/cli`, then error handling and project config paths in the same repository, then confirm command wiring in its command index."
+        },
+        {
+          "content": "Question: \"Where does registry data come from?\" → check external CLI `SCHEMA_CONFIG` and `registry api` flow in `https://github.com/ui8kit/cli`, then compare with corresponding command docs in that repository README."
+        },
+        {
+          "content": "Question: \"How are utility props generated and validated?\" → open `src/lib/utility-props.ts` and `src/lib/utility-props.map.ts`, then verify CLI map generation path in `SCHEMA_CONFIG.utilityMap.sources` and `packages/registry/ui8kit.map.json` output."
+        },
+        {
+          "content": "Question: \"Build pipeline broken?\" → follow `packages/registry` for distribution expectations in this repo, then scan/build command flow in `https://github.com/ui8kit/cli`, and finally verify generated artifacts in `packages/registry/r`."
+        }
+      ]
     },
     {
       "title": "Architecture",
-      "purpose": "Three-layer architecture explanation: Core primitives → Composite components → Layout templates",
+      "purpose": "Component structure, utility props, variants, and output flow",
       "page_notes": [
         {
-          "content": "Detail the Core/UI layer (Block, Box, Button), Components/UI layer (extended components with variants), and Layouts layer (page templates). Explain CVA variant system, prop forwarding, polymorphic components, and how everything ties together for maximum composability."
+          "content": "React Component → Type validation + utility-props → HTML5/CSS3 Output. Primitives (ui/) vs composite (Accordion, Card, Grid, Sheet). CVA variants + utility-props.map.ts. resolveUtilityClassName, cn() merging."
         }
       ],
       "parent": null
     },
     {
-      "title": "Core Components",
-      "purpose": "Basic primitives documentation: Block, Box, Button, and their fundamental APIs",
+      "title": "Utility Props",
+      "purpose": "utility-props.map.ts, resolveUtilityClassName, semantic aliases",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Cover the essential building blocks: Block (polymorphic container), Box (universal primitive), Button (interactive element). Explain prop forwarding, component prop for polymorphism, TypeScript interfaces, and how these primitives form the foundation for all other components."
+          "content": "Centralized definition in `utility-props.map.ts`. `ux()` + `resolveUtilityClassName()` build classes via whitelisted token pairs. Special cases: flex direction (`flex`/`col` -> `flex flex-col`), semantic gaps (`md` → `gap-4`), and bare-token aliases (`italic`, `hidden`, etc.). Design intent: layout/spacing primitives (`p`, `m`, `gap`, `flex`, `justify`, `items`) + tokenized styles (`bg`, `text`, `border`, `shadow`, `rounded`) cover common layout/typography/tokening scenarios without custom class/style usage. No runtime class validation in component code."
+        },
+        {
+          "content": "Theme tokens are defined in global CSS variables and exposed as semantic token classes (`bg-primary`, `text-muted-foreground`, `border-input`, etc.), so palette and radius/typography/surface changes happen by theme edits, not by component changes. Keep utility updates additive: add new token names to `utility-props.map.ts` and regenerate the utility map only when you introduce new semantic token names. Current practical coverage in this repo is intentionally incremental. Full token parity is planned to be managed by the generator flow in a separate CLI utility (including map generation from shadcn-style token sources), so coverage can be treated as expandable without changing component semantics."
+        }
+      ]
+    },
+    {
+      "title": "Theming & Design Tokens",
+      "purpose": "How tokenized design variables are consumed by utility props",
+      "parent": "Architecture",
+      "page_notes": [
+        {
+          "content": "Global theme variables provide source of truth for colors, fonts, radius and shadows. The library consumes these through tokenized class names (`bg-*`, `text-*`, `border-*`, `shadow-*`, `rounded-*`) emitted by utility props and variants. This allows switching from light to dark mode and brand palette by changing CSS variables, while component usage (`bg`, `textColor`, `fontSize`, `p`, `gap`, etc.) stays stable."
+        },
+        {
+          "content": "In practice this means: if styling needs stay within existing tokens (`accent`, `primary`, `muted`, `destructive`, spacing scale, border/shadow presets), you avoid custom styles in component markup entirely. If a new semantic token is introduced, add it to `utility-props.map.ts` and keep generation pipelines updated so it becomes accepted as props."
         }
       ]
     },
     {
       "title": "Variant System",
-      "purpose": "CVA-based styling system explanation: spacing, colors, layout, typography, and component variants",
+      "purpose": "CVA-based variants: grid, typography, button, badge, card, field, image",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Critical section explaining how variants work: spacing (p, m, gap), colors (bg, c), layout (w, h, display), visual (shadow, rounded), and component-specific variants. Show how variants compose, how Tailwind merging works, and how to create custom variants."
+          "content": "src/variants/: grid (cols patterns), typography (fontSize, truncate), button, badge, card, field, image. Components combine variants with utility props. Type-safe VariantProps."
         }
       ]
     },
     {
-      "title": "UI Components",
-      "purpose": "Extended components with full variant support: Card, Badge, Title, Text, Image, etc.",
+      "title": "Layout Components (Architecture)",
+      "purpose": "Block, Container, Stack, Group, Box, Grid",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Document composite components that extend primitives with specific functionality. Explain compound component patterns (Card.Header), data-class attributes for testing, and how these components provide high-level APIs while maintaining the flexibility of the variant system."
+          "content": "Block (polymorphic), Container (responsive), Stack/Group (flex), Box (universal primitive), Grid (cols number/array/semantic, Grid.Col). All support utility props."
         }
       ]
     },
     {
-      "title": "Layout Components",
-      "purpose": "Layout and structural components: Container, Stack, Group, Grid",
+      "title": "UI Components (Architecture)",
+      "purpose": "UI and interactive components from architecture perspective",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Cover layout primitives for building page structures. Explain Container (responsive wrapper), Stack/Group (flex layouts), Grid (CSS Grid with responsive presets). Show how these create consistent spacing and alignment across applications."
+          "content": "Compound patterns: Card.Header/Content/Footer, Accordion.Item/Trigger/Content. Field for form inputs. Grid.Col. data-class attributes for testing."
         }
       ]
     },
     {
       "title": "Package Structure",
-      "purpose": "Explain package.json configuration, distribution setup, and module exports",
+      "purpose": "package.json, exports, dist/, packages/registry, ui8kit.config.json",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Provide basic explanation of package configuration: entry points, exports, dependencies, dev dependencies, and how they support different integration formats."
+          "content": "Entry: dist/index.js. Exports from src/index.ts, src/components/index.ts. packages/registry: CDN artifacts for ui8kit add/list/diff. ui8kit.config.json: created by init, stores project config (registry type, import alias, CSS path). CLI-driven commands (`scan`, `build`) are exposed via ui8kit package externally (`npx ui8kit` / `bunx ui8kit@latest`)."
         }
       ]
     },
     {
       "title": "Build System",
-      "purpose": "Document the TypeScript compilation process, build scripts, and output generation",
+      "purpose": "TypeScript compilation, build scripts, dist output",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Tutorial for configuring and compiling the library for dist/ output and NPM publication. Cover build commands, TypeScript configuration, output structure, and distribution files."
+          "content": "tsc -p tsconfig.json. Output to dist/. Type definitions, build scripts."
         }
       ]
     },
     {
       "title": "Component Registry",
-      "purpose": "Explain the registry.json system, component metadata, and how it powers tooling",
+      "purpose": "packages/registry, ui8kit.map.json, scan and build workflow",
       "parent": "Architecture",
       "page_notes": [
         {
-          "content": "Brief tutorial (to be expanded later). Explain principles for registering components and publishing to NPM so they're available via commands like `npx buildy-ui add button card`. Cover registry format and metadata."
-        }
-      ]
-    },
-    {
-      "title": "TypeScript Configuration",
-      "purpose": "Detail the TypeScript setup, path aliases, compilation targets, and type generation",
-      "parent": "Architecture",
-      "page_notes": [
-        {
-          "content": "Detailed tutorial explaining TypeScript configuration: walk through each setting in tsconfig.json, explain path aliases, compilation targets, strict mode settings, and generated type definitions."
+          "content": "packages/registry: component metadata, CDN artifacts. scan: scans src/ → registry.json manifest. build: registry.json → packages/registry/r, also generates ui8kit.map.json from utility-props.map.ts + utility-props.ts (flat Tailwind class array). add fetches from registry CDN. list/diff use registry. reset removes packages/registry artifacts."
         }
       ]
     },
     {
       "title": "API Reference",
-      "purpose": "Complete component API documentation: props, types, variants, and usage patterns",
+      "purpose": "Complete component API: props, types, variants",
       "parent": null
     },
     {
       "title": "Core Components",
-      "purpose": "API documentation for basic primitives: Block, Box, Button with TypeScript interfaces and examples",
+      "purpose": "API for Block, Box, Button",
       "parent": "API Reference",
       "page_notes": [
         {
-          "content": "Detail Block (polymorphic container), Box (universal primitive), Button (interactive element). Include complete prop interfaces, TypeScript types, forwardRef patterns, component polymorphism, and practical usage examples with different HTML elements."
+          "content": "Block (polymorphic), Box (universal), Button (variants). Prop interfaces, forwardRef, component polymorphism."
         }
       ]
     },
     {
       "title": "UI Components",
-      "purpose": "API documentation for extended components: Card, Badge, Title, Text, Image with variant support",
+      "purpose": "API for Card, Badge, Title, Text, Field, Image, Icon, Grid, Sheet, Accordion",
       "parent": "API Reference",
       "page_notes": [
         {
-          "content": "Document composite components with full variant APIs. Cover compound patterns (Card.Header), data-class attributes, prop forwarding, and how components extend base primitives while maintaining type safety and flexibility."
+          "content": "Full prop APIs. Compound components. Grid.Col (span, start, end, order). Field for form inputs."
         }
       ]
     },
     {
       "title": "Layout Components",
-      "purpose": "API documentation for layout system: Container, Stack, Group, Grid with responsive patterns",
+      "purpose": "API for Container, Stack, Group, Grid",
       "parent": "API Reference",
       "page_notes": [
         {
-          "content": "Explain layout components for building page structures. Cover Container sizing, Stack/Group flex layouts, Grid responsive presets. Show how these components create consistent spacing, alignment, and responsive behavior across different screen sizes."
+          "content": "Container, Stack, Group, Grid. Grid cols: number, array of {bp, value}, or semantic string (1-3, etc)."
         }
       ]
     },
     {
       "title": "Development Guide",
-      "purpose": "Developer workflows, best practices, and advanced usage patterns",
+      "purpose": "Developer workflows, testing, best practices",
       "parent": null,
       "page_notes": [
         {
-          "content": "Comprehensive guide for UI8Kit developers. Covers component composition, theme customization, performance optimization, and real-world usage patterns. Includes practical examples for common development scenarios."
-        }
-      ]
-    },
-    {
-      "title": "Basic Workflow",
-      "purpose": "Step-by-step development workflow from project setup to deployment",
-      "parent": "Development Guide",
-      "page_notes": [
-        {
-          "content": "Complete workflow guide: project creation, theme setup, component development, testing, and deployment. Includes Tailwind configuration, CSS variables setup, theme provider integration, and common development patterns."
+          "content": "Component development, testing (vitest), lint (eslint). Extending variants, utility props usage."
         }
       ]
     },
     {
       "title": "Component Development",
-      "purpose": "Creating custom components and extending UI8Kit with new functionality",
+      "purpose": "Creating custom components, extending variants",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Guide for building custom components that integrate with UI8Kit's variant system. Covers extending base components, creating new variants, prop forwarding patterns, and maintaining consistency with the design system."
+          "content": "Extend base components, create variants, add to utility-props.map. resolveUtilityClassName pattern."
         }
       ]
     },
     {
       "title": "Best Practices",
-      "purpose": "Guidelines for optimal component usage, performance, and maintainability",
+      "purpose": "Semantic props, data-class, accessibility",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Best practices for UI8Kit usage: semantic HTML, accessibility, performance optimization, TypeScript patterns, theming approaches. Emphasizes the utility-first philosophy and avoiding custom CSS when variants suffice."
+          "content": "Prefer semantic props over className. data-class for targeting. Utility props over inline styles."
         }
       ]
     },
     {
-      "title": "Dark Mode",
-      "purpose": "Complete dark mode implementation with theme switching and persistence",
+      "title": "Static Generation",
+      "purpose": "React to HTML5/CSS3 conversion, future roadmap",
       "parent": "Development Guide",
       "page_notes": [
         {
-          "content": "Detailed guide for implementing dark mode: CSS variable setup, ThemeProvider configuration, toggle components, system preference detection, localStorage persistence, and theme switching animations."
+          "content": "Roadmap: React routes → HTML files, preserve semantic structure, SEO-optimized output. Props-to-CSS mapping enables static generation."
         }
       ]
     },
     {
       "title": "Troubleshooting",
-      "purpose": "Common issues, debugging techniques, and problem-solving guides",
+      "purpose": "Common issues, debugging",
       "parent": null,
       "page_notes": [
         {
-          "content": "Comprehensive troubleshooting guide covering: component styling issues, TypeScript errors, theme problems, form handling, responsive design, accessibility concerns, and performance optimization. Includes diagnostic steps and solutions."
+          "content": "Styling issues, TypeScript errors, utility props validation, form handling with Field."
         }
       ]
     }
