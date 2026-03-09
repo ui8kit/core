@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Group",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Group.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\n\r\ntype GroupDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;\r\n\r\nexport type GroupProps\r\n  = GroupDomProps &\r\n    UtilityPropBag & {\r\n  children: ReactNode;\r\n  component?: ElementType;\r\n  grow?: boolean;\r\n};\r\n\r\nconst defaultProps = ux({\r\n  flex: '',        // display: flex (bare token)\r\n  gap: '4',        // default gap\r\n  items: 'center', // default align\r\n  justify: 'start', // default justify\r\n  min: 'w-0'      // prevent overflow by default (preventGrowOverflow=true)\r\n});\r\n\r\nexport const Group = forwardRef<HTMLElement, GroupProps>(\r\n  ({\r\n    children,\r\n    className,\r\n    component = 'div',\r\n    grow = false,\r\n    ...props\r\n  }, ref) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n    const Element = component as ElementType;\r\n\r\n    // Handle grow prop that maps to utility class\r\n    const specificUtilities = ux({\r\n      ...(grow && { flex: '1' }) // flex-1 when grow=true\r\n    });\r\n\r\n    return (\r\n      <Element\r\n        ref={ref}\r\n        data-class=\"group\"\r\n        className={cn(\r\n          defaultProps,\r\n          specificUtilities,\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </Element>\r\n    );\r\n  }\r\n);\r\n\r\nGroup.displayName = \"Group\"; ",
+      "target": "components/ui"
+    }
+  ]
+}

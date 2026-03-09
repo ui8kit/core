@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "grid",
+  "type": "registry:variants",
+  "description": "Types for grid props",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/variants/grid.ts",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\r\n\r\nexport const gridVariants = cva(\"\", {\r\n  variants: {\r\n    // Responsive patterns\r\n    cols: {\r\n      \"1-2\": \"grid-cols-1 md:grid-cols-2\",\r\n      \"1-3\": \"grid-cols-1 lg:grid-cols-3\",\r\n      \"1-4\": \"grid-cols-1 lg:grid-cols-4\",\r\n      \"1-5\": \"grid-cols-1 lg:grid-cols-5\",\r\n      \"1-6\": \"grid-cols-1 lg:grid-cols-6\",\r\n      \"2-3\": \"grid-cols-2 lg:grid-cols-3\",\r\n      \"2-4\": \"grid-cols-2 lg:grid-cols-4\",\r\n      \"2-5\": \"grid-cols-2 lg:grid-cols-5\",\r\n      \"2-6\": \"grid-cols-2 lg:grid-cols-6\",\r\n      \"3-4\": \"grid-cols-3 lg:grid-cols-4\",\r\n      \"3-5\": \"grid-cols-3 lg:grid-cols-5\",\r\n      \"3-6\": \"grid-cols-3 lg:grid-cols-6\",\r\n      \"4-5\": \"grid-cols-4 lg:grid-cols-5\",\r\n      \"4-6\": \"grid-cols-4 lg:grid-cols-6\",\r\n      \"5-6\": \"grid-cols-5 lg:grid-cols-6\",\r\n      \"1-2-3\": \"grid-cols-1 md:grid-cols-2 lg:grid-cols-3\",\r\n      \"1-2-4\": \"grid-cols-1 md:grid-cols-2 lg:grid-cols-4\",\r\n      \"1-2-6\": \"grid-cols-1 md:grid-cols-2 lg:grid-cols-6\",\r\n      \"1-3-4\": \"grid-cols-1 md:grid-cols-3 lg:grid-cols-4\",\r\n      \"1-3-6\": \"grid-cols-1 md:grid-cols-3 lg:grid-cols-6\",\r\n      \"2-3-4\": \"grid-cols-2 md:grid-cols-3 lg:grid-cols-4\",\r\n      \"1-2-3-4\": \"grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4\"\r\n    }\r\n  }\r\n});\r\n\r\n// Types for grid props\r\nexport interface GridVariantProps extends VariantProps<typeof gridVariants> {}",
+      "target": "variants"
+    }
+  ]
+}

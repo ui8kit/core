@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "card",
+  "type": "registry:variants",
+  "description": "Base card variants (style/variant collapses to \"card\")",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/variants/card.ts",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\r\n\r\n// Base card variants (style/variant collapses to \"card\")\r\nexport const cardVariants = cva(\"rounded-lg border bg-card text-card-foreground shadow-sm\", {\r\n  variants: {\r\n    variant: {\r\n      default: \"border-border\",\r\n      outlined: \"border-border shadow-none\",\r\n      filled: \"border-transparent bg-muted/50\"\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    variant: \"default\",\r\n  },\r\n});\r\n\r\n// Sub-entity variants → card-header, card-title, etc.\r\nexport const cardHeaderVariants = cva(\"flex flex-col space-y-1.5 p-6\");\r\n\r\nexport const cardTitleVariants = cva(\"text-2xl font-semibold leading-none tracking-tight\");\r\n\r\nexport const cardDescriptionVariants = cva(\"text-sm text-muted-foreground\");\r\n\r\nexport const cardContentVariants = cva(\"p-6 pt-0\");\r\n\r\nexport const cardFooterVariants = cva(\"flex items-center p-6 pt-0\");\r\n\r\nexport interface CardHeaderVariantProps extends VariantProps<typeof cardHeaderVariants> {}\r\nexport interface CardTitleVariantProps extends VariantProps<typeof cardTitleVariants> {}\r\nexport interface CardDescriptionVariantProps extends VariantProps<typeof cardDescriptionVariants> {}\r\nexport interface CardContentVariantProps extends VariantProps<typeof cardContentVariants> {}\r\nexport interface CardFooterVariantProps extends VariantProps<typeof cardFooterVariants> {}\r\nexport type CardVariantProps = VariantProps<typeof cardVariants>;\r\nexport type CardCompoundVariantProps\r\n  = CardVariantProps &\r\n    CardHeaderVariantProps &\r\n    CardTitleVariantProps &\r\n    CardDescriptionVariantProps &\r\n    CardContentVariantProps &\r\n    CardFooterVariantProps;\r\n",
+      "target": "variants"
+    }
+  ]
+}

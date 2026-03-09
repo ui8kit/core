@@ -1,0 +1,264 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry.json",
+  "components": [
+    {
+      "name": "Title",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Text",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Stack",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Image",
+      "type": "registry:ui",
+      "description": "Simple fit variants - single class each, handled via ux()",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Icon",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Group",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Field",
+      "type": "registry:ui",
+      "description": "Base field props — variant (style) + component (element) + utility props.",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Container",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Button",
+      "type": "registry:ui",
+      "description": "Base props shared between button and anchor variants",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Box",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Block",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Badge",
+      "type": "registry:ui",
+      "description": "",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Sheet",
+      "type": "registry:composite",
+      "description": "",
+      "dependencies": [
+        "react",
+        "lucide-react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Grid",
+      "type": "registry:composite",
+      "description": "=============================================================================",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Card",
+      "type": "registry:composite",
+      "description": "Main Card component interface (CDL utility-props + variant)",
+      "dependencies": [
+        "react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "Accordion",
+      "type": "registry:composite",
+      "description": "",
+      "dependencies": [
+        "react",
+        "lucide-react"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "typography",
+      "type": "registry:variants",
+      "description": "Typography Variants\r\n * \r\n * Semantic variants for text styling. Separates concerns:\r\n * - fontSize: text size (xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl)\r\n * - textColor: text color (foreground, muted-foreground, primary, etc.)\r\n * - textAlign: text alignment (left, center, right, justify)\r\n * - fontWeight: font weight (normal, medium, semibold, bold)\r\n * - lineHeight: line height (tight, normal, relaxed)\r\n * - letterSpacing: letter spacing (tight, normal, wide)",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "image",
+      "type": "registry:variants",
+      "description": "Image position variants - only for combinations with multiple classes",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "grid",
+      "type": "registry:variants",
+      "description": "Types for grid props",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "field",
+      "type": "registry:variants",
+      "description": "Base input styles (shadcn classic) — shared by input, textarea, select.",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "card",
+      "type": "registry:variants",
+      "description": "Base card variants (style/variant collapses to \"card\")",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "button",
+      "type": "registry:variants",
+      "description": "Button size variants",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "badge",
+      "type": "registry:variants",
+      "description": "Badge size variants",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "index",
+      "type": "registry:variants",
+      "description": "Variant exports: grid, typography, button, badge, field, card, image",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "index",
+      "type": "registry:composite",
+      "description": "Layout Components",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "description": "",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": []
+    },
+    {
+      "name": "utility-props",
+      "type": "registry:lib",
+      "description": "Strict utility-prop value:\r\n * - allows only values listed in `utilityPropsMap` for the given prefix\r\n * - additionally allows numeric literals when the map contains numeric strings (e.g. \"8\" -> 8)\r\n * - allows `true` / \"\" only when the map contains a bare token \"\" (e.g. flex, block, absolute)\r\n * - allows false/null/undefined to omit the class",
+      "dependencies": [],
+      "registryDependencies": []
+    },
+    {
+      "name": "utility-props.map",
+      "type": "registry:lib",
+      "description": "CDL Utility Props Map\r\n * src/cdl/utility-props.map.ts",
+      "dependencies": [],
+      "registryDependencies": []
+    }
+  ],
+  "categories": [
+    "ui",
+    "composite",
+    "components",
+    "layouts",
+    "lib",
+    "blocks",
+    "variants"
+  ],
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-08T08:11:28.149Z",
+  "registry": "ui"
+}

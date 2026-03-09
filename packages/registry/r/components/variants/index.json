@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "index",
+  "type": "registry:variants",
+  "description": "Variant exports: grid, typography, button, badge, field, card, image",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/variants/index.ts",
+      "content": "// Base variants\r\nexport * from \"./grid\";\r\nexport * from \"./typography\";\r\n\r\n// Component-specific variants\r\nexport * from \"./button\";\r\nexport * from \"./badge\";\r\nexport * from \"./field\";\r\nexport * from \"./card\";\r\nexport * from \"./image\";"
+    }
+  ]
+}

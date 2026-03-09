@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "image",
+  "type": "registry:variants",
+  "description": "Image position variants - only for combinations with multiple classes",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/variants/image.ts",
+      "content": "import { cva, type VariantProps } from \"class-variance-authority\";\r\n\r\n// Image position variants - only for combinations with multiple classes\r\n// Simple positions (center, top, right, bottom, left) are handled via ux() in component\r\nexport const imagePositionVariants = cva(\"\", {\r\n  variants: {\r\n    position: {\r\n      \"right-top\": \"object-top object-right\",\r\n      \"right-bottom\": \"object-bottom object-right\",\r\n      \"left-bottom\": \"object-bottom object-left\",\r\n      \"left-top\": \"object-top object-left\"\r\n    }\r\n  }\r\n});\r\n\r\nexport interface ImagePositionVariantProps extends VariantProps<typeof imagePositionVariants> {}",
+      "target": "variants"
+    }
+  ]
+}

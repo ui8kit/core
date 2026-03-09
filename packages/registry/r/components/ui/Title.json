@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Title",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Title.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\nimport { typographyVariants, type TypographyVariantProps } from \"../../variants/typography\";\r\n\r\ntype TitleDomProps = Omit<React.HTMLAttributes<HTMLHeadingElement>, UtilityPropPrefix>;\r\n\r\nexport type TitleProps = TitleDomProps &\r\n  UtilityPropBag &\r\n  TypographyVariantProps & {\r\n    children: ReactNode;\r\n    order?: 1 | 2 | 3 | 4 | 5 | 6;\r\n  };\r\n\r\nexport const Title = forwardRef<HTMLHeadingElement, TitleProps>(\r\n  (\r\n    {\r\n      children,\r\n      className,\r\n      order = 1,\r\n      // Typography variants with Title-specific defaults\r\n      fontSize = \"xl\",\r\n      textColor,\r\n      textAlign,\r\n      fontWeight = \"bold\",\r\n      lineHeight = \"normal\",\r\n      letterSpacing,\r\n      truncate,\r\n      ...props\r\n    },\r\n    ref\r\n  ) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n    const Heading = `h${order}` as ElementType;\r\n\r\n    return (\r\n      <Heading\r\n        ref={ref}\r\n        data-class=\"title\"\r\n        className={cn(\r\n          typographyVariants({\r\n            fontSize,\r\n            textColor,\r\n            textAlign,\r\n            fontWeight,\r\n            lineHeight,\r\n            letterSpacing,\r\n            truncate,\r\n          }),\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </Heading>\r\n    );\r\n  }\r\n);\r\n\r\nTitle.displayName = \"Title\"; ",
+      "target": "components/ui"
+    }
+  ]
+}

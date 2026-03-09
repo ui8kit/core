@@ -1,0 +1,23 @@
+{
+    "name": "@ui8kit/registry",
+    "version": "1.5.2",
+    "description": "UI8Kit components registry for UI8Kit CLI - published from npm to CDN",
+    "main": "index.js",
+    "files": [
+        "r/",
+        "index.json"
+    ],
+    "keywords": [
+        "ui",
+        "components",
+        "registry",
+        "ui8kit"
+    ],
+    "author": "ui8kit",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ui8kit/core.git"
+    },
+    "url": "https://unpkg.com/@ui8kit/registry@latest/r/components/index.json"
+}

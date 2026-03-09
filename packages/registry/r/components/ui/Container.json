@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Container",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Container.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\n\r\ntype ContainerDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;\r\n\r\nexport type ContainerProps = ContainerDomProps & UtilityPropBag & {\r\n  component?: ElementType;\r\n  className?: string;\r\n  children?: ReactNode;\r\n};\r\n\r\nconst defaultProps = ux({\r\n  max: 'w-7xl',\r\n  mx: 'auto',\r\n  px: '4'\r\n});\r\n\r\nexport const Container = forwardRef<HTMLElement, ContainerProps>(\r\n  ({\r\n    component = \"div\",\r\n    children,\r\n    className,\r\n    ...props\r\n  }, ref) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n\r\n    const Element = component as ElementType;\r\n\r\n    // Use provided data-class or default to \"container\"\r\n    const dataClass = (rest as any)['data-class'] || 'container';\r\n\r\n    return (\r\n      <Element\r\n        ref={ref}\r\n        data-class={dataClass}\r\n        className={cn(\r\n          defaultProps,\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </Element>\r\n    );\r\n  }\r\n);\r\n\r\nContainer.displayName = \"Container\"; ",
+      "target": "components/ui"
+    }
+  ]
+}

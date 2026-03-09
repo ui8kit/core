@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Text",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Text.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\nimport { typographyVariants, type TypographyVariantProps } from \"../../variants/typography\";\r\n\r\ntype TextDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;\r\n\r\nexport type TextProps = TextDomProps &\r\n  UtilityPropBag &\r\n  TypographyVariantProps & {\r\n    children: ReactNode;\r\n    component?: ElementType;\r\n  };\r\n\r\nexport const Text = forwardRef<HTMLElement, TextProps>(\r\n  (\r\n    {\r\n      children,\r\n      className,\r\n      component = \"p\",\r\n      // Typography variants\r\n      fontSize = \"base\",\r\n      textColor,\r\n      textAlign,\r\n      fontWeight = \"normal\",\r\n      lineHeight = \"normal\",\r\n      letterSpacing,\r\n      truncate,\r\n      ...props\r\n    },\r\n    ref\r\n  ) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n    const Element = component as ElementType;\r\n\r\n    return (\r\n      <Element\r\n        ref={ref}\r\n        data-class=\"text\"\r\n        className={cn(\r\n          typographyVariants({\r\n            fontSize,\r\n            textColor,\r\n            textAlign,\r\n            fontWeight,\r\n            lineHeight,\r\n            letterSpacing,\r\n            truncate,\r\n          }),\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </Element>\r\n    );\r\n  }\r\n);\r\n\r\nText.displayName = \"Text\"; ",
+      "target": "components/ui"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Icon",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Icon.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, ux, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\n\r\ntype IconDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;\r\n\r\nexport type IconProps\r\n  = IconDomProps &\r\n    UtilityPropBag & {\r\n  children?: ReactNode;\r\n  component?: ElementType;\r\n  lucideIcon?: any; // For Lucide React icons\r\n  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';\r\n};\r\n\r\nconst defaultProps = ux({\r\n  inline: '',      // display: inline (bare token)\r\n  shrink: '0',     // flex-shrink: 0\r\n  w: '4',          // width: 1rem (16px)\r\n  h: '4'           // height: 1rem (16px)\r\n});\r\n\r\nconst sizeProps = {\r\n  xs: ux({ w: '3', h: '3' }),    // 12px\r\n  sm: ux({ w: '4', h: '4' }),    // 16px\r\n  md: ux({ w: '5', h: '5' }),    // 20px\r\n  lg: ux({ w: '6', h: '6' }),    // 24px\r\n  xl: ux({ w: '8', h: '8' })     // 32px\r\n};\r\n\r\nexport const Icon = forwardRef<HTMLElement, IconProps>(\r\n  ({\r\n    children,\r\n    className,\r\n    component: Component = 'span',\r\n    size = 'sm',\r\n    lucideIcon: LucideIcon,\r\n    ...props\r\n  }, ref) => {\r\n    const { 'aria-hidden': ariaHidden, role, ...restProps } = props;\r\n    const { utilityClassName, rest } = resolveUtilityClassName(restProps);\r\n\r\n    const sizeClasses = sizeProps[size];\r\n    const baseClasses = cn(\r\n      defaultProps,\r\n      sizeClasses,\r\n      utilityClassName,\r\n      className\r\n    );\r\n\r\n    const ComponentWithRef = Component as React.ComponentType<any>;\r\n\r\n    return (\r\n      <ComponentWithRef\r\n        ref={ref}\r\n        data-class=\"icon\"\r\n        className={baseClasses}\r\n        aria-hidden={ariaHidden}\r\n        role={role}\r\n        {...rest}\r\n      >\r\n        {LucideIcon ? (\r\n          <LucideIcon\r\n            className={cn(\r\n              sizeClasses,\r\n              utilityClassName\r\n            )}\r\n          />\r\n        ) : (\r\n          children\r\n        )}\r\n      </ComponentWithRef>\r\n    );\r\n  }\r\n);\r\n\r\nIcon.displayName = \"Icon\"; ",
+      "target": "components/ui"
+    }
+  ]
+}

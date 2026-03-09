@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Badge",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Badge.tsx",
+      "content": "import type { ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\nimport { badgeStyleVariants, type BadgeVariantProps } from \"../../variants\";\r\n\r\ntype BadgeDomProps = Omit<React.HTMLAttributes<HTMLDivElement>, UtilityPropPrefix>;\r\n\r\nexport type BadgeProps\r\n  = BadgeDomProps &\r\n    UtilityPropBag &\r\n    BadgeVariantProps & {\r\n  children: ReactNode;\r\n};\r\n\r\nexport const Badge = forwardRef<HTMLDivElement, BadgeProps>(\r\n  ({\r\n    children,\r\n    className,\r\n    variant = 'default',\r\n    ...props\r\n  }, ref) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n\r\n    return (\r\n      <div\r\n        ref={ref}\r\n        data-class=\"badge\"\r\n        className={cn(\r\n          badgeStyleVariants({ variant }),\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </div>\r\n    );\r\n  }\r\n);\r\n\r\nBadge.displayName = \"Badge\"; ",
+      "target": "components/ui"
+    }
+  ]
+}

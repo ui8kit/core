@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Box",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Box.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\n\r\ntype BoxDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;\r\n\r\nexport type BoxProps\r\n  = BoxDomProps &\r\n  UtilityPropBag & {\r\n    component?: ElementType;\r\n    className?: string;\r\n    children?: ReactNode;\r\n  };\r\n\r\nexport const Box = forwardRef<HTMLElement, BoxProps>(\r\n  ({\r\n    component = \"div\",\r\n    className,\r\n    children,\r\n    ...props\r\n  }, ref) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n    const Element = component as ElementType;\r\n\r\n    return (\r\n      <Element\r\n        ref={ref}\r\n        data-class=\"box\"\r\n        className={cn(\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </Element>\r\n    );\r\n  }\r\n);\r\n\r\nBox.displayName = \"Box\";",
+      "target": "components/ui"
+    }
+  ]
+}

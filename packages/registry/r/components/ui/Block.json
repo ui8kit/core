@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.buildy.tw/schema/registry-item.json",
+  "name": "Block",
+  "type": "registry:ui",
+  "description": "",
+  "dependencies": [
+    "react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/ui/Block.tsx",
+      "content": "import type { ElementType, ReactNode } from \"react\";\r\nimport { forwardRef } from \"react\";\r\nimport { cn } from \"../../lib/utils\";\r\nimport { resolveUtilityClassName, type UtilityPropBag, type UtilityPropPrefix } from \"../../lib/utility-props\";\r\n\r\ntype BlockDomProps = Omit<React.HTMLAttributes<HTMLElement>, UtilityPropPrefix>;\r\n\r\nexport type BlockProps\r\n  = BlockDomProps &\r\n    UtilityPropBag & {\r\n  children: ReactNode;\r\n  component?: ElementType;\r\n};\r\n\r\nexport const Block = forwardRef<HTMLElement, BlockProps>(\r\n  ({\r\n    children,\r\n    className,\r\n    component = 'div',\r\n    ...props\r\n  }, ref) => {\r\n    const { utilityClassName, rest } = resolveUtilityClassName(props);\r\n    const Element = component as ElementType;\r\n\r\n    return (\r\n      <Element\r\n        ref={ref}\r\n        data-class=\"block\"\r\n        className={cn(\r\n          utilityClassName,\r\n          className\r\n        )}\r\n        {...rest}\r\n      >\r\n        {children}\r\n      </Element>\r\n    );\r\n  }\r\n);\r\n\r\nBlock.displayName = \"Block\"; ",
+      "target": "components/ui"
+    }
+  ]
+}
